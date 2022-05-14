@@ -1,0 +1,3 @@
+int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = 
+{
+};
