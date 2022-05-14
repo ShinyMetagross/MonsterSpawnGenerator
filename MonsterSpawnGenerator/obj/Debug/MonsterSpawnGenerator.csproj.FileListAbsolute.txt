@@ -7,3 +7,12 @@ C:\Users\andyc\OneDrive\Desktop\Repositories\MonsterSpawnGenerator\MonsterSpawnG
 C:\Users\andyc\OneDrive\Desktop\Repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.csproj.CoreCompileInputs.cache
 C:\Users\andyc\OneDrive\Desktop\Repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.exe
 C:\Users\andyc\OneDrive\Desktop\Repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.pdb
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\bin\Debug\MonsterSpawnGenerator.exe
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\bin\Debug\MonsterSpawnGenerator.pdb
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.csproj.AssemblyReference.cache
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.mainWindow.resources
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.Properties.Resources.resources
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.csproj.GenerateResource.cache
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.csproj.CoreCompileInputs.cache
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.exe
+C:\Users\andyc\Desktop\Modding stuff\repositories\MonsterSpawnGenerator\MonsterSpawnGenerator\obj\Debug\MonsterSpawnGenerator.pdb

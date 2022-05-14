@@ -20,6 +20,11 @@ namespace MonsterSpawnGenerator
             monsters.Add(newMon);
         }
 
+        public void monsterRemove(monster oldMon)
+        {
+            monsters.Remove(oldMon);
+        }
+
         public override string ToString()
         {
             return monsterSlotName;

@@ -15,6 +15,11 @@ namespace MonsterSpawnGenerator
         public monster(string name)
         {
             this.monsterName = name;
+            this.difficultyToken[0] = "";
+            this.difficultyToken[1] = "";
+            this.difficultyToken[2] = "";
+            this.difficultyToken[3] = "";
+            this.difficultyToken[4] = "";
         }
 
         public override string ToString()
@@ -36,6 +41,17 @@ namespace MonsterSpawnGenerator
         public string getMonsterHealthByDifficulty(int index)
         {
             return healthMod[index];
+        }
+
+        public void setMonsterTokenByDifficulty(string token, int index)
+        {
+            if (token == string.Empty) token = "";
+            difficultyToken[index] = token;
+        }
+
+        public string getMonsterTokenByDifficulty(int index)
+        {
+            return difficultyToken[index];
         }
     }
 }

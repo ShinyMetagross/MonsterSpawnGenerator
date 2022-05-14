@@ -57,7 +57,6 @@ namespace MonsterSpawnGenerator
                 if (this.altGameList.Items.Count > 0)
                     this.altGameList.SelectedIndex = 0;
 
-                //defaultProperties();
                 populateMonsterList();
             }
         }
@@ -121,7 +120,6 @@ namespace MonsterSpawnGenerator
                 if (this.monsterSlotList.Items.Count > 0)
                     this.monsterSlotList.SelectedIndex = 0;
 
-                defaultProperties();
                 populateMonsterList();
             }
         }
@@ -143,11 +141,10 @@ namespace MonsterSpawnGenerator
                 this.monsterName.Text = null;
                 this.monsterName.Enabled = true;
                 this.addMonster.Enabled = true;
+                this.removeMonster.Enabled = true;
 
-                if(this.monsterList.Items.Count > 0)
+                if (this.monsterList.Items.Count > 0)
                     this.monsterList.SelectedIndex = 0;
-
-                //defaultProperties();
             }
         }
 
@@ -164,21 +161,33 @@ namespace MonsterSpawnGenerator
                     thisMonsterSlot.monsterAdd(new monster(this.monsterName.Text));
                 }
             }
+        }
 
+        private void removeMonsterFromList(object sender, EventArgs e)
+        {
+            if (this.monsterSlotList.SelectedItem != null && this.monsterSlotList.SelectedItem.GetType() == typeof(monsterSlot))
+            {
+                monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
+                thisMonsterSlot.monsterRemove((monster)this.monsterList.SelectedItem);
+            }
+            this.monsterList.Items.Remove(this.monsterList.SelectedItem);
         }
 
         private void changeMonster(object sender, EventArgs e)
         {
             if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
             {
-                //defaultProperties();
-
                 monster thisMonster = (monster)this.monsterList.SelectedItem;
                 this.health1.Text = thisMonster.getMonsterHealthByDifficulty(0);
                 this.health2.Text = thisMonster.getMonsterHealthByDifficulty(1);
                 this.health3.Text = thisMonster.getMonsterHealthByDifficulty(2);
                 this.health4.Text = thisMonster.getMonsterHealthByDifficulty(3);
                 this.health5.Text = thisMonster.getMonsterHealthByDifficulty(4);
+                this.token1.Text = thisMonster.getMonsterTokenByDifficulty(0);
+                this.token2.Text = thisMonster.getMonsterTokenByDifficulty(1);
+                this.token3.Text = thisMonster.getMonsterTokenByDifficulty(2);
+                this.token4.Text = thisMonster.getMonsterTokenByDifficulty(3);
+                this.token5.Text = thisMonster.getMonsterTokenByDifficulty(4);
             }
         }
 
@@ -216,70 +225,109 @@ namespace MonsterSpawnGenerator
             this.token4.Text = "0";
             this.token5.Text = "0";
         }
-        private void savePropertiesInput(object sender, EventArgs e)
-        {
-            saveProperties();
-        }
-        private void saveProperties()
+        private void token1Change(object sender, EventArgs e)
         {
             if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
             {
                 monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health1.Text, 0);
-                thisMonster.setMonsterHealthByDifficulty(this.health2.Text, 1);
-                thisMonster.setMonsterHealthByDifficulty(this.health3.Text, 2);
-                thisMonster.setMonsterHealthByDifficulty(this.health4.Text, 3);
-                thisMonster.setMonsterHealthByDifficulty(this.health5.Text, 4);
+                thisMonster.setMonsterTokenByDifficulty(this.token1.Text, 0);
+            }
+        }
+        private void token2Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterTokenByDifficulty(this.token2.Text, 1);
+            }
+        }
+        private void token3Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterTokenByDifficulty(this.token3.Text, 2);
+            }
+        }
+        private void token4Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterTokenByDifficulty(this.token4.Text, 3);
+            }
+        }
+        private void token5Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterTokenByDifficulty(this.token5.Text, 4);
             }
         }
 
         private void generateSpawns(object sender, EventArgs e)
         {
             string contents = assembleContents();
-            var path = "output.txt";
+            var path = "Spawns.acs";
             File.WriteAllText(path, contents);
         }   
 
         private string assembleContents()
         {
             StringBuilder sb = new StringBuilder();
+            int gameCounter = 0;
+            int altGameCounter = 0;
+            int slotCounter = 0;
+            int monsterCounter = 0;
 
             sb.Append("int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = \n{");
             foreach(Object item in this.gameList.Items)
             {
+                gameCounter++;
                 if (item.GetType() == typeof(game))
                 {
                     game thisGame = (game)item;
                     sb.Append("\n\t{");
-                    sb.Append("\\\\" + item.ToString());
+                    sb.Append("//" + item.ToString());
+                    altGameCounter = 0;
                     foreach (Object item2 in thisGame.altGames)
                     {
+                        altGameCounter++;
                         altGame thisAltGame = (altGame)item2;
                         if (item2.GetType() == typeof(altGame))
                         {
                             sb.Append("\n\t\t{");
-                            sb.Append("\\\\" + item2.ToString());
+                            sb.Append("//" + item2.ToString());
+                            slotCounter = 0;
                             foreach (Object item3 in thisAltGame.monsterslots)
                             {
+                                slotCounter++;
                                 monsterSlot thisMonsterSlot = (monsterSlot)item3;
                                 if (item3.GetType() == typeof(monsterSlot))
                                 {
                                     sb.Append("\n\t\t\t{");
-                                    sb.Append("\\\\" + item3.ToString());
+                                    sb.Append("//" + item3.ToString());
+                                    monsterCounter = 0;
                                     foreach (Object item4 in thisMonsterSlot.monsters)
                                     {
+                                        monsterCounter++;
                                         monster thisMonster = (monster)item4;
-                                        sb.Append("\n\t\t\t\t{");
-                                        sb.Append("\n\t\t\t\t\t{\"" + thisMonster.ToString() + "\"},");
-                                        sb.Append("\n\t\t\t\t},");
+                                        sb.Append("\n\t\t\t\t{\"" + thisMonster.ToString() + "\""
+                                            + (thisMonster.getMonsterTokenByDifficulty(0) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(0) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(2) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(1) != string.Empty ? ",\"\"" : "")
+                                            + (thisMonster.getMonsterTokenByDifficulty(1) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(1) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(2) != string.Empty ? ",\"\"" : "")
+                                            + (thisMonster.getMonsterTokenByDifficulty(2) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(2) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"\"" : "")
+                                            + (thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(3) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : "")
+                                            + (thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(4) + "\"": "")
+                                            + "}" + (monsterCounter == thisMonsterSlot.monsters.Count ? "" : ","));
                                     }
-                                    sb.Append("\n\t\t\t},");
+                                    sb.Append("\n\t\t\t}" + (slotCounter == thisAltGame.monsterslots.Count ? "" : ","));
                                 }
                             }
-                            sb.Append("\n\t\t},");
+                            sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append("\n\t},");
+                    sb.Append("\n\t}" + (gameCounter == this.gameList.Items.Count ? "" : ","));
                 }
             }
             sb.Append("\n};");
@@ -368,8 +416,7 @@ namespace MonsterSpawnGenerator
                                         foreach(monsterSlot mSlot in thisAltGame.monsterslots)
                                         {
                                             if(mSlot.ToString() == monsterSlotName)
-                                            {
-                                                string monsterName = "";
+                                            {   
                                                 while ((line = stringReader.ReadLine()) != null)
                                                 {
                                                     lineNumber++;
@@ -378,23 +425,51 @@ namespace MonsterSpawnGenerator
                                                     {
                                                         String lineFormat = line.Replace("\"", "");
                                                         lineFormat = lineFormat.Replace(" ", "");
-                                                        if (line.EndsWith("}"))
+                                                        if (line.EndsWith("}") || line.EndsWith("},"))
                                                             lineFormat = lineFormat.Substring(1);
 
 
                                                         StringReader monsterLine = new StringReader(lineFormat);
+                                                        string monsterName = "";
+                                                        string tokenName = "";
+                                                        int tokenNumber = 0;
+                                                        
+                                                        while ((character = monsterLine.Read()) != -1)
+                                                        {
+                                                            if (character == '}')
+                                                            {
+                                                                if (monsterLine.Peek() != ',')
+                                                                    breaknext = true;
+                                                                break;
+                                                            }
+                                                            else if (character != ',')
+                                                                monsterName += ((char)character).ToString();
+                                                            else if (character == ',')
+                                                                break;
+                                                        }
+                                                        monster newMonster = new monster(monsterName);
 
                                                         while ((character = monsterLine.Read()) != -1)
                                                         {
                                                             if (character == '}')
                                                             {
-                                                                breaknext = true;
+                                                                newMonster.setMonsterTokenByDifficulty(tokenName, tokenNumber);
+                                                                tokenNumber++;
+                                                                tokenName = "";
+                                                                if (monsterLine.Peek() != ',')
+                                                                    breaknext = true;
                                                                 break;
                                                             }
+                                                            else if (character == ',')
+                                                            {
+                                                                newMonster.setMonsterTokenByDifficulty(tokenName, tokenNumber);
+                                                                tokenNumber++;
+                                                                tokenName = "";
+                                                            }
                                                             else if (character != ',' || character != ' ')
-                                                                monsterName += ((char)character).ToString();
+                                                                tokenName += ((char)character).ToString();  
                                                         }
-                                                        mSlot.monsterAdd(new monster(monsterName));
+                                                        mSlot.monsterAdd(newMonster);
                                                     }
                                                     if ((line.StartsWith("}") && !line.EndsWith(",")) || breaknext)
                                                     {

@@ -68,6 +68,7 @@
             this.token2 = new System.Windows.Forms.TextBox();
             this.token1 = new System.Windows.Forms.TextBox();
             this.monsterListItems = new System.Windows.Forms.ListBox();
+            this.removeMonster = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -241,7 +242,6 @@
             this.health1.Size = new System.Drawing.Size(47, 20);
             this.health1.TabIndex = 20;
             this.health1.Text = "0";
-            this.health1.TextChanged += new System.EventHandler(this.savePropertiesInput);
             // 
             // health2
             // 
@@ -250,7 +250,6 @@
             this.health2.Size = new System.Drawing.Size(47, 20);
             this.health2.TabIndex = 21;
             this.health2.Text = "0";
-            this.health2.TextChanged += new System.EventHandler(this.savePropertiesInput);
             // 
             // health3
             // 
@@ -259,7 +258,6 @@
             this.health3.Size = new System.Drawing.Size(47, 20);
             this.health3.TabIndex = 22;
             this.health3.Text = "0";
-            this.health3.TextChanged += new System.EventHandler(this.savePropertiesInput);
             // 
             // health4
             // 
@@ -268,7 +266,6 @@
             this.health4.Size = new System.Drawing.Size(47, 20);
             this.health4.TabIndex = 23;
             this.health4.Text = "0";
-            this.health4.TextChanged += new System.EventHandler(this.savePropertiesInput);
             // 
             // health5
             // 
@@ -277,7 +274,6 @@
             this.health5.Size = new System.Drawing.Size(47, 20);
             this.health5.TabIndex = 24;
             this.health5.Text = "0";
-            this.health5.TextChanged += new System.EventHandler(this.savePropertiesInput);
             // 
             // difficulty1
             // 
@@ -388,6 +384,7 @@
             this.token5.Name = "token5";
             this.token5.Size = new System.Drawing.Size(199, 20);
             this.token5.TabIndex = 41;
+            this.token5.TextChanged += new System.EventHandler(this.token5Change);
             // 
             // token4
             // 
@@ -395,6 +392,7 @@
             this.token4.Name = "token4";
             this.token4.Size = new System.Drawing.Size(199, 20);
             this.token4.TabIndex = 40;
+            this.token4.TextChanged += new System.EventHandler(this.token4Change);
             // 
             // token3
             // 
@@ -402,6 +400,7 @@
             this.token3.Name = "token3";
             this.token3.Size = new System.Drawing.Size(199, 20);
             this.token3.TabIndex = 39;
+            this.token3.TextChanged += new System.EventHandler(this.token3Change);
             // 
             // token2
             // 
@@ -409,6 +408,7 @@
             this.token2.Name = "token2";
             this.token2.Size = new System.Drawing.Size(199, 20);
             this.token2.TabIndex = 38;
+            this.token2.TextChanged += new System.EventHandler(this.token2Change);
             // 
             // token1
             // 
@@ -416,6 +416,7 @@
             this.token1.Name = "token1";
             this.token1.Size = new System.Drawing.Size(199, 20);
             this.token1.TabIndex = 37;
+            this.token1.TextChanged += new System.EventHandler(this.token1Change);
             // 
             // monsterListItems
             // 
@@ -443,7 +444,7 @@
             "Dark Imp",
             "Blood Demon",
             "Cacolantern",
-            "Abbadon",
+            "Abaddon",
             "Hectebus",
             "Belphegor"});
             this.monsterListItems.Location = new System.Drawing.Point(313, 6);
@@ -451,11 +452,23 @@
             this.monsterListItems.Size = new System.Drawing.Size(154, 303);
             this.monsterListItems.TabIndex = 42;
             // 
+            // removeMonster
+            // 
+            this.removeMonster.Enabled = false;
+            this.removeMonster.Location = new System.Drawing.Point(212, 480);
+            this.removeMonster.Name = "removeMonster";
+            this.removeMonster.Size = new System.Drawing.Size(75, 23);
+            this.removeMonster.TabIndex = 43;
+            this.removeMonster.Text = "Remove";
+            this.removeMonster.UseVisualStyleBackColor = true;
+            this.removeMonster.Click += new System.EventHandler(this.removeMonsterFromList);
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 562);
+            this.Controls.Add(this.removeMonster);
             this.Controls.Add(this.monsterListItems);
             this.Controls.Add(this.token5);
             this.Controls.Add(this.token4);
@@ -546,6 +559,7 @@
         private System.Windows.Forms.TextBox token2;
         private System.Windows.Forms.TextBox token1;
         private System.Windows.Forms.ListBox monsterListItems;
+        private System.Windows.Forms.Button removeMonster;
     }
 }
 
