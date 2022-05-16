@@ -465,6 +465,63 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =
 				{"Beast3Doom"}
 			}
 		}
+	},
+	{//Wolfenstein 3D
+		{//Classic
+			{//Zombieman
+				{"WolfGuard"}
+			},
+			{//Shotgunguy
+				{"WolfOfficer"},
+				{"WolfGuard"}
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
 	}
 };
 
@@ -880,4 +937,61 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			}
 		}
 	},
+	{//Wolfenstein 3D
+		{//Classic
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,0}
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
+	}
 };

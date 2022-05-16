@@ -117,11 +117,78 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="generatorToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addAltGame.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wAAADsABataJCQAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
+        QAWDKBUDEhrwAwHThbgJgrp0I7ZFbFJQiwshKyXQxFqkjUJlFoE0Ysbj3DgJY5GICw8c5sI9770z514y
+        wmq1UigUolRmtuUMrn45gTACS8PYmNh2TZc0htPppGQySYqi0A3czY5iDMHCabgS/VFBEHRVA/h8Pkqn
+        01SqrJpHEF50Yh8cSh/cjwdikiTpqgaoOXi/nF23B0OKgC6Yljphi2+6aREsTbrsd/CrNQaDQYrH4zSf
+        m286gvN5ES6YCp3ouLd93Khj8mOcWdWykZlMpprBOVx/J8ELcXUHzuauRNbq+CG+iJ7jpfv197f+FOY8
+        M5hzTZZS8gM8Obofp76K6AW7GMKFKe49/fbCN6mmZa6jr257esI7PXQSl8uj6hjcOIR2yEVJ9WrfXSXt
+        cMUEB5jaJWoH5BWp4sWvvlwUF3pgmmkD8ayZbJfQobFdJ9d/ot77aAfNtoL2Lh8vB/LHwDfSB3uRUxdL
+        vXUHVNYOFNpUyttXNLKmqqM360HPRFD3JbfbMdLttxy0eYTBVteBO4fl2KdEPQP6rNl8ZJ0if7OLBsw+
+        CjTL1brP7KF+jUYYN7E2BR6j7dbmyD9tYuWHWt8DQdmKroe7x//fJhrBNnkbJ+5PmL25wUVhYQuqYV0U
+        Yrrk7+D15F/ZMO3MmtJagNNa0pGWqN5eA6KfahFQKKOmosUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="generatorToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="addGame.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wAAADsABataJCQAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
+        QAWDKBUDEhrwAwHThbgJgrp0I7ZFbFJQiwshKyXQxFqkjUJlFoE0Ysbj3DgJY5GICw8c5sI9770z514y
+        wmq1UigUolRmtuUMrn45gTACS8PYmNh2TZc0htPppGQySYqi0A3czY5iDMHCabgS/VFBEHRVA/h8Pkqn
+        01SqrJpHEF50Yh8cSh/cjwdikiTpqgaoOXi/nF23B0OKgC6Yljphi2+6aREsTbrsd/CrNQaDQYrH4zSf
+        m286gvN5ES6YCp3ouLd93Khj8mOcWdWykZlMpprBOVx/J8ELcXUHzuauRNbq+CG+iJ7jpfv197f+FOY8
+        M5hzTZZS8gM8Obofp76K6AW7GMKFKe49/fbCN6mmZa6jr257esI7PXQSl8uj6hjcOIR2yEVJ9WrfXSXt
+        cMUEB5jaJWoH5BWp4sWvvlwUF3pgmmkD8ayZbJfQobFdJ9d/ot77aAfNtoL2Lh8vB/LHwDfSB3uRUxdL
+        vXUHVNYOFNpUyttXNLKmqqM360HPRFD3JbfbMdLttxy0eYTBVteBO4fl2KdEPQP6rNl8ZJ0if7OLBsw+
+        CjTL1brP7KF+jUYYN7E2BR6j7dbmyD9tYuWHWt8DQdmKroe7x//fJhrBNnkbJ+5PmL25wUVhYQuqYV0U
+        Yrrk7+D15F/ZMO3MmtJagNNa0pGWqN5eA6KfahFQKKOmosUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="removeAltGameButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wAAADsABataJCQAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
+        MIg2ocU25yJ4BMItsinENidzPN3v2n307Hrg8C73ne87v75LzEz8+OTyeb3/1uuJWq1GiUSCjOGMu8Fg
+        MI8dDgVin1stt1Qq0RzcaIy5WuXvk1N5324Lz/PIcRztOHe7XZpMJsSjkeD6hWTf549icXyWzboENoA5
+        l2POZHh6WNYkvu8TPAI+rkjEzLa2OUgKvovH+4SykRk/2HGY02lN8tJ7EEEQRMHq32w1xq+q8GsimSYS
+        uj9kBAgBhoTLR1L3C8d5AbwOsBkS+vxHkkwy76SkdnW2go1hWOgXZetsANNKxL8U+NYGhhkC9KxLRtYF
+        gs9YXO6nUgKxETMthNNeQjDd2JSdZjNccWgYYmRVS1rA3dQ7iOhEGxRmWxV6RtnIrAn/rNiQaMVqeVr2
+        jIGhZ5SNzOF2fkluLq9EoVBQkegZ8oTCFlaFMq0rVt/33T1ZyefFXMpK25Cnbc82kpmzxoFyLWW8KjwM
+        aNsqEmWGBGUjM8AdonGeyCU8SbwqsGltLzEMDD2jbMRqMBH9AMsJpG2DFwE8AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="removeGameButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vwAADr8BOAVTJAAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
+        MIg2ocU25yJ4BMItsinENidzPN3v2n307Hrg8C73ne87v75LzEz8+OTyeb3/1uuJWq1GiUSCjOGMu8Fg
+        MI8dDgVin1stt1Qq0RzcaIy5WuXvk1N5324Lz/PIcRztOHe7XZpMJsSjkeD6hWTf549icXyWzboENoA5
+        l2POZHh6WNYkvu8TPAI+rkjEzLa2OUgKvovH+4SykRk/2HGY02lN8tJ7EEEQRMHq32w1xq+q8GsimSYS
+        uj9kBAgBhoTLR1L3C8d5AbwOsBkS+vxHkkwy76SkdnW2go1hWOgXZetsANNKxL8U+NYGhhkC9KxLRtYF
+        gs9YXO6nUgKxETMthNNeQjDd2JSdZjNccWgYYmRVS1rA3dQ7iOhEGxRmWxV6RtnIrAn/rNiQaMVqeVr2
+        jIGhZ5SNzOF2fkluLq9EoVBQkegZ8oTCFlaFMq0rVt/33T1ZyefFXMpK25Cnbc82kpmzxoFyLWW8KjwM
+        aNsqEmWGBGUjM8AdonGeyCU8SbwqsGltLzEMDD2jbMRqMBH9AMsJpG2DFwE8AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="weightLabel.ToolTip" xml:space="preserve">
+    <value>The weight of a monster, as an integer. For each monster in the slot, for each game/alt set, this sets the preference for this monster being chosen, the higher, the more likely it is to spawn. 
+
+Setting this to a negative value will make it so this monster does not spawn at all on the specified difficulty. Default is 0, which will be treated as 1 in game.</value>
+  </data>
   <data name="moveGameUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC7SURBVDhPnYyx
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC7SURBVDhPnYyx
         DYNAEAQ3ICAkpAAKoBQXQAkUQAcUQAkU4BIogQJcgEOHDhzgW+ks3esXBD5ppP+92cO2bbvY3Ina/ZAh
         sWkNPkirHCJDYjOHA7NyiA6Bxvh4mfDdSFeGwOTFyCTdLABq4+2lCLM687MAGL2gGDM/+QCV8XJZwV2V
         dJIPMLh4xJB0Qrk0ni4dQadUB3oXztAnB2wK4+HLM9At4oHOF1fo4oE1LM6yehc3D/6BXSwhuAiWL4A/
@@ -131,7 +198,7 @@
   <data name="moveGameDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAADDSURBVDhPnYw9
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAADDSURBVDhPnYw9
         EYNAEIVfQUFJiQAEIAUBSEAADhCABAREAhIQEAEpU6ZIcdlHNsxeboe5ZGe+gXt/kFuF8CfsojPCr3QI
         gV9sRsxl27s60Bsjl94OFMJVjRyYLY4BHRnUzGE4emagFG4aOIOZMhnQkVFDZ4xRJ3oAlXDXoAe9KurY
         xy4Ak4Y9piSfCEAtPLRgoVYn+W9hF4FZS5bZzboi0AhPLRL+N27WE4ncomWyeBniikSuNQOtlyGu+EHu

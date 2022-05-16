@@ -71,7 +71,7 @@ namespace MonsterSpawnGenerator
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void isThisNumeric(object sender, KeyPressEventArgs e)
@@ -141,6 +141,7 @@ namespace MonsterSpawnGenerator
                 {
                     this.gameList.Items.Remove(thisGame);
                     this.gameList.Items.Insert(gameIndex - 1, thisGame);
+                    this.gameList.SelectedItem = thisGame;
                 }
             }
         }
@@ -156,6 +157,7 @@ namespace MonsterSpawnGenerator
                 {
                     this.gameList.Items.Remove(thisGame);
                     this.gameList.Items.Insert(gameIndex + 1, thisGame);
+                    this.gameList.SelectedItem = thisGame;
                 }
             }
         }
@@ -546,17 +548,21 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append("\n\t}" + (gameCounter == this.gameList.Items.Count ? "" : ","));
+                    sb.Append((altGameCounter > 0 ? "\n\t" : "") + "}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
             sb.Append("\n\n");
             sb.Append("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] = \n{");
+            gameCounter = 0;
+            altGameCounter = 0;
+            slotCounter = 0;
+            monsterCounter = 0;
             foreach (Object item in this.gameList.Items)
             {
-                gameCounter++;
                 if (item.GetType() == typeof(game))
                 {
+                    gameCounter++;
                     game thisGame = (game)item;
                     sb.Append("\n\t{");
                     sb.Append("//" + item.ToString());
@@ -607,7 +613,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append("\n\t}" + (gameCounter == this.gameList.Items.Count ? "" : ","));
+                    sb.Append((altGameCounter > 0 ? "\n\t" : "") + "}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
@@ -672,10 +678,28 @@ namespace MonsterSpawnGenerator
                 while((line = stringReader.ReadLine()) != null)
                 {
                     if (line.StartsWith("{//"))
-                    {
+                    { 
                         String gameName = line.Substring(3);
-                        game thisGame = new game(gameName);
+                        game thisGame;
+
+                        if (line.EndsWith("}"))
+                        {
+                            gameName = line.Substring(3, gameName.Length - 1);
+                            thisGame = new game(gameName);
+                            this.gameList.Items.Add(thisGame);
+                            continue;
+                        }
+                        else if (line.EndsWith("},"))
+                        {
+                            gameName = line.Substring(3, gameName.Length - 2);
+                            thisGame = new game(gameName);
+                            this.gameList.Items.Add(thisGame);
+                            continue;
+                        }
+
+                        thisGame = new game(gameName);
                         this.gameList.Items.Add(thisGame);
+
                         while ((line = stringReader.ReadLine()) != null)
                         {
                             if (line.StartsWith("{//"))
@@ -689,11 +713,11 @@ namespace MonsterSpawnGenerator
                                     if (line.StartsWith("{//"))
                                     {
                                         String monsterSlotName = line.Substring(3);
-                                        foreach(monsterSlot mSlot in thisAltGame.monsterslots)
+                                        foreach (monsterSlot mSlot in thisAltGame.monsterslots)
                                         {
                                             if(mSlot.ToString() == monsterSlotName)
                                             {   
-                                                while ((line = stringReader.ReadLine()) != null)
+                                                while ((line = stringReader.ReadLine()) != null && line.StartsWith("{"))
                                                 {
                                                     if (line.StartsWith("{"))
                                                     {
@@ -701,7 +725,6 @@ namespace MonsterSpawnGenerator
                                                         lineFormat = lineFormat.Replace(" ", "");
                                                         if (line.EndsWith("}") || line.EndsWith("},"))
                                                             lineFormat = lineFormat.Substring(1);
-
 
                                                         StringReader monsterLine = new StringReader(lineFormat);
                                                         string monsterName = "";
@@ -914,10 +937,5 @@ namespace MonsterSpawnGenerator
                 }
             }
         }
-
-        private void displayHelp(object sender, EventArgs e)
-        {
-            MessageBox.Show(designSpec.ToString());
-        }  
     }
 }
