@@ -130,6 +130,36 @@ namespace MonsterSpawnGenerator
             }
         }
 
+        private void moveGameUp(object sender, EventArgs e)
+        {
+            if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+            {
+                game thisGame = (game)this.gameList.SelectedItem;
+                int gameIndex = this.gameList.SelectedIndex;
+
+                if (gameIndex > 0)
+                {
+                    this.gameList.Items.Remove(thisGame);
+                    this.gameList.Items.Insert(gameIndex - 1, thisGame);
+                }
+            }
+        }
+
+        private void moveGameDown(object sender, EventArgs e)
+        {
+            if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+            {
+                game thisGame = (game)this.gameList.SelectedItem;
+                int gameIndex = this.gameList.SelectedIndex;
+
+                if (gameIndex < this.gameList.Items.Count - 1)
+                {
+                    this.gameList.Items.Remove(thisGame);
+                    this.gameList.Items.Insert(gameIndex + 1, thisGame);
+                }
+            }
+        }
+
         private void addAltGameDialogue(object sender, EventArgs e)
         {
             if (this.altGameList.Text.Length == 0)
@@ -594,7 +624,7 @@ namespace MonsterSpawnGenerator
             openFileDialog.Filter = "txt files (*.txt)|*.txt|acs files (*.acs)|*.acs";
             openFileDialog.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
-
+            
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 //Get the path of specified file
@@ -612,8 +642,10 @@ namespace MonsterSpawnGenerator
                     }
                     else
                     {
+                        this.gameList.Items.Clear();
                         dissectStrings(fileContent);
                         dissectValues(fileContent);
+                        MessageBox.Show("Imported Spawns Successfully!");
                     }
                 }
             }
@@ -886,6 +918,6 @@ namespace MonsterSpawnGenerator
         private void displayHelp(object sender, EventArgs e)
         {
             MessageBox.Show(designSpec.ToString());
-        }
+        }  
     }
 }

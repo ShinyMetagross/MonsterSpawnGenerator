@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.monsterSlotList = new System.Windows.Forms.ComboBox();
             this.monsterList = new System.Windows.Forms.ListBox();
             this.addMonster = new System.Windows.Forms.Button();
@@ -76,6 +77,8 @@
             this.weight1 = new System.Windows.Forms.TextBox();
             this.weightLabel = new System.Windows.Forms.Label();
             this.helpButton = new System.Windows.Forms.Button();
+            this.moveGameUpButton = new System.Windows.Forms.Button();
+            this.moveGameDownButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -475,7 +478,7 @@
             "Abaddon",
             "Hectebus",
             "Belphegor"});
-            this.monsterListItems.Location = new System.Drawing.Point(313, 6);
+            this.monsterListItems.Location = new System.Drawing.Point(335, 3);
             this.monsterListItems.Name = "monsterListItems";
             this.monsterListItems.Size = new System.Drawing.Size(154, 303);
             this.monsterListItems.TabIndex = 42;
@@ -560,11 +563,36 @@
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.displayHelp);
             // 
+            // moveGameUpButton
+            // 
+            this.moveGameUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moveGameUpButton.Image = ((System.Drawing.Image)(resources.GetObject("moveGameUpButton.Image")));
+            this.moveGameUpButton.Location = new System.Drawing.Point(307, 3);
+            this.moveGameUpButton.Name = "moveGameUpButton";
+            this.moveGameUpButton.Size = new System.Drawing.Size(22, 23);
+            this.moveGameUpButton.TabIndex = 51;
+            this.moveGameUpButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.moveGameUpButton.UseVisualStyleBackColor = true;
+            this.moveGameUpButton.Click += new System.EventHandler(this.moveGameUp);
+            // 
+            // moveGameDownButton
+            // 
+            this.moveGameDownButton.Image = ((System.Drawing.Image)(resources.GetObject("moveGameDownButton.Image")));
+            this.moveGameDownButton.Location = new System.Drawing.Point(306, 32);
+            this.moveGameDownButton.Name = "moveGameDownButton";
+            this.moveGameDownButton.Size = new System.Drawing.Size(22, 23);
+            this.moveGameDownButton.TabIndex = 52;
+            this.moveGameDownButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.moveGameDownButton.UseVisualStyleBackColor = true;
+            this.moveGameDownButton.Click += new System.EventHandler(this.moveGameDown);
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 562);
+            this.Controls.Add(this.moveGameDownButton);
+            this.Controls.Add(this.moveGameUpButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.weight5);
             this.Controls.Add(this.weight4);
@@ -671,6 +699,8 @@
         private System.Windows.Forms.TextBox weight1;
         private System.Windows.Forms.Label weightLabel;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button moveGameUpButton;
+        private System.Windows.Forms.Button moveGameDownButton;
     }
 }
 

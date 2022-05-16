@@ -387,8 +387,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =
 	{//Heretic
 		{//Main
 			{//Zombieman
-				{"Mummy3Doom"},
-				{"MummyLeader3Doom"}
+				{"Mummy3Doom"}
 			},
 			{//Shotgunguy
 				{"MummyLeader3Doom"}
@@ -414,7 +413,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =
 				{"Beast3Doom"}
 			},
 			{//Arachnotron
-				{"Snake3Doom"}
+				{"Snake3Doom"},
+				{"Beast3Doom"}
 			},
 			{//Mancubus
 				{"Beast3Doom"}
@@ -426,10 +426,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =
 				{"Wizard3Doom"}
 			},
 			{//Cacodemon
-				{"{//Revenant"},
-				{"Snake3Doom"}
+				{"Wizard3Doom"}
 			},
 			{//Revenant
+				{"Snake3Doom"}
 			},
 			{//Archvile
 				{"IronLich3Doom"}
@@ -650,7 +650,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Baron of Hell
-				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,8},
+				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,2},
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
@@ -801,7 +801,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 	{//Heretic
 		{//Main
 			{//Zombieman
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Shotgunguy
@@ -828,6 +827,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Arachnotron
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Mancubus
@@ -840,10 +840,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Cacodemon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Revenant
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Archvile
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
