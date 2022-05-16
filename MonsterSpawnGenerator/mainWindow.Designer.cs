@@ -41,8 +41,8 @@
             this.gameLabel = new System.Windows.Forms.Label();
             this.altGameLabel = new System.Windows.Forms.Label();
             this.slotLabel = new System.Windows.Forms.Label();
-            this.removeAltGame = new System.Windows.Forms.Button();
-            this.removeGame = new System.Windows.Forms.Button();
+            this.removeAltGameButton = new System.Windows.Forms.Button();
+            this.removeGameButton = new System.Windows.Forms.Button();
             this.generateButton = new System.Windows.Forms.Button();
             this.importSpawn = new System.Windows.Forms.Button();
             this.health1 = new System.Windows.Forms.TextBox();
@@ -201,25 +201,26 @@
             this.slotLabel.TabIndex = 14;
             this.slotLabel.Text = "Slot:";
             // 
-            // removeAltGame
+            // removeAltGameButton
             // 
-            this.removeAltGame.Enabled = false;
-            this.removeAltGame.Location = new System.Drawing.Point(236, 90);
-            this.removeAltGame.Name = "removeAltGame";
-            this.removeAltGame.Size = new System.Drawing.Size(64, 23);
-            this.removeAltGame.TabIndex = 16;
-            this.removeAltGame.Text = "Remove";
-            this.removeAltGame.UseVisualStyleBackColor = true;
+            this.removeAltGameButton.Enabled = false;
+            this.removeAltGameButton.Location = new System.Drawing.Point(236, 90);
+            this.removeAltGameButton.Name = "removeAltGameButton";
+            this.removeAltGameButton.Size = new System.Drawing.Size(64, 23);
+            this.removeAltGameButton.TabIndex = 16;
+            this.removeAltGameButton.Text = "Remove";
+            this.removeAltGameButton.UseVisualStyleBackColor = true;
+            this.removeAltGameButton.Click += new System.EventHandler(this.removeAltGame);
             // 
-            // removeGame
+            // removeGameButton
             // 
-            this.removeGame.Enabled = false;
-            this.removeGame.Location = new System.Drawing.Point(236, 32);
-            this.removeGame.Name = "removeGame";
-            this.removeGame.Size = new System.Drawing.Size(64, 23);
-            this.removeGame.TabIndex = 17;
-            this.removeGame.Text = "Remove";
-            this.removeGame.UseVisualStyleBackColor = true;
+            this.removeGameButton.Location = new System.Drawing.Point(236, 32);
+            this.removeGameButton.Name = "removeGameButton";
+            this.removeGameButton.Size = new System.Drawing.Size(64, 23);
+            this.removeGameButton.TabIndex = 17;
+            this.removeGameButton.Text = "Remove";
+            this.removeGameButton.UseVisualStyleBackColor = true;
+            this.removeGameButton.Click += new System.EventHandler(this.removeGame);
             // 
             // generateButton
             // 
@@ -597,8 +598,8 @@
             this.Controls.Add(this.health1);
             this.Controls.Add(this.importSpawn);
             this.Controls.Add(this.generateButton);
-            this.Controls.Add(this.removeGame);
-            this.Controls.Add(this.removeAltGame);
+            this.Controls.Add(this.removeGameButton);
+            this.Controls.Add(this.removeAltGameButton);
             this.Controls.Add(this.slotLabel);
             this.Controls.Add(this.altGameLabel);
             this.Controls.Add(this.gameLabel);
@@ -635,8 +636,8 @@
         private System.Windows.Forms.Label gameLabel;
         private System.Windows.Forms.Label altGameLabel;
         private System.Windows.Forms.Label slotLabel;
-        private System.Windows.Forms.Button removeAltGame;
-        private System.Windows.Forms.Button removeGame;
+        private System.Windows.Forms.Button removeAltGameButton;
+        private System.Windows.Forms.Button removeGameButton;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button importSpawn;
         private System.Windows.Forms.TextBox health1;

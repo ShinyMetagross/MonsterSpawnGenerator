@@ -100,6 +100,11 @@ namespace MonsterSpawnGenerator
             }
         }
 
+        private void removeGame(object sender, EventArgs e)
+        {
+            this.gameList.Items.Remove(this.gameList.SelectedItem);
+        }
+        
         private void changeGame(object sender, EventArgs e)
         {
             if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
@@ -115,6 +120,7 @@ namespace MonsterSpawnGenerator
 
                 //Empty the field to show it's been added, and enable adding alt games
                 this.altGameList.Text = null;
+                this.removeAltGameButton.Enabled = true;
                 this.altGameList.Enabled = true;
                 this.addAltGame.Enabled = true;
                 if (this.altGameList.Items.Count > 0)
@@ -151,6 +157,13 @@ namespace MonsterSpawnGenerator
                     this.altGameList.Text = null;
                 }
             }
+        }
+
+        private void removeAltGame(object sender, EventArgs e)
+        {
+            game thisGame = (game)this.gameList.SelectedItem;
+            thisGame.altGames.Remove((altGame)this.altGameList.SelectedItem);
+            this.altGameList.Items.Remove(this.altGameList.SelectedItem);
         }
 
         private void generateMonsterSlots(altGame thisAltGame)

@@ -20,6 +20,11 @@ namespace MonsterSpawnGenerator
             altGames.Add(newAltGame);
         }
 
+        public void gameRemove(altGame oldAltGame)
+        {
+            altGames.Remove(oldAltGame);
+        }
+
         public void setGameName(string name)
         {
             gameName = name;
