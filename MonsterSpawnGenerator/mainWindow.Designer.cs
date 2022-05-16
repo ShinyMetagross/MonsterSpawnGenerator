@@ -75,6 +75,7 @@
             this.weight2 = new System.Windows.Forms.TextBox();
             this.weight1 = new System.Windows.Forms.TextBox();
             this.weightLabel = new System.Windows.Forms.Label();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -548,11 +549,22 @@
             this.weightLabel.TabIndex = 44;
             this.weightLabel.Text = "Weight:";
             // 
+            // helpButton
+            // 
+            this.helpButton.Location = new System.Drawing.Point(649, 522);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(77, 28);
+            this.helpButton.TabIndex = 50;
+            this.helpButton.Text = "Help";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.displayHelp);
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 562);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.weight5);
             this.Controls.Add(this.weight4);
             this.Controls.Add(this.weight3);
@@ -657,6 +669,7 @@
         private System.Windows.Forms.TextBox weight2;
         private System.Windows.Forms.TextBox weight1;
         private System.Windows.Forms.Label weightLabel;
+        private System.Windows.Forms.Button helpButton;
     }
 }
 

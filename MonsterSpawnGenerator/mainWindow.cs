@@ -869,5 +869,10 @@ namespace MonsterSpawnGenerator
                 }
             }
         }
+
+        private void displayHelp(object sender, EventArgs e)
+        {
+            MessageBox.Show(designSpec.ToString());
+        }
     }
 }
