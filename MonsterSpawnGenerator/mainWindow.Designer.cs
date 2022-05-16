@@ -69,6 +69,12 @@
             this.token1 = new System.Windows.Forms.TextBox();
             this.monsterListItems = new System.Windows.Forms.ListBox();
             this.removeMonster = new System.Windows.Forms.Button();
+            this.weight5 = new System.Windows.Forms.TextBox();
+            this.weight4 = new System.Windows.Forms.TextBox();
+            this.weight3 = new System.Windows.Forms.TextBox();
+            this.weight2 = new System.Windows.Forms.TextBox();
+            this.weight1 = new System.Windows.Forms.TextBox();
+            this.weightLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -217,7 +223,7 @@
             // generateButton
             // 
             this.generateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateButton.Location = new System.Drawing.Point(274, 510);
+            this.generateButton.Location = new System.Drawing.Point(297, 510);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(121, 40);
             this.generateButton.TabIndex = 18;
@@ -242,6 +248,8 @@
             this.health1.Size = new System.Drawing.Size(47, 20);
             this.health1.TabIndex = 20;
             this.health1.Text = "0";
+            this.health1.TextChanged += new System.EventHandler(this.health1Change);
+            this.health1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // health2
             // 
@@ -250,6 +258,8 @@
             this.health2.Size = new System.Drawing.Size(47, 20);
             this.health2.TabIndex = 21;
             this.health2.Text = "0";
+            this.health2.TextChanged += new System.EventHandler(this.health2Change);
+            this.health2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // health3
             // 
@@ -258,6 +268,8 @@
             this.health3.Size = new System.Drawing.Size(47, 20);
             this.health3.TabIndex = 22;
             this.health3.Text = "0";
+            this.health3.TextChanged += new System.EventHandler(this.health3Change);
+            this.health3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // health4
             // 
@@ -266,6 +278,8 @@
             this.health4.Size = new System.Drawing.Size(47, 20);
             this.health4.TabIndex = 23;
             this.health4.Text = "0";
+            this.health4.TextChanged += new System.EventHandler(this.health4Change);
+            this.health4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // health5
             // 
@@ -274,6 +288,8 @@
             this.health5.Size = new System.Drawing.Size(47, 20);
             this.health5.TabIndex = 24;
             this.health5.Text = "0";
+            this.health5.TextChanged += new System.EventHandler(this.health5Change);
+            this.health5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // difficulty1
             // 
@@ -327,6 +343,8 @@
             this.speed5.Size = new System.Drawing.Size(47, 20);
             this.speed5.TabIndex = 35;
             this.speed5.Text = "0";
+            this.speed5.TextChanged += new System.EventHandler(this.speed5Change);
+            this.speed5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // speed4
             // 
@@ -335,6 +353,8 @@
             this.speed4.Size = new System.Drawing.Size(47, 20);
             this.speed4.TabIndex = 34;
             this.speed4.Text = "0";
+            this.speed4.TextChanged += new System.EventHandler(this.speed4Change);
+            this.speed4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // speed3
             // 
@@ -343,6 +363,8 @@
             this.speed3.Size = new System.Drawing.Size(47, 20);
             this.speed3.TabIndex = 33;
             this.speed3.Text = "0";
+            this.speed3.TextChanged += new System.EventHandler(this.speed3Change);
+            this.speed3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // speed2
             // 
@@ -351,6 +373,8 @@
             this.speed2.Size = new System.Drawing.Size(47, 20);
             this.speed2.TabIndex = 32;
             this.speed2.Text = "0";
+            this.speed2.TextChanged += new System.EventHandler(this.speed2Change);
+            this.speed2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // speed1
             // 
@@ -359,6 +383,8 @@
             this.speed1.Size = new System.Drawing.Size(47, 20);
             this.speed1.TabIndex = 31;
             this.speed1.Text = "0";
+            this.speed1.TextChanged += new System.EventHandler(this.speed1Change);
+            this.speed1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
             // 
             // speedLabel
             // 
@@ -372,7 +398,7 @@
             // tokenLabel
             // 
             this.tokenLabel.AutoSize = true;
-            this.tokenLabel.Location = new System.Drawing.Point(474, 334);
+            this.tokenLabel.Location = new System.Drawing.Point(524, 334);
             this.tokenLabel.Name = "tokenLabel";
             this.tokenLabel.Size = new System.Drawing.Size(41, 13);
             this.tokenLabel.TabIndex = 36;
@@ -380,7 +406,7 @@
             // 
             // token5
             // 
-            this.token5.Location = new System.Drawing.Point(477, 454);
+            this.token5.Location = new System.Drawing.Point(527, 454);
             this.token5.Name = "token5";
             this.token5.Size = new System.Drawing.Size(199, 20);
             this.token5.TabIndex = 41;
@@ -388,7 +414,7 @@
             // 
             // token4
             // 
-            this.token4.Location = new System.Drawing.Point(477, 428);
+            this.token4.Location = new System.Drawing.Point(527, 428);
             this.token4.Name = "token4";
             this.token4.Size = new System.Drawing.Size(199, 20);
             this.token4.TabIndex = 40;
@@ -396,7 +422,7 @@
             // 
             // token3
             // 
-            this.token3.Location = new System.Drawing.Point(477, 402);
+            this.token3.Location = new System.Drawing.Point(527, 402);
             this.token3.Name = "token3";
             this.token3.Size = new System.Drawing.Size(199, 20);
             this.token3.TabIndex = 39;
@@ -404,7 +430,7 @@
             // 
             // token2
             // 
-            this.token2.Location = new System.Drawing.Point(477, 376);
+            this.token2.Location = new System.Drawing.Point(527, 376);
             this.token2.Name = "token2";
             this.token2.Size = new System.Drawing.Size(199, 20);
             this.token2.TabIndex = 38;
@@ -412,7 +438,7 @@
             // 
             // token1
             // 
-            this.token1.Location = new System.Drawing.Point(477, 350);
+            this.token1.Location = new System.Drawing.Point(527, 350);
             this.token1.Name = "token1";
             this.token1.Size = new System.Drawing.Size(199, 20);
             this.token1.TabIndex = 37;
@@ -463,11 +489,76 @@
             this.removeMonster.UseVisualStyleBackColor = true;
             this.removeMonster.Click += new System.EventHandler(this.removeMonsterFromList);
             // 
+            // weight5
+            // 
+            this.weight5.Location = new System.Drawing.Point(477, 454);
+            this.weight5.Name = "weight5";
+            this.weight5.Size = new System.Drawing.Size(47, 20);
+            this.weight5.TabIndex = 49;
+            this.weight5.Text = "0";
+            this.weight5.TextChanged += new System.EventHandler(this.weight5Change);
+            this.weight5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
+            // 
+            // weight4
+            // 
+            this.weight4.Location = new System.Drawing.Point(477, 428);
+            this.weight4.Name = "weight4";
+            this.weight4.Size = new System.Drawing.Size(47, 20);
+            this.weight4.TabIndex = 48;
+            this.weight4.Text = "0";
+            this.weight4.TextChanged += new System.EventHandler(this.weight4Change);
+            this.weight4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
+            // 
+            // weight3
+            // 
+            this.weight3.Location = new System.Drawing.Point(477, 402);
+            this.weight3.Name = "weight3";
+            this.weight3.Size = new System.Drawing.Size(47, 20);
+            this.weight3.TabIndex = 47;
+            this.weight3.Text = "0";
+            this.weight3.TextChanged += new System.EventHandler(this.weight3Change);
+            this.weight3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
+            // 
+            // weight2
+            // 
+            this.weight2.Location = new System.Drawing.Point(477, 376);
+            this.weight2.Name = "weight2";
+            this.weight2.Size = new System.Drawing.Size(47, 20);
+            this.weight2.TabIndex = 46;
+            this.weight2.Text = "0";
+            this.weight2.TextChanged += new System.EventHandler(this.weight2Change);
+            this.weight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
+            // 
+            // weight1
+            // 
+            this.weight1.Location = new System.Drawing.Point(477, 350);
+            this.weight1.Name = "weight1";
+            this.weight1.Size = new System.Drawing.Size(47, 20);
+            this.weight1.TabIndex = 45;
+            this.weight1.Text = "0";
+            this.weight1.TextChanged += new System.EventHandler(this.weight1Change);
+            this.weight1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isThisNumeric);
+            // 
+            // weightLabel
+            // 
+            this.weightLabel.AutoSize = true;
+            this.weightLabel.Location = new System.Drawing.Point(480, 334);
+            this.weightLabel.Name = "weightLabel";
+            this.weightLabel.Size = new System.Drawing.Size(44, 13);
+            this.weightLabel.TabIndex = 44;
+            this.weightLabel.Text = "Weight:";
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 562);
+            this.ClientSize = new System.Drawing.Size(734, 562);
+            this.Controls.Add(this.weight5);
+            this.Controls.Add(this.weight4);
+            this.Controls.Add(this.weight3);
+            this.Controls.Add(this.weight2);
+            this.Controls.Add(this.weight1);
+            this.Controls.Add(this.weightLabel);
             this.Controls.Add(this.removeMonster);
             this.Controls.Add(this.monsterListItems);
             this.Controls.Add(this.token5);
@@ -510,7 +601,7 @@
             this.Controls.Add(this.monsterList);
             this.Controls.Add(this.monsterSlotList);
             this.Name = "mainWindow";
-            this.Text = "Form1";
+            this.Text = "ReMixer Spawns Generator";
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -560,6 +651,12 @@
         private System.Windows.Forms.TextBox token1;
         private System.Windows.Forms.ListBox monsterListItems;
         private System.Windows.Forms.Button removeMonster;
+        private System.Windows.Forms.TextBox weight5;
+        private System.Windows.Forms.TextBox weight4;
+        private System.Windows.Forms.TextBox weight3;
+        private System.Windows.Forms.TextBox weight2;
+        private System.Windows.Forms.TextBox weight1;
+        private System.Windows.Forms.Label weightLabel;
     }
 }
 

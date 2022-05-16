@@ -1,25 +1,88 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace MonsterSpawnGenerator
 {
+
     public partial class mainWindow : Form
     {
+        StringBuilder designSpec = new StringBuilder();
+
         public mainWindow()
         {
             InitializeComponent();
+            designSpec =
+                designSpec.Append("/*======================================================================================================================\n"
+                + " 													Design Specs\n"
+                + "o MAX_GAME_TYPES\n"
+                + "	    - This corresponds to the game set, like Doom or Chex\n"
+                + "o MAX_ALTS\n"
+                + "	    - This corresponds to a game alt set, like Opposing Force\n"
+                + "o MONSTER_SLOT\n"
+                + "	    - This corresponds to the monster slot, like Zombieman. Slots are in this order:\n"
+                + "										            0: 	Zombieman\n"
+                + "										            1: 	Shotgunguy\n"
+                + "										            2: 	Imp\n"
+                + "										            3: 	Chaingunner\n"
+                + "										            4: 	Demon\n"
+                + "										            5: 	Spectre\n"
+                + "										            6: 	Hellknight\n"
+                + "										            7: 	Baron of Hell\n"
+                + "										            8: 	Arachnotron\n"
+                + "										            9: 	Mancubus\n"
+                + "										            10: Lost Soul\n"
+                + "										            11: Pain Elemental\n"
+                + "										            12: Cacodemon\n"
+                + "										            13: Revenant\n"
+                + "										            14: Archvile\n"
+                + "										            15: Cyberdemon\n"
+                + "										            16: Spider Mastermind\n"
+                + "										            17: Wolfenstein SS\n"
+                + "										            18: Super Shotgunguy\n"
+                + "										            19: Dark Imp\n"
+                + "										            20: Blood Demon\n"
+                + "										            21: Cacolantern\n"
+                + "										            22: Abaddon\n"
+                + "										            23: Hectebus\n"
+                + "										            24: Belphegor\n"
+                + "o MAXPERSLOT\n"
+                + "     - This variable is the slot for a decision on the monster from the slot, like spawning a zombieman variant\n\n"
+                + "													- Strings -\n"
+                + "     o Monster name:\n"
+                + "         - Name of the the monster\n"
+                + "     o Token0-4:\n"
+                + "         - These are inventory items that can be given to a monster for each difficulty, to alter their behavior\n\n"
+                + "													- Stats -\n"
+                + "     o Speed0-4:\n"
+                + "         - These tokens work as a multiplier for monster speed. As such, you should never use numbers with no decimal\n"
+                + "           point. Please use 2.0 instead of 2. If left alone, it will have no affect.\n"
+                + "     o Health0-4:\n"
+                + "         - A health multiplier. Same as speed, these are multipliers. If left alone, it will have no affect.\n"
+                + "     o Weight0-4:\n"
+                + "         - This is a spawn chance, which functions similarly to RandomSpawner. You can use whatever numbers you want,\n"
+                + "           to define the chance of a monster spawning. The higher the weight compared to other monsters, the more likely\n"
+                + "           it is to spawn, and vice versa. If left alone, will be treated as 1. If set to a negative value, however,\n"
+                + "           that means the monster will not spawn at all on that difficulty.\n\n"
+                + "======================================================================================================================*/\n"
+                );
         }
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void isThisNumeric(object sender, KeyPressEventArgs e)
+        {
+            int keyNumber;
+            string keyPress = e.KeyChar.ToString();
+            if (!(int.TryParse(keyPress, out keyNumber) || keyPress == "."))
+            {
+                MessageBox.Show("Please type a number or decimal point.");
+                e.Handled = true;
+            }
         }
 
         private void addGameDialogue(object sender, EventArgs e)
@@ -183,6 +246,16 @@ namespace MonsterSpawnGenerator
                 this.health3.Text = thisMonster.getMonsterHealthByDifficulty(2);
                 this.health4.Text = thisMonster.getMonsterHealthByDifficulty(3);
                 this.health5.Text = thisMonster.getMonsterHealthByDifficulty(4);
+                this.speed1.Text = thisMonster.getMonsterSpeedByDifficulty(0);
+                this.speed2.Text = thisMonster.getMonsterSpeedByDifficulty(1);
+                this.speed3.Text = thisMonster.getMonsterSpeedByDifficulty(2);
+                this.speed4.Text = thisMonster.getMonsterSpeedByDifficulty(3);
+                this.speed5.Text = thisMonster.getMonsterSpeedByDifficulty(4);
+                this.weight1.Text = thisMonster.getMonsterWeightByDifficulty(0);
+                this.weight2.Text = thisMonster.getMonsterWeightByDifficulty(1);
+                this.weight3.Text = thisMonster.getMonsterWeightByDifficulty(2);
+                this.weight4.Text = thisMonster.getMonsterWeightByDifficulty(3);
+                this.weight5.Text = thisMonster.getMonsterWeightByDifficulty(4);
                 this.token1.Text = thisMonster.getMonsterTokenByDifficulty(0);
                 this.token2.Text = thisMonster.getMonsterTokenByDifficulty(1);
                 this.token3.Text = thisMonster.getMonsterTokenByDifficulty(2);
@@ -207,23 +280,45 @@ namespace MonsterSpawnGenerator
             }
         }
 
-        private void defaultProperties()
+        private void health1Change(object sender, EventArgs e)
         {
-            this.health1.Text = "0";
-            this.health2.Text = "0";
-            this.health3.Text = "0";
-            this.health4.Text = "0";
-            this.health5.Text = "0";
-            this.speed1.Text = "0";
-            this.speed2.Text = "0";
-            this.speed3.Text = "0";
-            this.speed4.Text = "0";
-            this.speed5.Text = "0";
-            this.token1.Text = "0";
-            this.token2.Text = "0";
-            this.token3.Text = "0";
-            this.token4.Text = "0";
-            this.token5.Text = "0";
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.health1.Text, 0);
+            }
+        }
+        private void health2Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.health2.Text, 1);
+            }
+        }
+        private void health3Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.health3.Text, 2);
+            }
+        }
+        private void health4Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.health4.Text, 3);
+            }
+        }
+        private void health5Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.health5.Text, 4);
+            }
         }
         private void token1Change(object sender, EventArgs e)
         {
@@ -265,6 +360,86 @@ namespace MonsterSpawnGenerator
                 thisMonster.setMonsterTokenByDifficulty(this.token5.Text, 4);
             }
         }
+        private void speed1Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.speed1.Text, 0);
+            }
+        }
+        private void speed2Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.speed2.Text, 1);
+            }
+        }
+        private void speed3Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.speed3.Text, 2);
+            }
+        }
+        private void speed4Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.speed4.Text, 3);
+            }
+        }
+        private void speed5Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterHealthByDifficulty(this.speed5.Text, 4);
+            }
+        }
+        private void weight1Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterWeightByDifficulty(this.weight1.Text, 0);
+            }
+        }
+        private void weight2Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterWeightByDifficulty(this.weight2.Text, 1);
+            }
+        }
+        private void weight3Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterWeightByDifficulty(this.weight3.Text, 2);
+            }
+        }
+        private void weight4Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterWeightByDifficulty(this.weight4.Text, 3);
+            }
+        }
+        private void weight5Change(object sender, EventArgs e)
+        {
+            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            {
+                monster thisMonster = (monster)this.monsterList.SelectedItem;
+                thisMonster.setMonsterWeightByDifficulty(this.weight5.Text, 4);
+            }
+        }
 
         private void generateSpawns(object sender, EventArgs e)
         {
@@ -281,7 +456,8 @@ namespace MonsterSpawnGenerator
             int slotCounter = 0;
             int monsterCounter = 0;
 
-            sb.Append("int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = \n{");
+            sb.Append(designSpec.ToString() + "\n");
+            sb.Append("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = \n{");
             foreach(Object item in this.gameList.Items)
             {
                 gameCounter++;
@@ -331,6 +507,67 @@ namespace MonsterSpawnGenerator
                 }
             }
             sb.Append("\n};");
+            sb.Append("\n\n");
+            sb.Append("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] = \n{");
+            foreach (Object item in this.gameList.Items)
+            {
+                gameCounter++;
+                if (item.GetType() == typeof(game))
+                {
+                    game thisGame = (game)item;
+                    sb.Append("\n\t{");
+                    sb.Append("//" + item.ToString());
+                    altGameCounter = 0;
+                    foreach (Object item2 in thisGame.altGames)
+                    {
+                        altGameCounter++;
+                        altGame thisAltGame = (altGame)item2;
+                        if (item2.GetType() == typeof(altGame))
+                        {
+                            sb.Append("\n\t\t{");
+                            sb.Append("//" + item2.ToString());
+                            slotCounter = 0;
+                            foreach (Object item3 in thisAltGame.monsterslots)
+                            {
+                                slotCounter++;
+                                monsterSlot thisMonsterSlot = (monsterSlot)item3;
+                                if (item3.GetType() == typeof(monsterSlot))
+                                {
+                                    sb.Append("\n\t\t\t{");
+                                    sb.Append("//" + item3.ToString());
+                                    monsterCounter = 0;
+                                    foreach (Object item4 in thisMonsterSlot.monsters)
+                                    {
+                                        monsterCounter++;
+                                        monster thisMonster = (monster)item4;
+                                        sb.Append("\n\t\t\t\t{"
+                                            + thisMonster.getMonsterHealthByDifficulty(0) + ","
+                                            + thisMonster.getMonsterSpeedByDifficulty(0) + ","
+                                            + thisMonster.getMonsterWeightByDifficulty(0) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(1) + ","
+                                            + thisMonster.getMonsterSpeedByDifficulty(1) + ","
+                                            + thisMonster.getMonsterWeightByDifficulty(1) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(2) + ","
+                                            + thisMonster.getMonsterSpeedByDifficulty(2) + ","
+                                            + thisMonster.getMonsterWeightByDifficulty(2) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(3) + ","
+                                            + thisMonster.getMonsterSpeedByDifficulty(3) + ","
+                                            + thisMonster.getMonsterWeightByDifficulty(3) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(4) + ","
+                                            + thisMonster.getMonsterSpeedByDifficulty(4) + ","
+                                            + thisMonster.getMonsterWeightByDifficulty(4)
+                                            + "}" + (monsterCounter == thisMonsterSlot.monsters.Count ? "" : ","));
+                                    }
+                                    sb.Append("\n\t\t\t}" + (slotCounter == thisAltGame.monsterslots.Count ? "" : ","));
+                                }
+                            }
+                            sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
+                        }
+                    }
+                    sb.Append("\n\t}" + (gameCounter == this.gameList.Items.Count ? "" : ","));
+                }
+            }
+            sb.Append("\n};");
 
             return sb.ToString();
         }
@@ -356,23 +593,24 @@ namespace MonsterSpawnGenerator
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
                     fileContent = reader.ReadToEnd();
-                    if(!fileContent.Contains("int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] ="))
+                    if(!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
                     {
                         MessageBox.Show("This text file is invalid, please select another.");
                     }
                     else
                     {
-                        dissectFile(fileContent);
+                        dissectStrings(fileContent);
+                        dissectValues(fileContent);
                     }
                 }
             }
         }
 
-        private void dissectFile(string file)
+        private void dissectStrings(string file)
         {
             string virtualString = file.Replace("\t", String.Empty);
 
-            int startPosition = virtualString.IndexOf("int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =") + "int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =".Length;
+            int startPosition = virtualString.IndexOf("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =") + "int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =".Length;
             virtualString = virtualString.Substring(startPosition);
 
             StringReader stringReader = new StringReader(virtualString);
@@ -380,7 +618,6 @@ namespace MonsterSpawnGenerator
             //Done twice to consume the remaining line and move onto next
             string line;
             int character;
-            int lineNumber = 1;
             bool breaknext = false;
             line = stringReader.ReadLine();
             line = stringReader.ReadLine();
@@ -389,8 +626,6 @@ namespace MonsterSpawnGenerator
             {
                 while((line = stringReader.ReadLine()) != null)
                 {
-                    lineNumber++;
-                    //MessageBox.Show("Line Number: " + lineNumber.ToString() + " - " + line + " - Loop " + 1);
                     if (line.StartsWith("{//"))
                     {
                         String gameName = line.Substring(3);
@@ -398,8 +633,6 @@ namespace MonsterSpawnGenerator
                         this.gameList.Items.Add(thisGame);
                         while ((line = stringReader.ReadLine()) != null)
                         {
-                            lineNumber++;
-                            //MessageBox.Show("Line Number: " + lineNumber.ToString() + " - " + line + " - Loop " + 2);
                             if (line.StartsWith("{//"))
                             {
                                 String altGameName = line.Substring(3);
@@ -408,8 +641,6 @@ namespace MonsterSpawnGenerator
                                 generateMonsterSlots(thisAltGame);
                                 while ((line = stringReader.ReadLine()) != null)
                                 {
-                                    lineNumber++;
-                                    //MessageBox.Show("Line Number: " + lineNumber.ToString() + " - " + line + " - Loop " + 3);
                                     if (line.StartsWith("{//"))
                                     {
                                         String monsterSlotName = line.Substring(3);
@@ -419,8 +650,6 @@ namespace MonsterSpawnGenerator
                                             {   
                                                 while ((line = stringReader.ReadLine()) != null)
                                                 {
-                                                    lineNumber++;
-                                                    //MessageBox.Show("Line Number: " + lineNumber.ToString() + " - " + line + " - Loop " + 4);
                                                     if (line.StartsWith("{"))
                                                     {
                                                         String lineFormat = line.Replace("\"", "");
@@ -489,6 +718,153 @@ namespace MonsterSpawnGenerator
                         }
                     }
                     else if (line.StartsWith("};"))
+                        break;
+                }
+            }
+        }
+
+        private void dissectValues(string file)
+        {
+            int startPosition = file.IndexOf("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =") + "int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =".Length;
+            string virtualString = file.Substring(startPosition).Replace("\t","");
+
+            StringReader stringReader = new StringReader(virtualString);
+
+            //Done twice to consume the remaining line and move onto next
+            string line;
+            string monsterValue = "";
+            line = stringReader.ReadLine();
+            line = stringReader.ReadLine();
+
+            int thisGame = 0;
+            int thisAltGame = 0;
+            int thisMonsterSlot = 0;
+            int thisMonster = 0;
+            int character = 0;
+            int statIncrement = 0;
+
+            if (line == "{")
+            {
+                while ((line = stringReader.ReadLine()) != null)
+                {
+                    if(line.StartsWith("{"))
+                    {                       
+                        if (line.EndsWith(","))
+                        {
+                            thisGame++;
+                            continue;
+                        }
+                        else if (line.EndsWith("}"))
+                            break;
+                        else
+                        {
+                            game thisGameObject = (game)this.gameList.Items[thisGame];
+                            thisAltGame = 0;
+                            while ((line = stringReader.ReadLine()) != null)
+                            {
+                                if (line.StartsWith("{"))
+                                {
+                                    if (line.EndsWith(","))
+                                    {
+                                        thisAltGame++;
+                                        continue;
+                                    }
+                                    else if (line.EndsWith("}"))
+                                        break;
+                                    else
+                                    {
+                                        altGame thisAltGameObject = (altGame)thisGameObject.altGames[thisAltGame];
+                                        thisMonsterSlot = 0;
+                                        while ((line = stringReader.ReadLine()) != null)
+                                        {
+                                            if (line.StartsWith("{"))
+                                            {
+                                                if (line.EndsWith(","))
+                                                {
+                                                    thisMonsterSlot++;
+                                                    continue;
+                                                }
+                                                else if (line.EndsWith("}"))
+                                                    break;
+                                                else
+                                                {
+                                                    monsterSlot thisMonsterSlotObject = (monsterSlot)thisAltGameObject.monsterslots[thisMonsterSlot];
+                                                    thisMonster = 0;
+                                                    while ((line = stringReader.ReadLine()) != null)
+                                                    {
+                                                        if (line.StartsWith("{") && (line.EndsWith("}") || line.EndsWith(",")))
+                                                        {
+                                                            String lineFormat = line.Replace("\"", "");
+                                                            lineFormat = lineFormat.Replace(" ", "");
+                                                            if (line.EndsWith("}") || line.EndsWith("},"))
+                                                                lineFormat = lineFormat.Substring(1);
+
+                                                            StringReader monsterLine = new StringReader(lineFormat);
+
+                                                            monster thisMonsterObject = (monster)thisMonsterSlotObject.monsters[thisMonster];
+
+                                                            while ((character = monsterLine.Read()) != -1)
+                                                            {
+                                                                if (character == '}')
+                                                                {
+                                                                    switch (statIncrement % 3)
+                                                                    {
+                                                                        case 0:
+                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                        case 1:
+                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                        case 2:
+                                                                            thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                    }
+                                                                    statIncrement = 0;
+                                                                    monsterValue = "";
+                                                                    break;
+                                                                }
+                                                                else if (character == ',')
+                                                                {
+                                                                    switch (statIncrement%3)
+                                                                    {
+                                                                        case 0:
+                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                        case 1:
+                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                        case 2:
+                                                                            thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
+                                                                            break;
+                                                                    }
+                                                                    statIncrement++;
+                                                                    monsterValue = "";
+                                                                }
+                                                                else
+                                                                    monsterValue += ((char)character).ToString();
+                                                            }
+
+                                                            thisMonster++;
+                                                        }
+                                                        if (line.EndsWith("}"))
+                                                            break;
+                                                    }
+                                                    thisMonsterSlot++;
+                                                }
+                                            }
+                                            else if (line.EndsWith("}"))
+                                                break;
+                                        }
+                                        thisAltGame++;
+                                    }
+                                }
+                                else if (line.EndsWith("}"))
+                                    break;
+                            }
+                            thisGame++;
+                        }
+                    }
+                    else if (line.EndsWith("}"))
                         break;
                 }
             }
