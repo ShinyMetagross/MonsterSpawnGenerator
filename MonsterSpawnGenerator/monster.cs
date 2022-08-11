@@ -83,8 +83,11 @@ namespace MonsterSpawnGenerator
 
         public void setMonsterTokenByDifficulty(string token, int index)
         {
-            if (token == string.Empty) token = "";
-            difficultyToken[index] = token;
+            if (index < 5)
+            {
+                if (token == string.Empty) token = "";
+                difficultyToken[index] = token;
+            }
         }
 
         public string getMonsterTokenByDifficulty(int index)
