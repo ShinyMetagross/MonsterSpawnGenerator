@@ -80,6 +80,8 @@
             this.moveGameUpButton = new System.Windows.Forms.Button();
             this.moveGameDownButton = new System.Windows.Forms.Button();
             this.generatorToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.globalSlotBox = new System.Windows.Forms.ComboBox();
+            this.globalSlotLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -497,9 +499,8 @@
             "Belphegor"});
             this.monsterListItems.Location = new System.Drawing.Point(328, 3);
             this.monsterListItems.Name = "monsterListItems";
-            this.monsterListItems.Size = new System.Drawing.Size(154, 316);
+            this.monsterListItems.Size = new System.Drawing.Size(155, 277);
             this.monsterListItems.TabIndex = 42;
-            this.monsterListItems.Visible = false;
             // 
             // removeMonster
             // 
@@ -598,11 +599,30 @@
             this.moveGameDownButton.UseVisualStyleBackColor = true;
             this.moveGameDownButton.Click += new System.EventHandler(this.moveGameDown);
             // 
+            // globalSlotBox
+            // 
+            this.globalSlotBox.FormattingEnabled = true;
+            this.globalSlotBox.Location = new System.Drawing.Point(389, 291);
+            this.globalSlotBox.Name = "globalSlotBox";
+            this.globalSlotBox.Size = new System.Drawing.Size(155, 21);
+            this.globalSlotBox.TabIndex = 53;
+            // 
+            // globalSlotLabel
+            // 
+            this.globalSlotLabel.AutoSize = true;
+            this.globalSlotLabel.Location = new System.Drawing.Point(325, 294);
+            this.globalSlotLabel.Name = "globalSlotLabel";
+            this.globalSlotLabel.Size = new System.Drawing.Size(58, 13);
+            this.globalSlotLabel.TabIndex = 54;
+            this.globalSlotLabel.Text = "Global Slot";
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 559);
+            this.Controls.Add(this.globalSlotLabel);
+            this.Controls.Add(this.globalSlotBox);
             this.Controls.Add(this.moveGameDownButton);
             this.Controls.Add(this.moveGameUpButton);
             this.Controls.Add(this.weight5);
@@ -712,6 +732,8 @@
         private System.Windows.Forms.Button moveGameUpButton;
         private System.Windows.Forms.Button moveGameDownButton;
         private System.Windows.Forms.ToolTip generatorToolTip;
+        private System.Windows.Forms.ComboBox globalSlotBox;
+        private System.Windows.Forms.Label globalSlotLabel;
     }
 }
 

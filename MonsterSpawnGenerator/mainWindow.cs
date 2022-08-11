@@ -613,7 +613,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append("\n\t}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
+                    sb.Append((thisGame.altGames.Count > 0 ? "\n\t" : "") + "}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");

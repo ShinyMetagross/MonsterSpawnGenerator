@@ -124,7 +124,7 @@
   <data name="addAltGame.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
+        vwAADr8BOAVTJAAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
         QAWDKBUDEhrwAwHThbgJgrp0I7ZFbFJQiwshKyXQxFqkjUJlFoE0Ysbj3DgJY5GICw8c5sI9770z514y
         wmq1UigUolRmtuUMrn45gTACS8PYmNh2TZc0htPppGQySYqi0A3czY5iDMHCabgS/VFBEHRVA/h8Pkqn
         01SqrJpHEF50Yh8cSh/cjwdikiTpqgaoOXi/nF23B0OKgC6Yljphi2+6aREsTbrsd/CrNQaDQYrH4zSf
@@ -142,7 +142,7 @@
   <data name="addGame.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
+        vwAADr8BOAVTJAAAAilJREFUOE+1UktoE1EUvXSTdJOBYjJVQqe1aEBpU7UhkjimsdD4AWNBxFqpH4Rq
         QAWDKBUDEhrwAwHThbgJgrp0I7ZFbFJQiwshKyXQxFqkjUJlFoE0Ysbj3DgJY5GICw8c5sI9770z514y
         wmq1UigUolRmtuUMrn45gTACS8PYmNh2TZc0htPppGQySYqi0A3czY5iDMHCabgS/VFBEHRVA/h8Pkqn
         01SqrJpHEF50Yh8cSh/cjwdikiTpqgaoOXi/nF23B0OKgC6Yljphi2+6aREsTbrsd/CrNQaDQYrH4zSf
@@ -157,7 +157,7 @@
   <data name="removeAltGameButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
+        vwAADr8BOAVTJAAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
         MIg2ocU25yJ4BMItsinENidzPN3v2n307Hrg8C73ne87v75LzEz8+OTyeb3/1uuJWq1GiUSCjOGMu8Fg
         MI8dDgVin1stt1Qq0RzcaIy5WuXvk1N5324Lz/PIcRztOHe7XZpMJsSjkeD6hWTf549icXyWzboENoA5
         l2POZHh6WNYkvu8TPAI+rkjEzLa2OUgKvovH+4SykRk/2HGY02lN8tJ7EEEQRMHq32w1xq+q8GsimSYS
@@ -170,7 +170,7 @@
   <data name="removeGameButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
+        vgAADr4B6kKxwAAAAbtJREFUOE91U79LQlEUPk3p9FrEWw0FCb7NSQShHBscXotk08vJcinbxbn+AXFp
         MIg2ocU25yJ4BMItsinENidzPN3v2n307Hrg8C73ne87v75LzEz8+OTyeb3/1uuJWq1GiUSCjOGMu8Fg
         MI8dDgVin1stt1Qq0RzcaIy5WuXvk1N5324Lz/PIcRztOHe7XZpMJsSjkeD6hWTf549icXyWzboENoA5
         l2POZHh6WNYkvu8TPAI+rkjEzLa2OUgKvovH+4SykRk/2HGY02lN8tJ7EEEQRMHq32w1xq+q8GsimSYS
@@ -188,7 +188,7 @@ Setting this to a negative value will make it so this monster does not spawn at 
   <data name="moveGameUpButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC7SURBVDhPnYyx
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAAC7SURBVDhPnYyx
         DYNAEAQ3ICAkpAAKoBQXQAkUQAcUQAkU4BIogQJcgEOHDhzgW+ks3esXBD5ppP+92cO2bbvY3Ina/ZAh
         sWkNPkirHCJDYjOHA7NyiA6Bxvh4mfDdSFeGwOTFyCTdLABq4+2lCLM687MAGL2gGDM/+QCV8XJZwV2V
         dJIPMLh4xJB0Qrk0ni4dQadUB3oXztAnB2wK4+HLM9At4oHOF1fo4oE1LM6yehc3D/6BXSwhuAiWL4A/
@@ -198,7 +198,7 @@ Setting this to a negative value will make it so this monster does not spawn at 
   <data name="moveGameDownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAADDSURBVDhPnYw9
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAADDSURBVDhPnYw9
         EYNAEIVfQUFJiQAEIAUBSEAADhCABAREAhIQEAEpU6ZIcdlHNsxeboe5ZGe+gXt/kFuF8CfsojPCr3QI
         gV9sRsxl27s60Bsjl94OFMJVjRyYLY4BHRnUzGE4emagFG4aOIOZMhnQkVFDZ4xRJ3oAlXDXoAe9KurY
         xy4Ak4Y9piSfCEAtPLRgoVYn+W9hF4FZS5bZzboi0AhPLRL+N27WE4ncomWyeBniikSuNQOtlyGu+EHu

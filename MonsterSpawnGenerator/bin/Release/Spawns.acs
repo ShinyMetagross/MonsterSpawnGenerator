@@ -1,0 +1,941 @@
+/*======================================================================================================================
+ 													Design Specs
+o MAX_GAME_TYPES
+	    - This corresponds to the game set, like Doom or Chex
+o MAX_ALTS
+	    - This corresponds to a game alt set, like Opposing Force
+o MONSTER_SLOT
+	    - This corresponds to the monster slot, like Zombieman. Slots are in this order:
+										            0: 	Zombieman
+										            1: 	Shotgunguy
+										            2: 	Imp
+										            3: 	Chaingunner
+										            4: 	Demon
+										            5: 	Spectre
+										            6: 	Hellknight
+										            7: 	Baron of Hell
+										            8: 	Arachnotron
+										            9: 	Mancubus
+										            10: Lost Soul
+										            11: Pain Elemental
+										            12: Cacodemon
+										            13: Revenant
+										            14: Archvile
+										            15: Cyberdemon
+										            16: Spider Mastermind
+										            17: Wolfenstein SS
+										            18: Super Shotgunguy
+										            19: Dark Imp
+										            20: Blood Demon
+										            21: Cacolantern
+										            22: Abaddon
+										            23: Hectebus
+										            24: Belphegor
+o MAXPERSLOT
+     - This variable is the slot for a decision on the monster from the slot, like spawning a zombieman variant
+
+													- Strings -
+     o Monster name:
+         - Name of the the monster
+     o Token0-4:
+         - These are inventory items that can be given to a monster for each difficulty, to alter their behavior
+
+													- Stats -
+     o Speed0-4:
+         - These tokens work as a multiplier for monster speed. As such, you should never use numbers with no decimal
+           point. Please use 2.0 instead of 2. If left alone, it will have no affect.
+     o Health0-4:
+         - A health multiplier. Same as speed, these are multipliers. If left alone, it will have no affect.
+     o Weight0-4:
+         - This is a spawn chance, which functions similarly to RandomSpawner. You can use whatever numbers you want,
+           to define the chance of a monster spawning. The higher the weight compared to other monsters, the more likely
+           it is to spawn, and vice versa. If left alone, will be treated as 1. If set to a negative value, however,
+           that means the monster will not spawn at all on that difficulty.
+
+======================================================================================================================*/
+
+str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = 
+{
+	{//Doom
+		{//Classic
+			{//Zombieman
+				{"Zombieman3"}
+			},
+			{//Shotgunguy
+				{"Shotgunguy3"}
+			},
+			{//Doom Imp
+				{"DoomImp3"}
+			},
+			{//Chaingunguy
+				{"Chaingunguy3"}
+			},
+			{//Demon
+				{"DoomDemon3"}
+			},
+			{//Spectre
+				{"Spectre3"}
+			},
+			{//Hell Knight
+				{"HellKnight3"}
+			},
+			{//Baron of Hell
+				{"BaronofHell3"}
+			},
+			{//Arachnotron
+				{"Arachnotron3"}
+			},
+			{//Mancubus
+				{"Fatso3"}
+			},
+			{//Lost Soul
+				{"LostSoul3"}
+			},
+			{//Pain Elemental
+				{"PainElemental3"}
+			},
+			{//Cacodemon
+				{"Cacodemon3"}
+			},
+			{//Revenant
+				{"Revenant3"}
+			},
+			{//Archvile
+				{"Archvile3"}
+			},
+			{//Cyberdemon
+				{"Cyberdemon3"}
+			},
+			{//Spider Mastermind
+				{"SpiderMastermind3"}
+			},
+			{//Wolfenstein SS
+				{"Nazi3"}
+			},
+			{//Super Shotgunguy
+				{"SuperShotgunguy2"}
+			},
+			{//Dark Imp
+				{"DarkImp2"}
+			},
+			{//Blood Demon
+				{"BloodDemon2"}
+			},
+			{//Cacolantern
+				{"Cacolantern2"}
+			},
+			{//Abaddon
+				{"Abaddon2"}
+			},
+			{//Hectebus
+				{"Hectebus2"}
+			},
+			{//Belphegor
+				{"Belphegor2"}
+			}
+		},
+		{//64
+			{//Zombieman
+				{"Zombieman64"}
+			},
+			{//Shotgunguy
+				{"Shotgunguy64"}
+			},
+			{//Doom Imp
+				{"DoomImp64"},
+				{"NightmareImp64"}
+			},
+			{//Chaingunguy
+				{"Chaingunguy64"}
+			},
+			{//Demon
+				{"Demon64"}
+			},
+			{//Spectre
+				{"Spectre64"}
+			},
+			{//Hell Knight
+				{"HellKnight64"}
+			},
+			{//Baron of Hell
+				{"BaronofHell64"}
+			},
+			{//Arachnotron
+				{"Arachnotron64"}
+			},
+			{//Mancubus
+				{"Fatso64"}
+			},
+			{//Lost Soul
+				{"LostSoul64"}
+			},
+			{//Pain Elemental
+				{"PainElemental64"}
+			},
+			{//Cacodemon
+				{"Cacodemon64"}
+			},
+			{//Revenant
+				{"Revenant64"}
+			},
+			{//Archvile
+				{"Archvile64"}
+			},
+			{//Cyberdemon
+				{"Cyberdemon64"}
+			},
+			{//Spider Mastermind
+				{"SpiderMastermind64"},
+				{"MotherDemon64"}
+			},
+			{//Wolfenstein SS
+				{"WolfensteinSSJagaur"}
+			},
+			{//Super Shotgunguy
+				{"SuperShotgunguy64"}
+			},
+			{//Dark Imp
+				{"DarkImp64"}
+			},
+			{//Blood Demon
+				{"BloodDemon64"}
+			},
+			{//Cacolantern
+				{"Cacolantern64"}
+			},
+			{//Abaddon
+				{"Abaddon64"}
+			},
+			{//Hectebus
+				{"Hectebus64"}
+			},
+			{//Belphegor
+				{"Belphegor64"}
+			}
+		},
+		{//VDR
+			{//Zombieman
+				{"ZombieManRandomizer"}
+			},
+			{//Shotgunguy
+				{"ShotgunguyRandomizer"}
+			},
+			{//Doom Imp
+				{"DoomImpRandomizer"}
+			},
+			{//Chaingunguy
+				{"ChaingunguyRandomizer"}
+			},
+			{//Demon
+				{"DoomDemonRandomizer"}
+			},
+			{//Spectre
+				{"SpectreRandomizer"}
+			},
+			{//Hell Knight
+				{"HellKnightRandomizer"}
+			},
+			{//Baron of Hell
+				{"BaronofHell3"},
+				{"Belphegor2"},
+				{"MMRandomizer_HellsFury"},
+				{"MMRandomizer_CyberBaron"},
+				{"MMRandomizer_BruiserDemon"},
+				{"MMRandomizer_Belphegor"}
+			},
+			{//Arachnotron
+				{"Arachnotron3"},
+				{"MMRandomizer_ChaingunArachnotron"},
+				{"MMRandomizer_RailgunArachnotron"}
+			},
+			{//Mancubus
+				{"Fatso3"},
+				{"Hectebus2"},
+				{"MMRandomizer_Cryocubus"},
+				{"MMRandomizer_Hectebus"}
+			},
+			{//Lost Soul
+				{"LostSoulRandomizer"}
+			},
+			{//Pain Elemental
+				{"PainElementalRandomizer"}
+			},
+			{//Cacodemon
+				{"CacodemonRandomizer"}
+			},
+			{//Revenant
+				{"RevenantRandomizer"}
+			},
+			{//Archvile
+				{"ArchvileRandomizer"}
+			},
+			{//Cyberdemon
+				{"Cyberdemon3"},
+				{"MMRandomizer_ArchonOfHell"},
+				{"MMRandomizer_Annihilator"}
+			},
+			{//Spider Mastermind
+				{"SpiderMastermind3"},
+				{"MMRandomizer_ArachnorbQueen"},
+				{"MMRandomizer_Demolisher"}
+			},
+			{//Wolfenstein SS
+				{"Nazi3"}
+			},
+			{//Super Shotgunguy
+				{"SuperShotgunguy2"}
+			},
+			{//Dark Imp
+				{"DarkImp2"}
+			},
+			{//Blood Demon
+				{"BloodDemon2"}
+			},
+			{//Cacolantern
+				{"Cacolantern2"}
+			},
+			{//Abaddon
+				{"Abaddon2"}
+			},
+			{//Hectebus
+				{"Hectebus2"}
+			},
+			{//Belphegor
+				{"Belphegor2"}
+			}
+		}
+	},
+	{//Chex
+		{//Main
+			{//Zombieman
+				{"FlemoidusCommonus3"}
+			},
+			{//Shotgunguy
+				{"FlemoidusBipedicus3"}
+			},
+			{//Doom Imp
+				{"NewArmoredFlemoidusBipedicus"}
+			},
+			{//Chaingunguy
+				{"NewArmoredFlemoidusBipedicus"}
+			},
+			{//Demon
+				{"NewFlemoidusStridicus"}
+			},
+			{//Spectre
+				{"NewFlemoidusCycloptisCommonus"},
+				{"NewLarva"}
+			},
+			{//Hell Knight
+				{"NewQuadrumpus"}
+			},
+			{//Baron of Hell
+				{"OldFlemoidusMaximusDoom"}
+			},
+			{//Arachnotron
+				{"NewQuadrumpus"}
+			},
+			{//Mancubus
+				{"NewQuadrumpus"}
+			},
+			{//Lost Soul
+				{"FlemMine2"},
+				{"NewFlemoidusGyro"}
+			},
+			{//Pain Elemental
+				{"SuperCycloptis2"}
+			},
+			{//Cacodemon
+				{"SuperCycloptis2"}
+			},
+			{//Revenant
+				{"NewQuadrumpus"}
+			},
+			{//Archvile
+				{"OldFlemoidusMaximusDoom"}
+			},
+			{//Cyberdemon
+				{"NewSnotfolus"}
+			},
+			{//Spider Mastermind
+				{"FlembominationNew"}
+			},
+			{//Wolfenstein SS
+				{"YellowArmoredFlemoid"}
+			},
+			{//Super Shotgunguy
+				{"SuperShotgunguy2"}
+			},
+			{//Dark Imp
+				{"DarkImp2"}
+			},
+			{//Blood Demon
+				{"BloodDemon2"}
+			},
+			{//Cacolantern
+				{"Cacolantern2"}
+			},
+			{//Abaddon
+				{"Abaddon2"}
+			},
+			{//Hectebus
+				{"Hectebus2"}
+			},
+			{//Belphegor
+				{"Belphegor2"}
+			}
+		}
+	},
+	{//Heretic
+		{//Poop
+			{//Zombieman
+			},
+			{//Shotgunguy
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
+	},
+	{//Duke 3D
+		{//Main
+			{//Zombieman
+				{"Turd"}
+			},
+			{//Shotgunguy
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
+	}
+};
+
+int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] = 
+{
+	{//Doom
+		{//Classic
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Doom Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Chaingunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spectre
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hell Knight
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Baron of Hell
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Arachnotron
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Mancubus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Lost Soul
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Pain Elemental
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacodemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Revenant
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Archvile
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cyberdemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spider Mastermind
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Wolfenstein SS
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Super Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Dark Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Blood Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacolantern
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Abaddon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hectebus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Belphegor
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			}
+		},
+		{//64
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Doom Imp
+				{0,0,4,0,0,3,0,0,2,0,0,1,0,0,-1},
+				{0,0,1,0,0,2,0,0,3,0,0,4,0,0,0}
+			},
+			{//Chaingunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spectre
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hell Knight
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Baron of Hell
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Arachnotron
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Mancubus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Lost Soul
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Pain Elemental
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacodemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Revenant
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Archvile
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cyberdemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spider Mastermind
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Wolfenstein SS
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Super Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Dark Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Blood Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacolantern
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Abaddon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hectebus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Belphegor
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			}
+		},
+		{//VDR
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Doom Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Chaingunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spectre
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hell Knight
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Baron of Hell
+				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,2},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Arachnotron
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Mancubus
+				{0,0,6,0,0,6,0,0,6,0,0,6,0,0,6},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Lost Soul
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Pain Elemental
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacodemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Revenant
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Archvile
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cyberdemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spider Mastermind
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Wolfenstein SS
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Super Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Dark Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Blood Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacolantern
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Abaddon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hectebus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Belphegor
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			}
+		}
+	},
+	{//Chex
+		{//Main
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Doom Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Chaingunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spectre
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hell Knight
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Baron of Hell
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Arachnotron
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Mancubus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Lost Soul
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Pain Elemental
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacodemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Revenant
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Archvile
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cyberdemon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Spider Mastermind
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Wolfenstein SS
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Super Shotgunguy
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Dark Imp
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Blood Demon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Cacolantern
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Abaddon
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Hectebus
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Belphegor
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			}
+		}
+	},
+	{//Heretic
+		{//Poop
+			{//Zombieman
+			},
+			{//Shotgunguy
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
+	},
+	{//Duke 3D
+		{//Main
+			{//Zombieman
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+			},
+			{//Shotgunguy
+			},
+			{//Doom Imp
+			},
+			{//Chaingunguy
+			},
+			{//Demon
+			},
+			{//Spectre
+			},
+			{//Hell Knight
+			},
+			{//Baron of Hell
+			},
+			{//Arachnotron
+			},
+			{//Mancubus
+			},
+			{//Lost Soul
+			},
+			{//Pain Elemental
+			},
+			{//Cacodemon
+			},
+			{//Revenant
+			},
+			{//Archvile
+			},
+			{//Cyberdemon
+			},
+			{//Spider Mastermind
+			},
+			{//Wolfenstein SS
+			},
+			{//Super Shotgunguy
+			},
+			{//Dark Imp
+			},
+			{//Blood Demon
+			},
+			{//Cacolantern
+			},
+			{//Abaddon
+			},
+			{//Hectebus
+			},
+			{//Belphegor
+			}
+		}
+	}
+};
