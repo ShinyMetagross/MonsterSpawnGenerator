@@ -502,7 +502,7 @@ namespace MonsterSpawnGenerator
             int monsterCounter = 0;
 
             sb.Append(designSpec.ToString() + "\n");
-            sb.Append("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] = \n{");
+            sb.Append("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] = \n{");
             foreach(Object item in this.gameList.Items)
             {
                 gameCounter++;
@@ -642,7 +642,7 @@ namespace MonsterSpawnGenerator
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
                     fileContent = reader.ReadToEnd();
-                    if(!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
+                    if(!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
                     {
                         MessageBox.Show("This text file is invalid, please select another.");
                     }
@@ -661,7 +661,7 @@ namespace MonsterSpawnGenerator
         {
             string virtualString = file.Replace("\t", String.Empty);
 
-            int startPosition = virtualString.IndexOf("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =") + "int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][6] =".Length;
+            int startPosition = virtualString.IndexOf("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") + "int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =".Length;
             virtualString = virtualString.Substring(startPosition);
 
             StringReader stringReader = new StringReader(virtualString);
