@@ -20,6 +20,11 @@ namespace MonsterSpawnGenerator
             monsterslots.Add(newMonSlot);
         }
 
+        public void monsterSlotRemove(monsterSlot newMonSlot)
+        {
+            monsterslots.Remove(newMonSlot);
+        }
+
         public void setAltGameName(string name)
         {
             altGameName = name;

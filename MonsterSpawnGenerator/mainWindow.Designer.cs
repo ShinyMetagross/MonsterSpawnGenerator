@@ -69,7 +69,6 @@
             this.token3 = new System.Windows.Forms.TextBox();
             this.token2 = new System.Windows.Forms.TextBox();
             this.token1 = new System.Windows.Forms.TextBox();
-            this.monsterListItems = new System.Windows.Forms.ListBox();
             this.removeMonster = new System.Windows.Forms.Button();
             this.weight5 = new System.Windows.Forms.TextBox();
             this.weight4 = new System.Windows.Forms.TextBox();
@@ -80,8 +79,12 @@
             this.moveGameUpButton = new System.Windows.Forms.Button();
             this.moveGameDownButton = new System.Windows.Forms.Button();
             this.generatorToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.globalSlotBox = new System.Windows.Forms.ComboBox();
+            this.addMonsterSlotGlobal = new System.Windows.Forms.Button();
+            this.removeMonsterSlotGlobal = new System.Windows.Forms.Button();
+            this.copyMonsterSlotGlobal = new System.Windows.Forms.Button();
             this.globalSlotLabel = new System.Windows.Forms.Label();
+            this.globalSlotListView = new System.Windows.Forms.ListBox();
+            this.globalSlotBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // monsterSlotList
@@ -468,40 +471,6 @@
             this.token1.TabIndex = 37;
             this.token1.TextChanged += new System.EventHandler(this.token1Change);
             // 
-            // monsterListItems
-            // 
-            this.monsterListItems.FormattingEnabled = true;
-            this.monsterListItems.Items.AddRange(new object[] {
-            "Zombieman",
-            "Shotgunguy",
-            "Doom Imp",
-            "Chaingunguy",
-            "Demon",
-            "Spectre",
-            "Hell Knight",
-            "Baron of Hell",
-            "Arachnotron",
-            "Mancubus",
-            "Lost Soul",
-            "Pain Elemental",
-            "Cacodemon",
-            "Revenant",
-            "Archvile",
-            "Cyberdemon",
-            "Spider Mastermind",
-            "Wolfenstein SS",
-            "Super Shotgunguy",
-            "Dark Imp",
-            "Blood Demon",
-            "Cacolantern",
-            "Abaddon",
-            "Hectebus",
-            "Belphegor"});
-            this.monsterListItems.Location = new System.Drawing.Point(328, 3);
-            this.monsterListItems.Name = "monsterListItems";
-            this.monsterListItems.Size = new System.Drawing.Size(155, 277);
-            this.monsterListItems.TabIndex = 42;
-            // 
             // removeMonster
             // 
             this.removeMonster.Enabled = false;
@@ -599,30 +568,74 @@
             this.moveGameDownButton.UseVisualStyleBackColor = true;
             this.moveGameDownButton.Click += new System.EventHandler(this.moveGameDown);
             // 
-            // globalSlotBox
+            // addMonsterSlotGlobal
             // 
-            this.globalSlotBox.FormattingEnabled = true;
-            this.globalSlotBox.Location = new System.Drawing.Point(389, 291);
-            this.globalSlotBox.Name = "globalSlotBox";
-            this.globalSlotBox.Size = new System.Drawing.Size(155, 21);
-            this.globalSlotBox.TabIndex = 53;
+            this.addMonsterSlotGlobal.Image = ((System.Drawing.Image)(resources.GetObject("addMonsterSlotGlobal.Image")));
+            this.addMonsterSlotGlobal.Location = new System.Drawing.Point(547, 290);
+            this.addMonsterSlotGlobal.Name = "addMonsterSlotGlobal";
+            this.addMonsterSlotGlobal.Size = new System.Drawing.Size(24, 24);
+            this.addMonsterSlotGlobal.TabIndex = 57;
+            this.generatorToolTip.SetToolTip(this.addMonsterSlotGlobal, "Add game");
+            this.addMonsterSlotGlobal.UseVisualStyleBackColor = true;
+            this.addMonsterSlotGlobal.Click += new System.EventHandler(this.addGlobalMonsterSlot);
+            // 
+            // removeMonsterSlotGlobal
+            // 
+            this.removeMonsterSlotGlobal.Image = ((System.Drawing.Image)(resources.GetObject("removeMonsterSlotGlobal.Image")));
+            this.removeMonsterSlotGlobal.Location = new System.Drawing.Point(547, 19);
+            this.removeMonsterSlotGlobal.Name = "removeMonsterSlotGlobal";
+            this.removeMonsterSlotGlobal.Size = new System.Drawing.Size(24, 24);
+            this.removeMonsterSlotGlobal.TabIndex = 58;
+            this.generatorToolTip.SetToolTip(this.removeMonsterSlotGlobal, "Remove game");
+            this.removeMonsterSlotGlobal.UseVisualStyleBackColor = true;
+            this.removeMonsterSlotGlobal.Click += new System.EventHandler(this.removeGlobalMonsterSlot);
+            // 
+            // copyMonsterSlotGlobal
+            // 
+            this.copyMonsterSlotGlobal.Image = ((System.Drawing.Image)(resources.GetObject("copyMonsterSlotGlobal.Image")));
+            this.copyMonsterSlotGlobal.Location = new System.Drawing.Point(577, 290);
+            this.copyMonsterSlotGlobal.Name = "copyMonsterSlotGlobal";
+            this.copyMonsterSlotGlobal.Size = new System.Drawing.Size(24, 24);
+            this.copyMonsterSlotGlobal.TabIndex = 59;
+            this.generatorToolTip.SetToolTip(this.copyMonsterSlotGlobal, "Copy Monster Slot");
+            this.copyMonsterSlotGlobal.UseVisualStyleBackColor = true;
+            this.copyMonsterSlotGlobal.Click += new System.EventHandler(this.copyMonsterSlot);
             // 
             // globalSlotLabel
             // 
             this.globalSlotLabel.AutoSize = true;
-            this.globalSlotLabel.Location = new System.Drawing.Point(325, 294);
+            this.globalSlotLabel.Location = new System.Drawing.Point(315, 296);
             this.globalSlotLabel.Name = "globalSlotLabel";
-            this.globalSlotLabel.Size = new System.Drawing.Size(58, 13);
+            this.globalSlotLabel.Size = new System.Drawing.Size(74, 13);
             this.globalSlotLabel.TabIndex = 54;
-            this.globalSlotLabel.Text = "Global Slot";
+            this.globalSlotLabel.Text = "Monster Slots:";
+            // 
+            // globalSlotListView
+            // 
+            this.globalSlotListView.FormattingEnabled = true;
+            this.globalSlotListView.Location = new System.Drawing.Point(386, 19);
+            this.globalSlotListView.Name = "globalSlotListView";
+            this.globalSlotListView.Size = new System.Drawing.Size(155, 264);
+            this.globalSlotListView.TabIndex = 61;
+            // 
+            // globalSlotBox
+            // 
+            this.globalSlotBox.Location = new System.Drawing.Point(386, 293);
+            this.globalSlotBox.Name = "globalSlotBox";
+            this.globalSlotBox.Size = new System.Drawing.Size(155, 20);
+            this.globalSlotBox.TabIndex = 62;
             // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 559);
-            this.Controls.Add(this.globalSlotLabel);
             this.Controls.Add(this.globalSlotBox);
+            this.Controls.Add(this.globalSlotListView);
+            this.Controls.Add(this.copyMonsterSlotGlobal);
+            this.Controls.Add(this.removeMonsterSlotGlobal);
+            this.Controls.Add(this.addMonsterSlotGlobal);
+            this.Controls.Add(this.globalSlotLabel);
             this.Controls.Add(this.moveGameDownButton);
             this.Controls.Add(this.moveGameUpButton);
             this.Controls.Add(this.weight5);
@@ -632,7 +645,6 @@
             this.Controls.Add(this.weight1);
             this.Controls.Add(this.weightLabel);
             this.Controls.Add(this.removeMonster);
-            this.Controls.Add(this.monsterListItems);
             this.Controls.Add(this.token5);
             this.Controls.Add(this.token4);
             this.Controls.Add(this.token3);
@@ -721,7 +733,6 @@
         private System.Windows.Forms.TextBox token3;
         private System.Windows.Forms.TextBox token2;
         private System.Windows.Forms.TextBox token1;
-        private System.Windows.Forms.ListBox monsterListItems;
         private System.Windows.Forms.Button removeMonster;
         private System.Windows.Forms.TextBox weight5;
         private System.Windows.Forms.TextBox weight4;
@@ -732,8 +743,12 @@
         private System.Windows.Forms.Button moveGameUpButton;
         private System.Windows.Forms.Button moveGameDownButton;
         private System.Windows.Forms.ToolTip generatorToolTip;
-        private System.Windows.Forms.ComboBox globalSlotBox;
         private System.Windows.Forms.Label globalSlotLabel;
+        private System.Windows.Forms.Button addMonsterSlotGlobal;
+        private System.Windows.Forms.Button removeMonsterSlotGlobal;
+        private System.Windows.Forms.Button copyMonsterSlotGlobal;
+        private System.Windows.Forms.ListBox globalSlotListView;
+        private System.Windows.Forms.TextBox globalSlotBox;
     }
 }
 

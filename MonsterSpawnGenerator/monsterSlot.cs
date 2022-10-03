@@ -15,6 +15,11 @@ namespace MonsterSpawnGenerator
             this.monsterSlotName = name;
         }
 
+        public void renameMonster(string name)
+        {
+            this.monsterSlotName = name;
+        }
+
         public void monsterAdd(monster newMon)
         {
             monsters.Add(newMon);
