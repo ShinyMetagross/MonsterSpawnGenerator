@@ -280,12 +280,26 @@ Setting this to a negative value will make it so this monster does not spawn at 
         5DB0/qbrzUu3vG5du73i9uBw6PCdkeiR0TvsO1N3U+6+uJd5b+H+xgfoB0UPpR5WPFJ81PCz7s9to5aj
         p8dcx/ofBz++P84af/ZLxi/vJwqekJ9UTKpMNk+ZTZ2adp++8XTl04ln6c8WZgp/lf619rnO8x9+c/yt
         fzZiduIF/8Wn30teyr889GrZq565gLlHr1NfL8wXvZF/c/gt423fu/B3kwtZ77HvKz/ofuj+6PPxwafU
-        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsRAAALEQF/ZF+RAAAA/ElEQVQ4T53SQUoDQRBG4ZZoQBEPIFll
+        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsPAAALDwGS+QOlAAAA/ElEQVQ4T53SQUoDQRBG4ZZoQBEPIFll
         EQJZG8gx9Ba68SBu+xQeIUcRVFzoQkUEFyIq7XtJLUIzSQcLPuipqv5hhkmdlcsUl7gLnqcxXVO59DHC
         CT7whPvg2Z4zd/pxK2p5+Rq/KPjBDEfBsz1n7ri7ErJMdfCKOd7xjMfg2Z4zd9wdxW0qlwlMn8fzGGeV
         ccwMcXeyeF7UakAuO9hbw1kz4Bg3uK3Yc9YMOMQ5Lir2nP0rYBCbW32DrleYxeZWAX6o/YofcDd2mwED
         vOCtYs9ZM+AAp6j/A3vOmgG+wiadAUN84xMPDe64O4zbVC49XOELpm/ijru9lFL6A8pItUxvlsL4AAAA
         AElFTkSuQmCC
+</value>
+  </data>
+  <data name="generateSlots.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wAAADsABataJCQAAAb9JREFUOE+NUj1IAzEYzd31x7YUFfwZBLEORdBJFMHFVdDBxUVEVydxcHFwc3PQ
+        RXEQRBAddHAVx3aodCnt3bWDgx2qIlSUim3v13dpoqFV6YPHJV/ee0m+HGlGLRcMW7qyYuflUycvJcEU
+        eIXaRl0N9jMZdB0RaM7YtAGIVp2C9OIWiPs7pRpMO4YaGENo1qtR40MiJqGw32r4kzYf0wBblzeFRRdh
+        aZxmyVCDsY9MaMDUfbOoXYsaTlJXQzEMqrxg68pBJRNWaDID7t6LgFuuEUlwp10+gShZTnfLzEeB3afQ
+        l6JoEklg0vgE4jnm+0YlE40aWmAaV1rDZofeJuC7GGB6A+ziltM9Xcz3Lx7v4vJnNjKM0AUvgCYhwCkm
+        4yGmaR9OXi7x4xiaf4KV2wcCznkA7njMyn/C0n3L8NxAu43eTBJT88/wANDGP7HItC0wNXkUf+Prz4bK
+        Fl1A2oUQYmG+h7cfpItALRfoRG0dfXrjOvSuUM2GGz2rq4EoCikhxKOD2hNYhJG+FKdXR79GqJkDhQju
+        duIZRXEzYU6gD0PM1gpTU8YhOkLYPb4W6J2kBF7i3eefU30SkwKEfAFsnrgDTUV7vgAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>

@@ -9,6 +9,80 @@ namespace MonsterSpawnGenerator
     public partial class mainWindow : Form
     {
         StringBuilder designSpec = new StringBuilder();
+        string[] defaultMonsters = { 
+            "Zombieman",
+            "Shotgunguy",
+            "Doom Imp",
+            "Chaingunguy",
+            "Demon",
+            "Spectre",
+            "Hell Knight",
+            "Baron of Hell",
+            "Arachnotron",
+            "Mancubus",
+            "Lost Soul",
+            "Pain Elemental",
+            "Cacodemon",
+            "Revenant",
+            "Archvile",
+            "Cyberdemon",
+            "Spider Mastermind",
+            "Wolfenstein SS",
+            "Super Shotgunguy",
+            "Dark Imp",
+            "Blood Demon",
+            "Cacolantern",
+            "Abaddon",
+            "Hectebus",
+            "Belphegor",
+            "Flemoidus Commonus",
+            "Flemoidus Bipedicus",
+            "Flem Mine",
+            "Super Cycloptis",
+            "Snotfolus",
+            "Flembomination",
+            "Flemoidus Stridicus",
+            "Armored Flemoidus Bipedicus",
+            "Quadrumpus",
+            "Flemoidus Cycloptis Commonus",
+            "Larva",
+            "Flembrane",
+            "Flemoidus Maximus",
+            "Heretic Imp",
+            "Heretic Imp Leader",
+            "Wizard",
+            "Mummy",
+            "Mummy Ghost",
+            "Mummy Leader",
+            "Knight",
+            "Knight Ghost",
+            "Iron Lich",
+            "Clink",
+            "Beast",
+            "Snake",
+            "Minotaur",
+            "D'Sparil",
+            "Chicken",
+            "Ettin",
+            "Bishop",
+            "Centaur",
+            "Centaur Leader",
+            "Green Chaos Serpent",
+            "Brown Chaos Serpent",
+            "Fire Demon",
+            "Wendigo",
+            "Serpent",
+            "Serpent Leader",
+            "Wraith",
+            "Wraith (Buried)",
+            "Traductus",
+            "Menelkir",
+            "Zedek",
+            "Death Wyvern",
+            "Heresiarch",
+            "Korax",
+            "Pig"
+                                    };
 
         public mainWindow()
         {
@@ -1015,6 +1089,20 @@ namespace MonsterSpawnGenerator
                     }
                 }
             }
+        }
+
+        private void doGenerateSlots(object sender, EventArgs e)
+        {
+            globalSlotListView.Items.Clear();
+            foreach (string monsterName in defaultMonsters)
+            {
+                globalSlotListView.Items.Add(new monsterSlot(monsterName));
+            }
+        }
+
+        private void generateSlots_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

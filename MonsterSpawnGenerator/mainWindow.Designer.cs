@@ -82,6 +82,7 @@
             this.addMonsterSlotGlobal = new System.Windows.Forms.Button();
             this.removeMonsterSlotGlobal = new System.Windows.Forms.Button();
             this.copyMonsterSlotGlobal = new System.Windows.Forms.Button();
+            this.generateSlots = new System.Windows.Forms.Button();
             this.globalSlotLabel = new System.Windows.Forms.Label();
             this.globalSlotListView = new System.Windows.Forms.ListBox();
             this.globalSlotBox = new System.Windows.Forms.TextBox();
@@ -575,7 +576,7 @@
             this.addMonsterSlotGlobal.Name = "addMonsterSlotGlobal";
             this.addMonsterSlotGlobal.Size = new System.Drawing.Size(24, 24);
             this.addMonsterSlotGlobal.TabIndex = 57;
-            this.generatorToolTip.SetToolTip(this.addMonsterSlotGlobal, "Add game");
+            this.generatorToolTip.SetToolTip(this.addMonsterSlotGlobal, "Add monster slot");
             this.addMonsterSlotGlobal.UseVisualStyleBackColor = true;
             this.addMonsterSlotGlobal.Click += new System.EventHandler(this.addGlobalMonsterSlot);
             // 
@@ -586,7 +587,7 @@
             this.removeMonsterSlotGlobal.Name = "removeMonsterSlotGlobal";
             this.removeMonsterSlotGlobal.Size = new System.Drawing.Size(24, 24);
             this.removeMonsterSlotGlobal.TabIndex = 58;
-            this.generatorToolTip.SetToolTip(this.removeMonsterSlotGlobal, "Remove game");
+            this.generatorToolTip.SetToolTip(this.removeMonsterSlotGlobal, "Remove monster slot");
             this.removeMonsterSlotGlobal.UseVisualStyleBackColor = true;
             this.removeMonsterSlotGlobal.Click += new System.EventHandler(this.removeGlobalMonsterSlot);
             // 
@@ -600,6 +601,18 @@
             this.generatorToolTip.SetToolTip(this.copyMonsterSlotGlobal, "Copy Monster Slot");
             this.copyMonsterSlotGlobal.UseVisualStyleBackColor = true;
             this.copyMonsterSlotGlobal.Click += new System.EventHandler(this.copyMonsterSlot);
+            // 
+            // generateSlots
+            // 
+            this.generateSlots.Image = ((System.Drawing.Image)(resources.GetObject("generateSlots.Image")));
+            this.generateSlots.Location = new System.Drawing.Point(547, 49);
+            this.generateSlots.Name = "generateSlots";
+            this.generateSlots.Size = new System.Drawing.Size(24, 24);
+            this.generateSlots.TabIndex = 63;
+            this.generatorToolTip.SetToolTip(this.generateSlots, "Generate default monster slots");
+            this.generateSlots.UseVisualStyleBackColor = true;
+            this.generateSlots.Click += new System.EventHandler(this.generateSlots_Click);
+            this.generateSlots.MouseCaptureChanged += new System.EventHandler(this.doGenerateSlots);
             // 
             // globalSlotLabel
             // 
@@ -630,6 +643,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 559);
+            this.Controls.Add(this.generateSlots);
             this.Controls.Add(this.globalSlotBox);
             this.Controls.Add(this.globalSlotListView);
             this.Controls.Add(this.copyMonsterSlotGlobal);
@@ -749,6 +763,7 @@
         private System.Windows.Forms.Button copyMonsterSlotGlobal;
         private System.Windows.Forms.ListBox globalSlotListView;
         private System.Windows.Forms.TextBox globalSlotBox;
+        private System.Windows.Forms.Button generateSlots;
     }
 }
 
