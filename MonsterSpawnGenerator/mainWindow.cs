@@ -24,7 +24,7 @@ namespace MonsterSpawnGenerator
             "Revenant",
             "Cacolantern",
             "Pain Elemental",
-            "Hellknight",
+            "Hell Knight",
             "Arachnotron",
             "Mancubus",
             "Abaddon",
