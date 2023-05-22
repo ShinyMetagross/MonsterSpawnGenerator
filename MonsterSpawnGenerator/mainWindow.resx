@@ -136,9 +136,6 @@
         Yrrk7+D15F/ZMO3MmtJagNNa0pGWqN5eA6KfahFQKKOmosUAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="generatorToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="addGame.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -280,7 +277,7 @@ Setting this to a negative value will make it so this monster does not spawn at 
         5DB0/qbrzUu3vG5du73i9uBw6PCdkeiR0TvsO1N3U+6+uJd5b+H+xgfoB0UPpR5WPFJ81PCz7s9to5aj
         p8dcx/ofBz++P84af/ZLxi/vJwqekJ9UTKpMNk+ZTZ2adp++8XTl04ln6c8WZgp/lf619rnO8x9+c/yt
         fzZiduIF/8Wn30teyr889GrZq565gLlHr1NfL8wXvZF/c/gt423fu/B3kwtZ77HvKz/ofuj+6PPxwafU
-        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsPAAALDwGS+QOlAAAA/ElEQVQ4T53SQUoDQRBG4ZZoQBEPIFll
+        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsOAAALDgFAvuFBAAAA/ElEQVQ4T53SQUoDQRBG4ZZoQBEPIFll
         EQJZG8gx9Ba68SBu+xQeIUcRVFzoQkUEFyIq7XtJLUIzSQcLPuipqv5hhkmdlcsUl7gLnqcxXVO59DHC
         CT7whPvg2Z4zd/pxK2p5+Rq/KPjBDEfBsz1n7ri7ErJMdfCKOd7xjMfg2Z4zd9wdxW0qlwlMn8fzGGeV
         ccwMcXeyeF7UakAuO9hbw1kz4Bg3uK3Yc9YMOMQ5Lir2nP0rYBCbW32DrleYxeZWAX6o/YofcDd2mwED
@@ -291,7 +288,7 @@ Setting this to a negative value will make it so this monster does not spawn at 
   <data name="generateSlots.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAb9JREFUOE+NUj1IAzEYzd31x7YUFfwZBLEORdBJFMHFVdDBxUVEVydxcHFwc3PQ
+        vwAADr8BOAVTJAAAAb9JREFUOE+NUj1IAzEYzd31x7YUFfwZBLEORdBJFMHFVdDBxUVEVydxcHFwc3PQ
         RXEQRBAddHAVx3aodCnt3bWDgx2qIlSUim3v13dpoqFV6YPHJV/ee0m+HGlGLRcMW7qyYuflUycvJcEU
         eIXaRl0N9jMZdB0RaM7YtAGIVp2C9OIWiPs7pRpMO4YaGENo1qtR40MiJqGw32r4kzYf0wBblzeFRRdh
         aZxmyVCDsY9MaMDUfbOoXYsaTlJXQzEMqrxg68pBJRNWaDID7t6LgFuuEUlwp10+gShZTnfLzEeB3afQ

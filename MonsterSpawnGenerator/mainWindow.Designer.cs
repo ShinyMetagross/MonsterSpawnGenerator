@@ -630,6 +630,7 @@
             this.globalSlotListView.Name = "globalSlotListView";
             this.globalSlotListView.Size = new System.Drawing.Size(155, 264);
             this.globalSlotListView.TabIndex = 61;
+            this.globalSlotListView.SelectedIndexChanged += new System.EventHandler(this.globalSlotListView_SelectedIndexChanged);
             // 
             // globalSlotBox
             // 

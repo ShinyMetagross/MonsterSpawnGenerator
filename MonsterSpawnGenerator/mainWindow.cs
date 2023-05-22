@@ -14,70 +14,71 @@ namespace MonsterSpawnGenerator
             "Shotgunguy",
             "Doom Imp",
             "Chaingunguy",
+            "Super Shotgunguy",
             "Demon",
+            "Dark Imp",
             "Spectre",
-            "Hell Knight",
-            "Baron of Hell",
-            "Arachnotron",
-            "Mancubus",
+            "Blood Demon",
             "Lost Soul",
-            "Pain Elemental",
             "Cacodemon",
             "Revenant",
-            "Archvile",
-            "Cyberdemon",
-            "Spider Mastermind",
-            "Wolfenstein SS",
-            "Super Shotgunguy",
-            "Dark Imp",
-            "Blood Demon",
             "Cacolantern",
+            "Pain Elemental",
+            "Hellknight",
+            "Arachnotron",
+            "Mancubus",
             "Abaddon",
+            "Archvile",
+            "Baron of Hell",
             "Hectebus",
             "Belphegor",
+            "Spider Mastermind",
+            "Cyberdemon",
+            "Wolfenstein SS",
             "Flemoidus Commonus",
             "Flemoidus Bipedicus",
-            "Flem Mine",
-            "Super Cycloptis",
-            "Snotfolus",
-            "Flembomination",
-            "Flemoidus Stridicus",
             "Armored Flemoidus Bipedicus",
-            "Quadrumpus",
-            "Flemoidus Cycloptis Commonus",
+            "Flemoidus Stridicus",
             "Larva",
-            "Flembrane",
+            "Flem Mine",
+            "Flemoidus Cycloptis Commonus",
+            "Super Cycloptis",
+            "Quadrumpus",
             "Flemoidus Maximus",
+            "Flembrane",
+            "Flembomination",
+            "Snotfolus",
             "Heretic Imp",
             "Heretic Imp Leader",
-            "Wizard",
             "Mummy",
             "Mummy Ghost",
             "Mummy Leader",
+            "Mummy Leader Ghost",
+            "Wizard",       
             "Knight",
             "Knight Ghost",
-            "Iron Lich",
             "Clink",
-            "Beast",
             "Snake",
+            "Beast",
+            "Iron Lich",  
             "Minotaur",
             "D'Sparil",
             "Chicken",
             "Ettin",
+            "Fire Demon",
             "Bishop",
             "Centaur",
             "Centaur Leader",
             "Green Chaos Serpent",
-            "Brown Chaos Serpent",
-            "Fire Demon",
-            "Wendigo",
             "Serpent",
             "Serpent Leader",
+            "Wendigo",
             "Wraith",
             "Wraith (Buried)",
+            "Brown Chaos Serpent",
             "Traductus",
-            "Menelkir",
             "Zedek",
+            "Menelkir",  
             "Death Wyvern",
             "Heresiarch",
             "Korax",
@@ -726,6 +727,31 @@ namespace MonsterSpawnGenerator
                         this.gameList.Items.Clear();
                         dissectStrings(fileContent);
                         dissectValues(fileContent);
+                        gameList.SelectedIndex = 0;
+                        bool drawnGlobalList = false;
+                        foreach (game game in this.gameList.Items)
+                        {
+                            foreach (altGame altGame in game.altGames)
+                            {
+                                altGame sortedAltGame = new altGame(altGame.ToString());
+                                for (int i = 0; i < defaultMonsters.Length; i++)
+                                {
+                                    monsterSlot newMonster = altGame.containsMonsterSlot(defaultMonsters[i]);
+                                    if (newMonster != null)
+                                        sortedAltGame.monsterSlotAdd(altGame.containsMonsterSlot(defaultMonsters[i]));
+                                }
+                                altGame.monsterslots = sortedAltGame.monsterslots;
+                                if(drawnGlobalList == false)
+                                {
+                                    globalSlotListView.Items.Clear();
+                                    foreach (monsterSlot monSlot in altGame.monsterslots)
+                                    {
+                                        globalSlotListView.Items.Add(monSlot.ToString());
+                                    }
+                                    drawnGlobalList = true;
+                                }
+                            }    
+                        }
                         MessageBox.Show("Imported Spawns Successfully!");
                     }
                 }
@@ -789,8 +815,6 @@ namespace MonsterSpawnGenerator
                                         if (line.Substring(3) == monsterSlotName)
                                         {
                                             monsterSlot newMonsterSlot = new monsterSlot(monsterSlotName);
-                                            if(!globalSlotListView.Items.Contains(monsterSlotName))
-                                                globalSlotListView.Items.Add(monsterSlotName);
 
                                             while ((line = stringReader.ReadLine()) != null && line.StartsWith("{"))
                                             {
@@ -870,7 +894,7 @@ namespace MonsterSpawnGenerator
         private void dissectValues(string file)
         {
             int startPosition = file.IndexOf("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =") + "int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =".Length;
-            string virtualString = file.Substring(startPosition).Replace("\t","");
+            string virtualString = file.Substring(startPosition).Replace("\t", "");
 
             StringReader stringReader = new StringReader(virtualString);
 
@@ -891,8 +915,8 @@ namespace MonsterSpawnGenerator
             {
                 while ((line = stringReader.ReadLine()) != null)
                 {
-                    if(line.StartsWith("{"))
-                    {                       
+                    if (line.StartsWith("{"))
+                    {
                         if (line.EndsWith(","))
                         {
                             thisGame++;
@@ -969,7 +993,7 @@ namespace MonsterSpawnGenerator
                                                                 }
                                                                 else if (character == ',')
                                                                 {
-                                                                    switch (statIncrement%3)
+                                                                    switch (statIncrement % 3)
                                                                     {
                                                                         case 0:
                                                                             thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
@@ -1101,6 +1125,11 @@ namespace MonsterSpawnGenerator
         }
 
         private void generateSlots_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void globalSlotListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

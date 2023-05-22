@@ -30,6 +30,16 @@ namespace MonsterSpawnGenerator
             altGameName = name;
         }
 
+        public monsterSlot containsMonsterSlot(string name)
+        {
+            foreach(monsterSlot monsterSlot in monsterslots)
+            {
+                if (monsterSlot.ToString() == name)
+                    return monsterSlot;
+            }
+            return null;
+        }
+
         public override string ToString()
         {
             return altGameName;
