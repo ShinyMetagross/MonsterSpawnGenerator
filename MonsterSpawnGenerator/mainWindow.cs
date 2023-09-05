@@ -88,60 +88,7 @@ namespace MonsterSpawnGenerator
         public mainWindow()
         {
             InitializeComponent();
-            designSpec =
-                designSpec.Append("/*======================================================================================================================\n"
-                + " 													Design Specs\n"
-                + "o MAX_GAME_TYPES\n"
-                + "	    - This corresponds to the game set, like Doom or Chex\n"
-                + "o MAX_ALTS\n"
-                + "	    - This corresponds to a game alt set, like Opposing Force\n"
-                + "o MONSTER_SLOT\n"
-                + "	    - This corresponds to the monster slot, like Zombieman. Slots are in this order:\n"
-                + "										            0: 	Zombieman\n"
-                + "										            1: 	Shotgunguy\n"
-                + "										            2: 	Imp\n"
-                + "										            3: 	Chaingunner\n"
-                + "										            4: 	Demon\n"
-                + "										            5: 	Spectre\n"
-                + "										            6: 	Hellknight\n"
-                + "										            7: 	Baron of Hell\n"
-                + "										            8: 	Arachnotron\n"
-                + "										            9: 	Mancubus\n"
-                + "										            10: Lost Soul\n"
-                + "										            11: Pain Elemental\n"
-                + "										            12: Cacodemon\n"
-                + "										            13: Revenant\n"
-                + "										            14: Archvile\n"
-                + "										            15: Cyberdemon\n"
-                + "										            16: Spider Mastermind\n"
-                + "										            17: Wolfenstein SS\n"
-                + "										            18: Super Shotgunguy\n"
-                + "										            19: Dark Imp\n"
-                + "										            20: Blood Demon\n"
-                + "										            21: Cacolantern\n"
-                + "										            22: Abaddon\n"
-                + "										            23: Hectebus\n"
-                + "										            24: Belphegor\n"
-                + "o MAXPERSLOT\n"
-                + "     - This variable is the slot for a decision on the monster from the slot, like spawning a zombieman variant\n\n"
-                + "													- Strings -\n"
-                + "     o Monster name:\n"
-                + "         - Name of the the monster\n"
-                + "     o Token0-4:\n"
-                + "         - These are inventory items that can be given to a monster for each difficulty, to alter their behavior\n\n"
-                + "													- Stats -\n"
-                + "     o Speed0-4:\n"
-                + "         - These tokens work as a multiplier for monster speed. As such, you should never use numbers with no decimal\n"
-                + "           point. Please use 2.0 instead of 2. If left alone, it will have no affect.\n"
-                + "     o Health0-4:\n"
-                + "         - A health multiplier. Same as speed, these are multipliers. If left alone, it will have no affect.\n"
-                + "     o Weight0-4:\n"
-                + "         - This is a spawn chance, which functions similarly to RandomSpawner. You can use whatever numbers you want,\n"
-                + "           to define the chance of a monster spawning. The higher the weight compared to other monsters, the more likely\n"
-                + "           it is to spawn, and vice versa. If left alone, will be treated as 1. If set to a negative value, however,\n"
-                + "           that means the monster will not spawn at all on that difficulty.\n\n"
-                + "======================================================================================================================*/\n"
-                );
+            designSpec = designSpec.Append("");
         }
 
         private void mainWindow_Load(object sender, EventArgs e)
@@ -706,7 +653,7 @@ namespace MonsterSpawnGenerator
             openFileDialog.Filter = "txt files (*.txt)|*.txt|acs files (*.acs)|*.acs";
             openFileDialog.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
-            
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 //Get the path of specified file
@@ -718,7 +665,18 @@ namespace MonsterSpawnGenerator
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
                     fileContent = reader.ReadToEnd();
-                    if(!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
+
+                    StringReader stringReader = new StringReader(fileContent);
+                    string line = string.Empty;
+
+                    while ((line = stringReader.ReadLine()) != null)
+                    {
+                        designSpec = designSpec.AppendLine(line);
+                        if (line.Contains("*/"))
+                            break;
+                    }
+
+                    if (!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
                     {
                         MessageBox.Show("This text file is invalid, please select another.");
                     }

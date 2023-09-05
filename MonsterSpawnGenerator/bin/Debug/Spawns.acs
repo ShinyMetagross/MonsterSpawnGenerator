@@ -1,56 +1,119 @@
-/*======================================================================================================================
- 													Design Specs
+/*=================================================== Design Specs =====================================================
+
 o MAX_GAME_TYPES
-	    - This corresponds to the game set, like Doom or Chex
+	- This corresponds to the game set, like Doom or Chex
 o MAX_ALTS
-	    - This corresponds to a game alt set, like Opposing Force
+	- This corresponds to a game alt set, like Opposing Force
 o MONSTER_SLOT
-	    - This corresponds to the monster slot, like Zombieman. Slots are in this order:
-										            0: 	Zombieman
-										            1: 	Shotgunguy
-										            2: 	Imp
-										            3: 	Chaingunner
-										            4: 	Demon
-										            5: 	Spectre
-										            6: 	Hellknight
-										            7: 	Baron of Hell
-										            8: 	Arachnotron
-										            9: 	Mancubus
-										            10: Lost Soul
-										            11: Pain Elemental
-										            12: Cacodemon
-										            13: Revenant
-										            14: Archvile
-										            15: Cyberdemon
-										            16: Spider Mastermind
-										            17: Wolfenstein SS
-										            18: Super Shotgunguy
-										            19: Dark Imp
-										            20: Blood Demon
-										            21: Cacolantern
-										            22: Abaddon
-										            23: Hectebus
-										            24: Belphegor
+	- This corresponds to the monster slot, like Zombieman. Slots are in this order:
+		~ Doom ~
+			0: Zombieman
+			1: Shotgun Guy
+			2: Imp
+			3: Chaingun Guy
+			4: Super Shotgun Guy
+			5: Demon
+			6: Dark Imp
+			7: Spectre
+			8: Blood Demon
+			9: Lost Soul
+			10: Cacodemon
+			11: Revenant
+			12: Cacolantern
+			13: Pain Elemental
+			14: Hell Knight
+			15: Arachnotron
+			16: Mancubus
+			17: Abaddon
+			18: Arch-vile
+			19: Baron of Hell
+			20: Hectebus
+			21: Belphegor
+			22: Spider Mastermind
+			23: Cyberdemon
+			24: Wolfenstein SS
+
+		~ Chex Quest ~
+			25: Flemoidus Commonus
+			26: Flemoidus Bipedicus
+			27: Armored Flemoidus Bipedicus
+			28: Flemoidus Stridicus
+			29: Larva
+			30: Flem Mine
+			31: Flemoidus Cycloptis Commonus
+			32: Super Cycloptis
+			33: Quadrumpus
+			34: Flemoidus Maximus
+			35: Flembrane
+			36: Flembomination
+			37: Snotfolus
+
+		~ Heretic ~
+			38: Gargoyle
+			39: Fire Gargoyle
+			40: Golem
+			41: Golem Ghost
+			42: Nitrogolem
+			43: Nitrogolem Ghost
+			44: Disciple of D'Sparil
+			45: Undead Warrior
+			46: Undead Warrior Ghost
+			47: Sabreclaw
+			48: Ophidian
+			49: Weredragon
+			50: Iron Lich
+			51: Maulotaur
+			52: D'Sparil
+			53: Chicken
+
+		~ Hexen ~
+			54: Ettin
+			55: Afrit
+			56: Dark Bishop
+			57: Centaur
+			58: Slaughtaur
+			59: Green Chaos Serpent
+			60: Stalker
+			61: Stalker Boss
+			62: Wendigo
+			63: Reiver
+			64: Reiver (Buried)
+			65: Brown Chaos Serpent
+			66: Traductus
+			67: Zedek
+			68: Menelkir
+			69: Death Wyvern
+			70: Heresiarch
+			71: Korax
+			72: Pig
 o MAXPERSLOT
-     - This variable is the slot for a decision on the monster from the slot, like spawning a zombieman variant
+	- This variable is the slot for a decision on the monster from the slot, like spawning a zombieman variant
 
-													- Strings -
-     o Monster name:
-         - Name of the the monster
-     o Token0-4:
-         - These are inventory items that can be given to a monster for each difficulty, to alter their behavior
+- Strings -
+	o Monster name:
+		- Name of the the monster
+	o Token0-4:
+		- These are inventory items that can be given to a monster for each difficulty, to alter their behavior. If set
+		  to an empty string or left alone, no token is given
 
-													- Stats -
-     o Speed0-4:
-         - These tokens work as a multiplier for monster speed. As such, you should never use numbers with no decimal
-           point. Please use 2.0 instead of 2. If left alone, it will have no affect.
-     o Health0-4:
-         - A health multiplier. Same as speed, these are multipliers. If left alone, it will have no affect.
-     o Weight0-4:
-         - This is a spawn chance, which functions similarly to RandomSpawner. You can use whatever numbers you want,
-           to define the chance of a monster spawning. The higher the weight compared to other monsters, the more likely
-           it is to spawn, and vice versa. If left alone, will be treated as 1. If set to a negative value, however,
-           that means the monster will not spawn at all on that difficulty.
+- Stats -
+	o Speed0-4:
+		- These tokens work as a multiplier for monster speed. As such, you should never use numbers with no decimal
+		  point. Please use 2.0 instead of 2. If left alone, it will have no effect.
+	o Health0-4:
+		- A health multiplier. Same as speed, these are multipliers. If left alone, it will have no effect.
+	o Weight0-4:
+		- This is a spawn chance, which functions similarly to RandomSpawner. You can use whatever numbers you want,
+		  to define the chance of a monster spawning. The higher the weight compared to other monsters, the more likely
+		  it is to spawn, and vice versa. If left alone, will be treated as 1. If set to a negative value, however,
+		  that means the monster will not spawn at all on that difficulty.
+
+* Each difficulty corresponds to the following numbers for Token, Speed, Health, and Weight
+	0: Baby      ("I'm too young to die")
+	1: Easy      ("Hey, not too rough")
+	2: Normal    ("Hurt me plenty")
+	3: Hard      ("Ultra-Violence")
+	4: Nightmare ("Nightmare!")
 
 ======================================================================================================================*/
 
@@ -2538,7 +2601,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Cyberdemon
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Wolfenstein SS
 				{"AssaultTrooper"}
@@ -2588,7 +2651,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Snotfolus
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Heretic Imp
 				{"SentryDrone"}
@@ -2637,7 +2700,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Minotaur
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//D'Sparil
 				{"CycloidEmperorDoom"},
@@ -2702,7 +2765,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Heresiarch
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Korax
 				{"CycloidEmperorDoom"},
@@ -2796,7 +2859,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Cyberdemon
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Wolfenstein SS
 				{"BeachTrooper"}
@@ -2847,7 +2910,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Snotfolus
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Heretic Imp
 				{"SentryDrone"},
@@ -2895,7 +2958,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Minotaur
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//D'Sparil
 				{"BeachCycloidEmperorDoom"},
@@ -2959,7 +3022,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			},
 			{//Heresiarch
 				{"BattlelordDoom"},
-				{"OverlordDoom"}
+				{"SamsaraMixerOverlordDoom"}
 			},
 			{//Korax
 				{"BeachCycloidEmperorDoom"},
@@ -3009,7 +3072,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WaterFlickta"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Dark Imp
 				{"TrooperMajor"},
@@ -3021,11 +3084,11 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Blood Demon
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Lost Soul
 				{"DroneMinor"},
@@ -3078,7 +3141,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Archvile
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Baron of Hell
 				{"HunterMajor"},
@@ -3127,7 +3190,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WaterFlickta"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Larva
 				{"WaterFlickta"},
@@ -3135,7 +3198,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Flem Mine
 				{"DroneMinor"},
@@ -3167,7 +3230,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Flemoidus Maximus
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Flembrane
 				{"HunterMajor"},
@@ -3208,7 +3271,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Mummy Leader
 				{"ProjectileFighterMinor"},
@@ -3224,7 +3287,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Wizard
 				{"SphtMinor"},
@@ -3243,14 +3306,14 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Clink
 				{"FighterMajor"},
 				{"WaterFlickta"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Snake
 				{"M1EnforcerMinor"},
@@ -3265,7 +3328,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Iron Lich
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Minotaur
 				{"JuggernautMajor"},
@@ -3304,7 +3367,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WaterFlickta"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Centaur Leader
 				{"WaterFlickta"},
@@ -3312,7 +3375,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MLooker2"},
 				{"DrinniolMinor"},
 				{"DrinniolMajor"},
-				{"SuperFighter"}
+				{"PfhorSuperFighter"}
 			},
 			{//Green Chaos Serpent
 				{"HunterMinor"},
@@ -3359,22 +3422,22 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Traductus
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Zedek
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Menelkir
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Death Wyvern
 				{"M2EliteEnforcerMinor"},
 				{"M2EliteEnforcerMajor"},
-				{"SuperTrooper"}
+				{"M2SuperTrooper"}
 			},
 			{//Heresiarch
 				{"JuggernautMajor"},
@@ -3973,7 +4036,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PerGunnerDrone"}
 			},
 			{//Hell Knight
-				{"ExpMutantBrown"},
+				{"ExpHumanBrown"},
 				{"GeneticGuard"},
 				{"PodAlien"}
 			},
@@ -3992,7 +4055,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PlasmaAlien"}
 			},
 			{//Baron of Hell
-				{"ExpMutantBlue"},
+				{"ExpHumanBlue"},
 				{"CyborgWarrior"}
 			},
 			{//Hectebus
@@ -4000,7 +4063,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BioMech"}
 			},
 			{//Belphegor
-				{"ExpMutantBlue"},
+				{"ExpHumanBlue"},
 				{"CyborgWarrior"}
 			},
 			{//Spider Mastermind
@@ -4055,7 +4118,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PlasmaAlien"}
 			},
 			{//Flembrane
-				{"ExpMutantBlue"},
+				{"ExpHumanBlue"},
 				{"CyborgWarrior"}
 			},
 			{//Flembomination
@@ -4110,7 +4173,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"AlienProtector"}
 			},
 			{//Beast
-				{"ExpMutantBrown"},
+				{"ExpHumanBrown"},
 				{"GeneticGuard"},
 				{"PodAlien"}
 			},
@@ -4150,7 +4213,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WaterAlien"}
 			},
 			{//Green Chaos Serpent
-				{"ExpMutantBrown"},
+				{"ExpHumanBrown"},
 				{"GeneticGuard"},
 				{"PodAlien"}
 			},
@@ -4176,7 +4239,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PerGunnerDrone"}
 			},
 			{//Brown Chaos Serpent
-				{"ExpMutantBlue"},
+				{"ExpHumanBlue"},
 				{"CyborgWarrior"}
 			},
 			{//Traductus
@@ -4965,7 +5028,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Semaj"}
 			},
 			{//Lost Soul
-				{"SectorProbe"}
+				{"C7SectorProbe"}
 			},
 			{//Cacodemon
 				{"Ailoprobe"}
@@ -5030,7 +5093,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Semaj"}
 			},
 			{//Flem Mine
-				{"SectorProbe"}
+				{"C7SectorProbe"}
 			},
 			{//Flemoidus Cycloptis Commonus
 				{"Ailoprobe"}
@@ -5056,7 +5119,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Solrac"}
 			},
 			{//Heretic Imp
-				{"SectorProbe"}
+				{"C7SectorProbe"}
 			},
 			{//Heretic Imp Leader
 				{"Bandor"}
@@ -5109,7 +5172,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"AnimatedProbe"}
 			},
 			{//Fire Demon
-				{"SectorProbe"}
+				{"C7SectorProbe"}
 			},
 			{//Bishop
 				{"Eitak"}
