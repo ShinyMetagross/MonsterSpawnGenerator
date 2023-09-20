@@ -9,12 +9,12 @@ namespace MonsterSpawnGenerator
     public partial class mainWindow : Form
     {
         StringBuilder designSpec = new StringBuilder();
-        string[] defaultMonsters = { 
+        readonly string[] defaultMonsters = {
             "Zombieman",
-            "Shotgunguy",
-            "Doom Imp",
-            "Chaingunguy",
-            "Super Shotgunguy",
+            "Shotgun Guy",
+            "Imp",
+            "Chaingun Guy",
+            "Super Shotgun Guy",
             "Demon",
             "Dark Imp",
             "Spectre",
@@ -28,7 +28,7 @@ namespace MonsterSpawnGenerator
             "Arachnotron",
             "Mancubus",
             "Abaddon",
-            "Archvile",
+            "Arch-vile",
             "Baron of Hell",
             "Hectebus",
             "Belphegor",
@@ -48,42 +48,42 @@ namespace MonsterSpawnGenerator
             "Flembrane",
             "Flembomination",
             "Snotfolus",
-            "Heretic Imp",
-            "Heretic Imp Leader",
-            "Mummy",
-            "Mummy Ghost",
-            "Mummy Leader",
-            "Mummy Leader Ghost",
-            "Wizard",       
-            "Knight",
-            "Knight Ghost",
-            "Clink",
-            "Snake",
-            "Beast",
-            "Iron Lich",  
-            "Minotaur",
+            "Gargoyle",
+            "Fire Gargoyle",
+            "Golem",
+            "Golem Ghost",
+            "Nitrogolem",
+            "Nitrogolem Ghost",
+            "Disciple of D'Sparil",
+            "Undead Warrior",
+            "Undead Warrior Ghost",
+            "Sabreclaw",
+            "Ophidian",
+            "Weredragon",
+            "Iron Lich",
+            "Maulotaur",
             "D'Sparil",
             "Chicken",
             "Ettin",
-            "Fire Demon",
-            "Bishop",
+            "Afrit",
+            "Dark Bishop",
             "Centaur",
-            "Centaur Leader",
+            "Slaughtaur",
             "Green Chaos Serpent",
-            "Serpent",
-            "Serpent Leader",
+            "Stalker",
+            "Stalker Boss",
             "Wendigo",
-            "Wraith",
-            "Wraith (Buried)",
+            "Reiver",
+            "Reiver (Buried)",
             "Brown Chaos Serpent",
             "Traductus",
             "Zedek",
-            "Menelkir",  
+            "Menelkir",
             "Death Wyvern",
             "Heresiarch",
             "Korax",
             "Pig"
-                                    };
+        };
 
         public mainWindow()
         {
@@ -93,18 +93,22 @@ namespace MonsterSpawnGenerator
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void isThisNumeric(object sender, KeyPressEventArgs e)
         {
-            int keyNumber;
             string keyPress = e.KeyChar.ToString();
-            if (!(int.TryParse(keyPress, out keyNumber) || keyPress == "."))
+            if (!(Char.IsControl(e.KeyChar) || int.TryParse(keyPress, out _) || keyPress == "."))
             {
                 MessageBox.Show("Please type a number or decimal point.");
                 e.Handled = true;
             }
+        }
+
+        private bool isListItemSelected(object selectedItem, Type itemType)
+        {
+            return selectedItem != null && selectedItem.GetType() == itemType;
         }
 
         private void addGameDialogue(object sender, EventArgs e)
@@ -129,7 +133,7 @@ namespace MonsterSpawnGenerator
         
         private void changeGame(object sender, EventArgs e)
         {
-            if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
             {
                 game thisGame = (game)this.gameList.SelectedItem;
                 this.altGameList.Items.Clear();
@@ -154,7 +158,7 @@ namespace MonsterSpawnGenerator
 
         private void moveGameUp(object sender, EventArgs e)
         {
-            if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
             {
                 game thisGame = (game)this.gameList.SelectedItem;
                 int gameIndex = this.gameList.SelectedIndex;
@@ -170,7 +174,7 @@ namespace MonsterSpawnGenerator
 
         private void moveGameDown(object sender, EventArgs e)
         {
-            if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
             {
                 game thisGame = (game)this.gameList.SelectedItem;
                 int gameIndex = this.gameList.SelectedIndex;
@@ -194,7 +198,7 @@ namespace MonsterSpawnGenerator
             }
             else
             {
-                if (this.gameList.SelectedItem != null && this.gameList.SelectedItem.GetType() == typeof(game))
+                if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
                 {
                     game thisGame = (game)this.gameList.SelectedItem;
                     altGame newAltGame = new altGame(this.altGameList.Text);
@@ -232,7 +236,7 @@ namespace MonsterSpawnGenerator
 
         private void changeAltGame(object sender, EventArgs e)
         {
-            if (this.altGameList.SelectedItem != null && this.altGameList.SelectedItem.GetType() == typeof(altGame))
+            if (isListItemSelected(this.altGameList.SelectedItem, typeof(altGame)))
             {
                 altGame thisAltGame = (altGame)this.altGameList.SelectedItem;
                 this.monsterSlotList.Items.Clear();
@@ -255,7 +259,7 @@ namespace MonsterSpawnGenerator
 
         private void changeMonsterSlot(object sender, EventArgs e)
         {
-            if (this.monsterSlotList.SelectedItem != null && this.monsterSlotList.SelectedItem.GetType() == typeof(monsterSlot))
+            if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
             {
                 monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
                 this.monsterList.Items.Clear();
@@ -284,7 +288,7 @@ namespace MonsterSpawnGenerator
             else
             {
                 this.monsterList.Items.Add(new monster(this.monsterName.Text));
-                if (this.monsterSlotList.SelectedItem != null && this.monsterSlotList.SelectedItem.GetType() == typeof(monsterSlot))
+                if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
                     monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
                     thisMonsterSlot.monsterAdd(new monster(this.monsterName.Text));
@@ -294,7 +298,7 @@ namespace MonsterSpawnGenerator
 
         private void removeMonsterFromList(object sender, EventArgs e)
         {
-            if (this.monsterSlotList.SelectedItem != null && this.monsterSlotList.SelectedItem.GetType() == typeof(monsterSlot))
+            if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
             {
                 monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
                 thisMonsterSlot.monsterRemove((monster)this.monsterList.SelectedItem);
@@ -304,7 +308,7 @@ namespace MonsterSpawnGenerator
 
         private void changeMonster(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
+            if (isListItemSelected(this.monsterList.SelectedItem, typeof(monster)))
             {
                 monster thisMonster = (monster)this.monsterList.SelectedItem;
                 this.health1.Text = thisMonster.getMonsterHealthByDifficulty(0);
@@ -333,9 +337,9 @@ namespace MonsterSpawnGenerator
         private void populateMonsterList()
         {
             this.monsterList.Items.Clear();
-            if (this.altGameList.SelectedItem != null && this.altGameList.SelectedItem.GetType() == typeof(altGame))
+            if (isListItemSelected(this.altGameList.SelectedItem, typeof(altGame)))
             {
-                if (this.monsterSlotList.SelectedItem != null && this.monsterSlotList.SelectedItem.GetType() == typeof(monsterSlot))
+                if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
                     monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
                     foreach (monster aMonster in thisMonsterSlot.monsters)
@@ -346,165 +350,96 @@ namespace MonsterSpawnGenerator
             }
         }
 
+        private void setMonsterStat(object sender, Action<monster, string> changeFunc)
+        {
+            if (isListItemSelected(monsterList.SelectedItem, typeof(monster)))
+            {
+                monster selectedMonster = (monster) monsterList.SelectedItem;
+                TextBox input = (TextBox) sender;
+
+                changeFunc(selectedMonster, input.Text);
+            }
+        }
+
         private void health1Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health1.Text, 0);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 0));
         }
         private void health2Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health2.Text, 1);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 1));
         }
         private void health3Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health3.Text, 2);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 2));
         }
         private void health4Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health4.Text, 3);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 3));
         }
         private void health5Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.health5.Text, 4);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 4));
         }
         private void token1Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterTokenByDifficulty(this.token1.Text, 0);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 0));
         }
         private void token2Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterTokenByDifficulty(this.token2.Text, 1);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 1));
         }
         private void token3Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterTokenByDifficulty(this.token3.Text, 2);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 2));
         }
         private void token4Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterTokenByDifficulty(this.token4.Text, 3);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 3));
         }
         private void token5Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterTokenByDifficulty(this.token5.Text, 4);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 4));
         }
         private void speed1Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.speed1.Text, 0);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 0));
         }
         private void speed2Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.speed2.Text, 1);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 1));
         }
         private void speed3Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.speed3.Text, 2);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 2));
         }
         private void speed4Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.speed4.Text, 3);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 3));
         }
         private void speed5Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterHealthByDifficulty(this.speed5.Text, 4);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 4));
         }
         private void weight1Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterWeightByDifficulty(this.weight1.Text, 0);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 0));
         }
         private void weight2Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterWeightByDifficulty(this.weight2.Text, 1);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 1));
         }
         private void weight3Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterWeightByDifficulty(this.weight3.Text, 2);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 2));
         }
         private void weight4Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterWeightByDifficulty(this.weight4.Text, 3);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 3));
         }
         private void weight5Change(object sender, EventArgs e)
         {
-            if (this.monsterList.SelectedItem != null && this.monsterList.SelectedItem.GetType() == typeof(monster))
-            {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                thisMonster.setMonsterWeightByDifficulty(this.weight5.Text, 4);
-            }
+            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 4));
         }
 
         private void generateSpawns(object sender, EventArgs e)
@@ -1088,6 +1023,11 @@ namespace MonsterSpawnGenerator
         }
 
         private void globalSlotListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generatorToolTip_Popup(object sender, PopupEventArgs e)
         {
 
         }
