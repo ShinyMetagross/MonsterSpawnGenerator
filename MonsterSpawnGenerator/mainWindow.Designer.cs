@@ -569,6 +569,10 @@
             this.moveGameDownButton.UseVisualStyleBackColor = true;
             this.moveGameDownButton.Click += new System.EventHandler(this.moveGameDown);
             // 
+            // generatorToolTip
+            // 
+            this.generatorToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.generatorToolTip_Popup);
+            // 
             // addMonsterSlotGlobal
             // 
             this.addMonsterSlotGlobal.Image = ((System.Drawing.Image)(resources.GetObject("addMonsterSlotGlobal.Image")));
