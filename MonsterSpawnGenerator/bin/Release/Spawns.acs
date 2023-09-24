@@ -304,7 +304,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Shotgunguy3"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy3"}
 			},
 			{//Wendigo
@@ -531,7 +531,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Shotgunguy64"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy64"}
 			},
 			{//Wendigo
@@ -1019,7 +1019,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MMRandomizer_SuperShotgunGuy"},
 				{"MMRandomizer_ChainsawZombie"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy3"},
 				{"MMRandomizer_ChaingunGuyVariant1"},
 				{"MMRandomizer_DoubleChaingunGuy"},
@@ -1296,7 +1296,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Shotgunguy64"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy64"}
 			},
 			{//Wendigo
@@ -1529,7 +1529,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"FlemoidusBipedicus3"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"NewArmoredFlemoidusBipedicus"}
 			},
 			{//Wendigo
@@ -1765,7 +1765,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"MummyLeader3Doom"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Knight3Doom"}
 			},
 			{//Wendigo
@@ -2013,7 +2013,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WolfOfficer"},
 				{"WolfGuard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"WolfSS"}
 			},
 			{//Wendigo
@@ -2255,7 +2255,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"SODOfficer"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"SODSS"}
 			},
 			{//Wendigo
@@ -2559,7 +2559,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"TotenkopfOfficer"},
 				{"TotenkopfOfficer2"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"TotenkopfSS"},
 				{"TotenkopfSSRifleman"},
 				{"TotenkopfSSInfantry"},
@@ -2808,7 +2808,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Ettin3Doom"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"FireDemon3Doom"}
 			},
 			{//Wendigo
@@ -3072,7 +3072,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ZombiePigCop"},
 				{"MagnumPig"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"AssaultEnforcer"},
 				{"PiginaDress"}
 			},
@@ -3410,7 +3410,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DarkGreenBeachPig"},
 				{"MagnumPig"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"BlueSeaMonster"},
 				{"RedSeaMonster"},
 				{"GraySeaMonster"},
@@ -3677,7 +3677,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ZombiePigCop"},
 				{"MagnumPig"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"AssaultEnforcer"},
 				{"PiginaDress"}
 			},
@@ -4077,7 +4077,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ProjectileFighterMajor"},
 				{"M1ProjectileFighterMajor"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"TrooperMinor"},
 				{"M1TrooperMinor"},
 				{"TrooperMajor"},
@@ -4381,7 +4381,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QEnforcer"},
 				{"QZombie"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"QCentroid"}
 			},
 			{//Wendigo
@@ -4630,7 +4630,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"LightningGuard","","","","","LightningGuardCrezzyMan"},
 				{"HeavyGuard","","","","","LightningGuardCrezzyMan"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"HighGuard"}
 			},
 			{//Wendigo
@@ -4911,7 +4911,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SectorPatrol"},
 				{"MutatedGuard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"BlakeSentinel"},
 				{"TechWarrior"}
 			},
@@ -5154,7 +5154,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Cultist","","","","CultistWellDone","CultistExtraCrispy"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Fanatic","","","","CultistWellDone","CultistExtraCrispy"}
 			},
 			{//Wendigo
@@ -5401,7 +5401,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"StrifeAcolyte3"},
 				{"StrifeAcolyte4"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"StrifeAcolyte5"},
 				{"StrifeAcolyte6"}
 			},
@@ -5647,7 +5647,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"EradArcher"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Skeeving"}
 			},
 			{//Wendigo
@@ -5881,7 +5881,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Rodex"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Eitak"}
 			},
 			{//Wendigo
@@ -6114,7 +6114,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"UnShockTrooper"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"BlackSuitStriker"}
 			},
 			{//Wendigo
@@ -6341,7 +6341,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"imperial_commander"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"hoth_trooper"}
 			},
 			{//Wendigo
@@ -6579,7 +6579,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"IPOGEliteCorp"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"IPOGHuntress"}
 			},
 			{//Wendigo
@@ -6844,7 +6844,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DisruptorMutantElite"},
 				{"DisruptorCryopirate"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"DisruptorTerroristRepeater"},
 				{"DisruptorTerroristCyclone"}
 			},
@@ -7234,7 +7234,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WTArgothonianFist"},
 				{"WTArgothonianSword"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"WTCiraenSentinelSpellAndStar"},
 				{"WTCiraenSentinelSpell"},
 				{"WTCiraenSentinelBowAndStar"},
@@ -7578,7 +7578,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"HECU_Shotgun1"},
 				{"HECU_Shotgun2"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"HECU_Grunt1"},
 				{"HECU_Grunt2"},
 				{"HECU_M203"},
@@ -7949,7 +7949,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Headcrab_Soldier"},
 				{"HECU_FGrunt_Opp_Small"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"MaleAssassin1_MP5"},
 				{"MaleAssassin2_MP5"},
 				{"MaleAssassin3_MP5"},
@@ -8269,7 +8269,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SWHenchman"},
 				{"SWWizard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"SWAssassin"},
 				{"NinjaRed"},
 				{"SWHenchmanRed"},
@@ -8600,7 +8600,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Metacop"},
 				{"CMTrooper"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"CMStynx"}
 			},
 			{//Wendigo
@@ -8844,7 +8844,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Bluescorpion"},
 				{"AnubisWarrior"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"KilmaatSentry"}
 			},
 			{//Wendigo
@@ -9292,7 +9292,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BillyRayJeeter_DarkGray"},
 				{"BillyRayJeeter_Ghost"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"BlueFrankDoyle"},
 				{"RedFrankDoyle"},
 				{"BlackFrankDoyle"},
@@ -9634,7 +9634,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Q2ShotgunGuard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Q2Infantry"},
 				{"Q2MachinegunGuard"},
 				{"Q2Gunner"}
@@ -9950,7 +9950,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Hexen2KnightArcher"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Hexen2IceArcher"},
 				{"Hexen2SkullWizard"}
 			},
@@ -10206,7 +10206,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Goldeneye_OliveGuard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Goldeneye_RusGuard"}
 			},
 			{//Wendigo
@@ -10549,7 +10549,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"CatacombAbyss_Mage"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"CatacombArmageddon_Mage1"},
 				{"CatacombArmageddon_Mage2"},
 				{"CatacombArmageddon_Succubus"}
@@ -10789,7 +10789,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Shotgunguy3"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy3"}
 			},
 			{//Wendigo
@@ -11012,7 +11012,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 			{//Stalker
 				{"Shotgunguy3"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Chaingunguy3"}
 			},
 			{//Wendigo
@@ -11260,7 +11260,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WolfOfficer"},
 				{"WolfGuard"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"WolfSS"}
 			},
 			{//Wendigo
@@ -11679,7 +11679,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QEnforcer"},
 				{"QZombie"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"Q2Infantry"},
 				{"Q2MachinegunGuard"},
 				{"Q2Gunner"},
@@ -11978,7 +11978,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DisruptorMutantElite"},
 				{"DisruptorCryopirate"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"DisruptorTerroristRepeater"},
 				{"DisruptorTerroristCyclone"}
 			},
@@ -12229,7 +12229,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"StrifeAcolyte3"},
 				{"StrifeAcolyte4"}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{"StrifeAcolyte5"},
 				{"StrifeAcolyte6"}
 			},
@@ -12464,7 +12464,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -12691,7 +12691,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -13179,7 +13179,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
@@ -13456,7 +13456,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -13689,7 +13689,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -13925,7 +13925,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -14173,7 +14173,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -14415,7 +14415,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -14719,7 +14719,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
@@ -14968,7 +14968,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -15232,7 +15232,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
@@ -15570,7 +15570,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
 				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -15837,7 +15837,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
@@ -16237,7 +16237,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.88,0.5,1,0.94,0.75,1,0,0,2,1.13,1.25,4,1.25,1.5,4},
 				{0.88,0.5,1,0.94,0.75,1,0,0,2,1.13,1.25,4,1.25,1.5,4}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0.88,0.5,3,0.94,0.75,2,0,0,4,1.13,1.25,4,1.25,1.5,2},
 				{0.88,0.5,3,0.94,0.75,2,0,0,4,1.13,1.25,4,1.25,1.5,2},
 				{0.88,0.5,-1,0.94,0.75,-1,0,0,1,1.13,1.25,2,1.25,1.5,4},
@@ -16541,7 +16541,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -16790,7 +16790,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.9,0.9,5,0,0,5,1.2,1.2,5,0,1.5,5,1.8,1.8,1},
 				{0,0.9,1,0,0,2,0,1.2,3,0,1.5,4,0,1.8,1}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0.7,0.7,0,0,0,0,1.3,1.3,0,1.6,1.6,0,2.0,2.0,0}
 			},
 			{//Wendigo
@@ -17071,7 +17071,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,3,0,1.5,2},
 				{0,0.4,1,0,0.6,1,0,0,1,0,1.2,1,0,1.5,1}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,1.4,1.4,5},
 				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
 			},
@@ -17314,7 +17314,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,2,1.5,1.5,2,0,2.0,2,2.5,2.5,2,3.1,3.1,2}
 			},
 			{//Wendigo
@@ -17561,7 +17561,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
@@ -17807,7 +17807,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -18041,7 +18041,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -18274,7 +18274,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -18501,7 +18501,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -18739,7 +18739,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -19004,7 +19004,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
 				{0,0,2,0,0,2,0,0,3,0,0,3,0,0,4}
 			},
@@ -19394,7 +19394,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,12,0,0,12,0,0,9},
 				{0,0,1,0,0,2,0,0,12,0,0,12,0,0,9}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -19738,7 +19738,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
 				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0.5,0.5,6,0.5,0.5,6,0.75,0.75,6,0,0,6,1.5,1.5,5},
 				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,1,0,0.5,1,0,0.75,2,0,0,3,0,1.5,4},
@@ -20109,7 +20109,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,2,0,0,2,0,0,1,0,2.0,1,0,2.0,1},
 				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,-1}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
 				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
 				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
@@ -20429,7 +20429,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -20760,7 +20760,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -21004,7 +21004,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -21452,7 +21452,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
@@ -21794,7 +21794,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
 				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
 				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
@@ -22110,7 +22110,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
@@ -22366,7 +22366,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -22709,7 +22709,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -22949,7 +22949,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -23172,7 +23172,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			{//Stalker
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -23420,7 +23420,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Wendigo
@@ -23839,7 +23839,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
 				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
 				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
@@ -24138,7 +24138,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
 				{0,0,2,0,0,2,0,0,3,0,0,3,0,0,4}
 			},
@@ -24389,7 +24389,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
-			{//Stalker Leader
+			{//Stalker Boss
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
