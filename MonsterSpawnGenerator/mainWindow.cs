@@ -287,12 +287,13 @@ namespace MonsterSpawnGenerator
                 MessageBox.Show("Please type a monster name.");
             else
             {
-                monsterList.Items.Add(new monster(monsterName.Text));
+                monster newMonster = new monster(monsterName.Text);
+                monsterList.Items.Add(newMonster);
 
                 if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
                     monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
-                    thisMonsterSlot.monsterAdd(new monster(monsterName.Text));
+                    thisMonsterSlot.monsterAdd(newMonster);
                 }
             }
         }
