@@ -96,13 +96,28 @@ namespace MonsterSpawnGenerator
 
         }
 
+        private void handleKeyPressError(KeyPressEventArgs e, string message)
+        {
+            MessageBox.Show(message);
+            e.Handled = true;
+        }
+
         private void isThisNumeric(object sender, KeyPressEventArgs e)
         {
-            string keyPress = e.KeyChar.ToString();
-            if (!(char.IsControl(e.KeyChar) || int.TryParse(keyPress, out _) || keyPress == "."))
+            TextBox textBox = (TextBox)sender;
+
+            if (textBox.Text.Contains("-") && !textBox.SelectedText.Contains("-") &&
+                (textBox.SelectionStart == 0 || (e.KeyChar == '-' && textBox.SelectionStart > 0)))
             {
-                MessageBox.Show("Please type a number or decimal point.");
-                e.Handled = true;
+                handleKeyPressError(e, "Only 1 negative sign allowed at start.");
+            }
+            if (!char.IsControl(e.KeyChar) && !int.TryParse(e.KeyChar.ToString(), out _) && e.KeyChar != '.' && e.KeyChar != '-')
+            {
+                handleKeyPressError(e, "Only numbers, negative signs, and decimal points allowed.");
+            }
+            if (e.KeyChar == '.' && textBox.Text.Contains("."))
+            {
+                handleKeyPressError(e, "Only 1 decimal point allowed.");
             }
         }
 
@@ -344,6 +359,7 @@ namespace MonsterSpawnGenerator
                 if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
                     monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+
                     foreach (monster aMonster in thisMonsterSlot.monsters)
                     {
                         monsterList.Items.Add(aMonster);
