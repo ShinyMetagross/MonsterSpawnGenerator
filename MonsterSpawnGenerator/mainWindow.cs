@@ -96,13 +96,28 @@ namespace MonsterSpawnGenerator
 
         }
 
+        private void handleKeyPressError(KeyPressEventArgs e, string message)
+        {
+            MessageBox.Show(message);
+            e.Handled = true;
+        }
+
         private void isThisNumeric(object sender, KeyPressEventArgs e)
         {
-            string keyPress = e.KeyChar.ToString();
-            if (!(Char.IsControl(e.KeyChar) || int.TryParse(keyPress, out _) || keyPress == "."))
+            TextBox textBox = (TextBox)sender;
+
+            if (textBox.Text.Contains("-") && !textBox.SelectedText.Contains("-") &&
+                (textBox.SelectionStart == 0 || (e.KeyChar == '-' && textBox.SelectionStart > 0)))
             {
-                MessageBox.Show("Please type a number or decimal point.");
-                e.Handled = true;
+                handleKeyPressError(e, "Only 1 negative sign allowed at start.");
+            }
+            if (!char.IsControl(e.KeyChar) && !int.TryParse(e.KeyChar.ToString(), out _) && e.KeyChar != '.' && e.KeyChar != '-')
+            {
+                handleKeyPressError(e, "Only numbers, negative signs, and decimal points allowed.");
+            }
+            if (e.KeyChar == '.' && textBox.Text.Contains("."))
+            {
+                handleKeyPressError(e, "Only 1 decimal point allowed.");
             }
         }
 
@@ -113,44 +128,44 @@ namespace MonsterSpawnGenerator
 
         private void addGameDialogue(object sender, EventArgs e)
         {
-            if (this.gameList.Text.Length == 0)
+            if (gameList.Text.Length == 0)
                 MessageBox.Show("Please type a game name.");
-            else if (this.gameList.FindStringExact(this.gameList.Text) >= 0)
+            else if (gameList.FindStringExact(gameList.Text) >= 0)
             {
                 MessageBox.Show("This item already exists.");
             }
             else
             {
-                this.gameList.Items.Add(new game(this.gameList.Text));
-                this.gameList.Text = null;
+                gameList.Items.Add(new game(gameList.Text));
+                gameList.Text = null;
             }
         }
 
         private void removeGame(object sender, EventArgs e)
         {
-            this.gameList.Items.Remove(this.gameList.SelectedItem);
+            gameList.Items.Remove(gameList.SelectedItem);
         }
         
         private void changeGame(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
             {
-                game thisGame = (game)this.gameList.SelectedItem;
-                this.altGameList.Items.Clear();
+                game thisGame = (game)gameList.SelectedItem;
+                altGameList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
                 foreach (altGame anAltGame in thisGame.altGames)
                 {
-                    this.altGameList.Items.Add(anAltGame);
+                    altGameList.Items.Add(anAltGame);
                 }
 
                 //Empty the field to show it's been added, and enable adding alt games
-                this.altGameList.Text = null;
-                this.removeAltGameButton.Enabled = true;
-                this.altGameList.Enabled = true;
-                this.addAltGame.Enabled = true;
-                if (this.altGameList.Items.Count > 0)
-                    this.altGameList.SelectedIndex = 0;
+                altGameList.Text = null;
+                removeAltGameButton.Enabled = true;
+                altGameList.Enabled = true;
+                addAltGame.Enabled = true;
+                if (altGameList.Items.Count > 0)
+                    altGameList.SelectedIndex = 0;
 
                 populateMonsterList();
             }
@@ -158,100 +173,100 @@ namespace MonsterSpawnGenerator
 
         private void moveGameUp(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
             {
-                game thisGame = (game)this.gameList.SelectedItem;
-                int gameIndex = this.gameList.SelectedIndex;
+                game thisGame = (game)gameList.SelectedItem;
+                int gameIndex = gameList.SelectedIndex;
 
                 if (gameIndex > 0)
                 {
-                    this.gameList.Items.Remove(thisGame);
-                    this.gameList.Items.Insert(gameIndex - 1, thisGame);
-                    this.gameList.SelectedItem = thisGame;
+                    gameList.Items.Remove(thisGame);
+                    gameList.Items.Insert(gameIndex - 1, thisGame);
+                    gameList.SelectedItem = thisGame;
                 }
             }
         }
 
         private void moveGameDown(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
             {
-                game thisGame = (game)this.gameList.SelectedItem;
-                int gameIndex = this.gameList.SelectedIndex;
+                game thisGame = (game)gameList.SelectedItem;
+                int gameIndex = gameList.SelectedIndex;
 
-                if (gameIndex < this.gameList.Items.Count - 1)
+                if (gameIndex < gameList.Items.Count - 1)
                 {
-                    this.gameList.Items.Remove(thisGame);
-                    this.gameList.Items.Insert(gameIndex + 1, thisGame);
-                    this.gameList.SelectedItem = thisGame;
+                    gameList.Items.Remove(thisGame);
+                    gameList.Items.Insert(gameIndex + 1, thisGame);
+                    gameList.SelectedItem = thisGame;
                 }
             }
         }
 
         private void addAltGameDialogue(object sender, EventArgs e)
         {
-            if (this.altGameList.Text.Length == 0)
+            if (altGameList.Text.Length == 0)
                 MessageBox.Show("Please type an alt game name.");
-            else if (this.altGameList.FindStringExact(this.altGameList.Text) >= 0)
+            else if (altGameList.FindStringExact(altGameList.Text) >= 0)
             {
                 MessageBox.Show("This item already exists.");
             }
             else
             {
-                if (isListItemSelected(this.gameList.SelectedItem, typeof(game)))
+                if (isListItemSelected(gameList.SelectedItem, typeof(game)))
                 {
-                    game thisGame = (game)this.gameList.SelectedItem;
-                    altGame newAltGame = new altGame(this.altGameList.Text);
+                    game thisGame = (game)gameList.SelectedItem;
+                    altGame newAltGame = new altGame(altGameList.Text);
                     generateMonsterSlots(newAltGame);
 
                     thisGame.gameAdd(newAltGame);
 
-                    this.altGameList.Items.Clear();
+                    altGameList.Items.Clear();
                     foreach (altGame anAltGame in thisGame.altGames)
                     {
-                        this.altGameList.Items.Add(anAltGame);
+                        altGameList.Items.Add(anAltGame);
                     }
 
-                    this.altGameList.Text = null;
+                    altGameList.Text = null;
                 }
             }
         }
 
         private void removeAltGame(object sender, EventArgs e)
         {
-            game thisGame = (game)this.gameList.SelectedItem;
-            thisGame.altGames.Remove((altGame)this.altGameList.SelectedItem);
-            this.altGameList.Items.Remove(this.altGameList.SelectedItem);
+            game thisGame = (game)gameList.SelectedItem;
+            thisGame.altGames.Remove((altGame)altGameList.SelectedItem);
+            altGameList.Items.Remove(altGameList.SelectedItem);
         }
 
         private void generateMonsterSlots(altGame thisAltGame)
         {
-            this.monsterSlotList.Items.Clear();
-            foreach (monsterSlot mSlot in this.globalSlotListView.Items)
+            monsterSlotList.Items.Clear();
+            foreach (monsterSlot mSlot in globalSlotListView.Items)
             {
                 thisAltGame.monsterSlotAdd(mSlot);
-                this.monsterSlotList.Items.Add(mSlot);
+                monsterSlotList.Items.Add(mSlot);
             }
         }
 
         private void changeAltGame(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.altGameList.SelectedItem, typeof(altGame)))
+            if (isListItemSelected(altGameList.SelectedItem, typeof(altGame)))
             {
-                altGame thisAltGame = (altGame)this.altGameList.SelectedItem;
-                this.monsterSlotList.Items.Clear();
+                altGame thisAltGame = (altGame)altGameList.SelectedItem;
+                monsterSlotList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
                 foreach (monsterSlot aMonsterSlot in thisAltGame.monsterslots)
                 {
-                    this.monsterSlotList.Items.Add(aMonsterSlot);
+                    monsterSlotList.Items.Add(aMonsterSlot);
                 }
 
                 //Empty the field to show it's been added, and enable adding alt games
-                this.monsterSlotList.Text = null;
-                this.monsterSlotList.Enabled = true;
-                if (this.monsterSlotList.Items.Count > 0)
-                    this.monsterSlotList.SelectedIndex = 0;
+                monsterSlotList.Text = null;
+                monsterSlotList.Enabled = true;
+                if (monsterSlotList.Items.Count > 0)
+                    monsterSlotList.SelectedIndex = 0;
 
                 populateMonsterList();
             }
@@ -259,92 +274,95 @@ namespace MonsterSpawnGenerator
 
         private void changeMonsterSlot(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
+            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
             {
-                monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
-                this.monsterList.Items.Clear();
+                monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                monsterList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
                 foreach (monster aMonster in thisMonsterSlot.monsters)
                 {
-                    this.monsterList.Items.Add(aMonster);
+                    monsterList.Items.Add(aMonster);
                 }
 
                 //Empty the field to show it's been added, and enable adding alt games
-                this.monsterName.Text = null;
-                this.monsterName.Enabled = true;
-                this.addMonster.Enabled = true;
-                this.removeMonster.Enabled = true;
+                monsterName.Text = null;
+                monsterName.Enabled = true;
+                addMonster.Enabled = true;
+                removeMonster.Enabled = true;
 
-                if (this.monsterList.Items.Count > 0)
-                    this.monsterList.SelectedIndex = 0;
+                if (monsterList.Items.Count > 0)
+                    monsterList.SelectedIndex = 0;
             }
         }
 
         private void addMonsterToList(object sender, EventArgs e)
         {
-            if (this.monsterName.Text.Length == 0)
+            if (monsterName.Text.Length == 0)
                 MessageBox.Show("Please type a monster name.");
             else
             {
-                this.monsterList.Items.Add(new monster(this.monsterName.Text));
-                if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
+                monster newMonster = new monster(monsterName.Text);
+                monsterList.Items.Add(newMonster);
+
+                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
-                    monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
-                    thisMonsterSlot.monsterAdd(new monster(this.monsterName.Text));
+                    monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                    thisMonsterSlot.monsterAdd(newMonster);
                 }
             }
         }
 
         private void removeMonsterFromList(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
+            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
             {
-                monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
-                thisMonsterSlot.monsterRemove((monster)this.monsterList.SelectedItem);
+                monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                thisMonsterSlot.monsterRemove((monster)monsterList.SelectedItem);
             }
-            this.monsterList.Items.Remove(this.monsterList.SelectedItem);
+            monsterList.Items.Remove(monsterList.SelectedItem);
         }
 
         private void changeMonster(object sender, EventArgs e)
         {
-            if (isListItemSelected(this.monsterList.SelectedItem, typeof(monster)))
+            if (isListItemSelected(monsterList.SelectedItem, typeof(monster)))
             {
-                monster thisMonster = (monster)this.monsterList.SelectedItem;
-                this.health1.Text = thisMonster.getMonsterHealthByDifficulty(0);
-                this.health2.Text = thisMonster.getMonsterHealthByDifficulty(1);
-                this.health3.Text = thisMonster.getMonsterHealthByDifficulty(2);
-                this.health4.Text = thisMonster.getMonsterHealthByDifficulty(3);
-                this.health5.Text = thisMonster.getMonsterHealthByDifficulty(4);
-                this.speed1.Text = thisMonster.getMonsterSpeedByDifficulty(0);
-                this.speed2.Text = thisMonster.getMonsterSpeedByDifficulty(1);
-                this.speed3.Text = thisMonster.getMonsterSpeedByDifficulty(2);
-                this.speed4.Text = thisMonster.getMonsterSpeedByDifficulty(3);
-                this.speed5.Text = thisMonster.getMonsterSpeedByDifficulty(4);
-                this.weight1.Text = thisMonster.getMonsterWeightByDifficulty(0);
-                this.weight2.Text = thisMonster.getMonsterWeightByDifficulty(1);
-                this.weight3.Text = thisMonster.getMonsterWeightByDifficulty(2);
-                this.weight4.Text = thisMonster.getMonsterWeightByDifficulty(3);
-                this.weight5.Text = thisMonster.getMonsterWeightByDifficulty(4);
-                this.token1.Text = thisMonster.getMonsterTokenByDifficulty(0);
-                this.token2.Text = thisMonster.getMonsterTokenByDifficulty(1);
-                this.token3.Text = thisMonster.getMonsterTokenByDifficulty(2);
-                this.token4.Text = thisMonster.getMonsterTokenByDifficulty(3);
-                this.token5.Text = thisMonster.getMonsterTokenByDifficulty(4);
+                monster thisMonster = (monster)monsterList.SelectedItem;
+                health1.Text = thisMonster.getMonsterHealthByDifficulty(0);
+                health2.Text = thisMonster.getMonsterHealthByDifficulty(1);
+                health3.Text = thisMonster.getMonsterHealthByDifficulty(2);
+                health4.Text = thisMonster.getMonsterHealthByDifficulty(3);
+                health5.Text = thisMonster.getMonsterHealthByDifficulty(4);
+                speed1.Text = thisMonster.getMonsterSpeedByDifficulty(0);
+                speed2.Text = thisMonster.getMonsterSpeedByDifficulty(1);
+                speed3.Text = thisMonster.getMonsterSpeedByDifficulty(2);
+                speed4.Text = thisMonster.getMonsterSpeedByDifficulty(3);
+                speed5.Text = thisMonster.getMonsterSpeedByDifficulty(4);
+                weight1.Text = thisMonster.getMonsterWeightByDifficulty(0);
+                weight2.Text = thisMonster.getMonsterWeightByDifficulty(1);
+                weight3.Text = thisMonster.getMonsterWeightByDifficulty(2);
+                weight4.Text = thisMonster.getMonsterWeightByDifficulty(3);
+                weight5.Text = thisMonster.getMonsterWeightByDifficulty(4);
+                token1.Text = thisMonster.getMonsterTokenByDifficulty(0);
+                token2.Text = thisMonster.getMonsterTokenByDifficulty(1);
+                token3.Text = thisMonster.getMonsterTokenByDifficulty(2);
+                token4.Text = thisMonster.getMonsterTokenByDifficulty(3);
+                token5.Text = thisMonster.getMonsterTokenByDifficulty(4);
             }
         }
 
         private void populateMonsterList()
         {
-            this.monsterList.Items.Clear();
-            if (isListItemSelected(this.altGameList.SelectedItem, typeof(altGame)))
+            monsterList.Items.Clear();
+            if (isListItemSelected(altGameList.SelectedItem, typeof(altGame)))
             {
-                if (isListItemSelected(this.monsterSlotList.SelectedItem, typeof(monsterSlot)))
+                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
                 {
-                    monsterSlot thisMonsterSlot = (monsterSlot)this.monsterSlotList.SelectedItem;
+                    monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+
                     foreach (monster aMonster in thisMonsterSlot.monsters)
                     {
-                        this.monsterList.Items.Add(aMonster);
+                        monsterList.Items.Add(aMonster);
                     }
                 }
             }
@@ -459,7 +477,7 @@ namespace MonsterSpawnGenerator
 
             sb.Append(designSpec.ToString() + "\n");
             sb.Append("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] = \n{");
-            foreach(Object item in this.gameList.Items)
+            foreach(Object item in gameList.Items)
             {
                 gameCounter++;
                 if (item.GetType() == typeof(game))
@@ -504,7 +522,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append((altGameCounter > 0 ? "\n\t" : "") + "}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
+                    sb.Append((altGameCounter > 0 ? "\n\t" : "") + "}" + (gameCounter < gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
@@ -514,7 +532,7 @@ namespace MonsterSpawnGenerator
             altGameCounter = 0;
             slotCounter = 0;
             monsterCounter = 0;
-            foreach (Object item in this.gameList.Items)
+            foreach (Object item in gameList.Items)
             {
                 if (item.GetType() == typeof(game))
                 {
@@ -546,20 +564,20 @@ namespace MonsterSpawnGenerator
                                         monsterCounter++;
                                         monster thisMonster = (monster)item4;
                                         sb.Append("\n\t\t\t\t{"
-                                            + thisMonster.getMonsterHealthByDifficulty(0) + ","
                                             + thisMonster.getMonsterSpeedByDifficulty(0) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(0) + ","
                                             + thisMonster.getMonsterWeightByDifficulty(0) + ","
-                                            + thisMonster.getMonsterHealthByDifficulty(1) + ","
                                             + thisMonster.getMonsterSpeedByDifficulty(1) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(1) + ","
                                             + thisMonster.getMonsterWeightByDifficulty(1) + ","
-                                            + thisMonster.getMonsterHealthByDifficulty(2) + ","
                                             + thisMonster.getMonsterSpeedByDifficulty(2) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(2) + ","
                                             + thisMonster.getMonsterWeightByDifficulty(2) + ","
-                                            + thisMonster.getMonsterHealthByDifficulty(3) + ","
                                             + thisMonster.getMonsterSpeedByDifficulty(3) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(3) + ","
                                             + thisMonster.getMonsterWeightByDifficulty(3) + ","
-                                            + thisMonster.getMonsterHealthByDifficulty(4) + ","
                                             + thisMonster.getMonsterSpeedByDifficulty(4) + ","
+                                            + thisMonster.getMonsterHealthByDifficulty(4) + ","
                                             + thisMonster.getMonsterWeightByDifficulty(4)
                                             + "}" + (monsterCounter == thisMonsterSlot.monsters.Count ? "" : ","));
                                     }
@@ -569,7 +587,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append((thisGame.altGames.Count > 0 ? "\n\t" : "") + "}" + (gameCounter < this.gameList.Items.Count ? "," : ""));
+                    sb.Append((thisGame.altGames.Count > 0 ? "\n\t" : "") + "}" + (gameCounter < gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
@@ -617,12 +635,12 @@ namespace MonsterSpawnGenerator
                     }
                     else
                     {
-                        this.gameList.Items.Clear();
+                        gameList.Items.Clear();
                         dissectStrings(fileContent);
                         dissectValues(fileContent);
                         gameList.SelectedIndex = 0;
                         bool drawnGlobalList = false;
-                        foreach (game game in this.gameList.Items)
+                        foreach (game game in gameList.Items)
                         {
                             foreach (altGame altGame in game.altGames)
                             {
@@ -680,19 +698,19 @@ namespace MonsterSpawnGenerator
                         {
                             gameName = line.Substring(3, gameName.Length - 1);
                             thisGame = new game(gameName);
-                            this.gameList.Items.Add(thisGame);
+                            gameList.Items.Add(thisGame);
                             continue;
                         }
                         else if (line.EndsWith("},"))
                         {
                             gameName = line.Substring(3, gameName.Length - 2);
                             thisGame = new game(gameName);
-                            this.gameList.Items.Add(thisGame);
+                            gameList.Items.Add(thisGame);
                             continue;
                         }
 
                         thisGame = new game(gameName);
-                        this.gameList.Items.Add(thisGame);
+                        gameList.Items.Add(thisGame);
 
                         while ((line = stringReader.ReadLine()) != null)
                         {
@@ -819,7 +837,7 @@ namespace MonsterSpawnGenerator
                             break;
                         else
                         {
-                            game thisGameObject = (game)this.gameList.Items[thisGame];
+                            game thisGameObject = (game)gameList.Items[thisGame];
                             thisAltGame = 0;
                             while ((line = stringReader.ReadLine()) != null)
                             {
@@ -871,10 +889,10 @@ namespace MonsterSpawnGenerator
                                                                     switch (statIncrement % 3)
                                                                     {
                                                                         case 0:
-                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
+                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
                                                                             break;
                                                                         case 1:
-                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
+                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
                                                                             break;
                                                                         case 2:
                                                                             thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
@@ -889,10 +907,10 @@ namespace MonsterSpawnGenerator
                                                                     switch (statIncrement % 3)
                                                                     {
                                                                         case 0:
-                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
+                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
                                                                             break;
                                                                         case 1:
-                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
+                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
                                                                             break;
                                                                         case 2:
                                                                             thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
