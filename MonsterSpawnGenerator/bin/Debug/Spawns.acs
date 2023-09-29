@@ -296,7 +296,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DoomDemon3"}
 			},
 			{//Slaughtaur
-				{"Spectre3"}
+				{"BaronofHell3"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight3"}
@@ -317,7 +317,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PainElemental3"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell3"}
+				{"Revenant3"}
 			},
 			{//Traductus
 				{"Archvile3"}
@@ -523,7 +523,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Demon64"}
 			},
 			{//Slaughtaur
-				{"Spectre64"}
+				{"BaronofHell64"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight64"}
@@ -544,7 +544,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PainElemental64"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell64"}
+				{"Revenant64"}
 			},
 			{//Traductus
 				{"Archvile64"}
@@ -999,9 +999,11 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MMRandomizer_MechBloodDemon"}
 			},
 			{//Slaughtaur
-				{"Spectre3"},
-				{"MMRandomizer_Wraith"},
-				{"MMRandomizer_Nightmare"}
+				{"BaronofHell3"},
+				{"MMRandomizer_Belphegor"},
+				{"MMRandomizer_HellsFury"},
+				{"MMRandomizer_CyberBaron"},
+				{"MMRandomizer_BruiserDemon"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight3"},
@@ -1048,11 +1050,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MMRandomizer_Afrit"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell3"},
-				{"MMRandomizer_Belphegor"},
-				{"MMRandomizer_HellsFury"},
-				{"MMRandomizer_CyberBaron"},
-				{"MMRandomizer_BruiserDemon"}
+				{"MMRandomizer_MeleeRevenant"},
+				{"Revenant3"},
+				{"MMRandomizer_Ghoul"},
+				{"MMRandomizer_Incarnate"}
 			},
 			{//Traductus
 				{"Archvile3"},
@@ -1287,8 +1288,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"AcidDemon64"}
 			},
 			{//Slaughtaur
-				{"Spectre64"},
-				{"NightmareSpectre64"}
+				{"BaronofHell64"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight64"}
@@ -1310,7 +1310,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PainElemental64"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell64"}
+				{"Revenant64"}
 			},
 			{//Traductus
 				{"Archvile64"}
@@ -1520,8 +1520,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"NewFlemoidusStridicus"}
 			},
 			{//Slaughtaur
-				{"NewFlemoidusCycloptisCommonus"},
-				{"NewLarva"}
+				{"OldFlemoidusMaximusDoom"}
 			},
 			{//Green Chaos Serpent
 				{"NewQuadrumpus"}
@@ -1542,7 +1541,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SuperCycloptis2"}
 			},
 			{//Brown Chaos Serpent
-				{"OldFlemoidusMaximusDoom"}
+				{"NewQuadrumpus"}
 			},
 			{//Traductus
 				{"NewFlemoidusMaximus"}
@@ -1755,9 +1754,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Clink3Doom"}
 			},
 			{//Slaughtaur
-				{"KnightGhost3Doom"},
-				{"MummyGhost3Doom"},
-				{"MummyLeaderGhost3Doom"}
+				{"Beast3Doom"}
 			},
 			{//Green Chaos Serpent
 				{"Beast3Doom"}
@@ -1778,7 +1775,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Wizard3Doom"}
 			},
 			{//Brown Chaos Serpent
-				{"Beast3Doom"}
+				{"Snake3Doom"}
 			},
 			{//Traductus
 				{"IronLich3Doom"}
@@ -2004,7 +2001,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WolfDog"}
 			},
 			{//Slaughtaur
-				{"WolfDogSpectre"}
+				{"HansGrosseDoom"},
+				{"GretelGrosseDoom"}
 			},
 			{//Green Chaos Serpent
 				{"WolfMutant"}
@@ -2026,8 +2024,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"FakeHitler"}
 			},
 			{//Brown Chaos Serpent
-				{"HansGrosseDoom"},
-				{"GretelGrosseDoom"}
+				{"WolfMutant"}
 			},
 			{//Traductus
 				{"TransGrosseDoom"}
@@ -2247,7 +2244,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SODDogSpectre"}
 			},
 			{//Slaughtaur
-				{"SODDogSpectre"}
+				{"GeneralleutnantStahlkopfDoom"}
 			},
 			{//Green Chaos Serpent
 				{"SODBat"}
@@ -2268,7 +2265,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"FireDrone"}
 			},
 			{//Brown Chaos Serpent
-				{"GeneralleutnantStahlkopfDoom"}
+				{"SODBat"}
 			},
 			{//Traductus
 				{"SubmarineWillyDoom"}
@@ -2546,8 +2543,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"TotenkopfDog2"}
 			},
 			{//Slaughtaur
-				{"TotenkopfDog"},
-				{"TotenkopfDog2"}
+				{"TotenkopfHansGrosse"}
 			},
 			{//Green Chaos Serpent
 				{"TotenkopfTrooperPanzerschreck"}
@@ -2581,7 +2577,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"TotenkopfMonk"}
 			},
 			{//Brown Chaos Serpent
-				{"TotenkopfHansGrosse"}
+				{"TotenkopfWaffenSS"},
+				{"TotenkopfWaffenSS2"},
+				{"TotenkopfWaffenSS3"},
+				{"TotenkopfWaffenSSOfficer"}
 			},
 			{//Traductus
 				{"TotenkopfMechanoidStormTrooper"}
@@ -3062,7 +3061,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ProtozoidEgg"}
 			},
 			{//Slaughtaur
-				{"ProtozoidEgg"}
+				{"MiniBattlelordDoom"}
 			},
 			{//Green Chaos Serpent
 				{"AssaultCommander"}
@@ -3087,7 +3086,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ReconPatrolVehicle"}
 			},
 			{//Brown Chaos Serpent
-				{"MiniBattlelordDoom"}
+				{"AssaultCommander"}
 			},
 			{//Traductus
 				{"ProtectorDroneDoom"}
@@ -3388,7 +3387,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ProtozoidEgg"}
 			},
 			{//Slaughtaur
-				{"ProtozoidEgg"}
+				{"MiniBattlelordDoom"}
 			},
 			{//Green Chaos Serpent
 				{"BlueBeachCommander"},
@@ -3435,7 +3434,12 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BeachOctabrain"}
 			},
 			{//Brown Chaos Serpent
-				{"MiniBattlelordDoom"}
+				{"BlueBeachCommander"},
+				{"RedBeachCommander"},
+				{"GreenBeachCommander"},
+				{"GrayBeachCommander"},
+				{"DarkGrayBeachCommander"},
+				{"DarkBlueBeachCommander"}
 			},
 			{//Traductus
 				{"ProtectorDroneDoom"}
@@ -3667,7 +3671,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ProtozoidEgg"}
 			},
 			{//Slaughtaur
-				{"ProtozoidEgg"}
+				{"MiniBattlelordDoom"}
 			},
 			{//Green Chaos Serpent
 				{"AssaultCommander"}
@@ -3692,7 +3696,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"ReconPatrolVehicle"}
 			},
 			{//Brown Chaos Serpent
-				{"MiniBattlelordDoom"}
+				{"AssaultCommander"}
 			},
 			{//Traductus
 				{"ProtectorDroneDoom"}
@@ -4058,12 +4062,9 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PfhorSuperFighter"}
 			},
 			{//Slaughtaur
-				{"WaterFlickta"},
-				{"MLooker"},
-				{"MLooker2"},
-				{"DrinniolMinor"},
-				{"DrinniolMajor"},
-				{"PfhorSuperFighter"}
+				{"HunterMajor"},
+				{"M1HunterMajor"},
+				{"MotherofAllHunters"}
 			},
 			{//Green Chaos Serpent
 				{"HunterMinor"},
@@ -4103,9 +4104,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"M2EliteSpht"}
 			},
 			{//Brown Chaos Serpent
-				{"HunterMajor"},
-				{"M1HunterMajor"},
-				{"MotherofAllHunters"}
+				{"M1EnforcerMinor"},
+				{"M2EnforcerMinor"},
+				{"M1EnforcerMajor"},
+				{"M2EnforcerMajor"}
 			},
 			{//Traductus
 				{"M2EliteEnforcerMinor"},
@@ -4368,10 +4370,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QGremlin"}
 			},
 			{//Slaughtaur
-				{"QPhantomSwordsman"},
-				{"Quake_Spawn"},
-				{"Quake_HellSpawn"},
-				{"Quake_HellSpawn_2"}
+				{"QGuardian2"},
+				{"QGuardian3"},
+				{"QGuardian4"},
+				{"QMummy"}
 			},
 			{//Green Chaos Serpent
 				{"QFiend"},
@@ -4395,10 +4397,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QWrath"}
 			},
 			{//Brown Chaos Serpent
-				{"QGuardian2"},
-				{"QGuardian3"},
-				{"QGuardian4"},
-				{"QMummy"}
+				{"QOgre"},
+				{"QMultiOgre"}
 			},
 			{//Traductus
 				{"Shambler"}
@@ -4621,7 +4621,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MonkDrain_Weak"}
 			},
 			{//Slaughtaur
-				{"MonkDrain"}
+				{"GeneralDarian"}
 			},
 			{//Green Chaos Serpent
 				{"RobotGuard"}
@@ -4643,7 +4643,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"CopterPatrol2"}
 			},
 			{//Brown Chaos Serpent
-				{"GeneralDarian"}
+				{"OverPatrol"}
 			},
 			{//Traductus
 				{"TriadEnforcer"}
@@ -4899,7 +4899,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MutantGreen"}
 			},
 			{//Slaughtaur
-				{"WaterAlien"}
+				{"ExpHumanBlue"},
+				{"CyborgWarrior"}
 			},
 			{//Green Chaos Serpent
 				{"ExpHumanBrown"},
@@ -4928,8 +4929,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PerGunnerDrone"}
 			},
 			{//Brown Chaos Serpent
-				{"ExpHumanBlue"},
-				{"CyborgWarrior"}
+				{"ReptilianWarrior"},
+				{"MechSentinel"},
+				{"StarTrooper"},
+				{"AlienProtector"}
 			},
 			{//Traductus
 				{"BreatherBeast"},
@@ -5146,7 +5149,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"GillBeast"}
 			},
 			{//Slaughtaur
-				{"ChokingHand"}
+				{"BloodBeast"}
 			},
 			{//Green Chaos Serpent
 				{"Butcher"}
@@ -5167,7 +5170,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BloodPhantasm"}
 			},
 			{//Brown Chaos Serpent
-				{"BloodBeast"}
+				{"HellHound"}
 			},
 			{//Traductus
 				{"BloodPriest","","","","CultistWellDone","CultistExtraCrispy"}
@@ -5392,7 +5395,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"StrifeStalker"}
 			},
 			{//Slaughtaur
-				{"ShadowStalker"}
+				{"NewStrifeBishop"}
 			},
 			{//Green Chaos Serpent
 				{"StrifeTemplar"}
@@ -5416,7 +5419,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"NewAlienSpectre1"}
 			},
 			{//Brown Chaos Serpent
-				{"NewStrifeBishop"}
+				{"StrifeReaver"}
 			},
 			{//Traductus
 				{"NewAlienSpectre3"},
@@ -5639,7 +5642,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BoonBitter"}
 			},
 			{//Slaughtaur
-				{"BoonBitter"}
+				{"RotoDroid"}
 			},
 			{//Green Chaos Serpent
 				{"HSD2"}
@@ -5661,7 +5664,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MiniRepairDroid"}
 			},
 			{//Brown Chaos Serpent
-				{"RotoDroid"}
+				{"LSD2"}
 			},
 			{//Traductus
 				{"RotoDroid"}
@@ -5873,7 +5876,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Semaj"}
 			},
 			{//Slaughtaur
-				{"Semaj"}
+				{"EniramBoss"}
 			},
 			{//Green Chaos Serpent
 				{"Otrebor"}
@@ -5895,7 +5898,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Ailoprobe"}
 			},
 			{//Brown Chaos Serpent
-				{"EniramBoss"}
+				{"Tenaj"},
+				{"Eniram"}
 			},
 			{//Traductus
 				{"C7MWarrior"}
@@ -6106,7 +6110,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BabyEstronBeast"}
 			},
 			{//Slaughtaur
-				{"BabyEstronBeast"}
+				{"RMREstronBig"}
 			},
 			{//Green Chaos Serpent
 				{"HeavyBlackSuit"}
@@ -6128,7 +6132,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"RMRSpinner"}
 			},
 			{//Brown Chaos Serpent
-				{"RMREstronBig"}
+				{"TerranCommando"}
 			},
 			{//Traductus
 				{"RMRHoverGunner"}
@@ -6333,7 +6337,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"gamorrean_guard"}
 			},
 			{//Slaughtaur
-				{"gamorrean_guard"}
+				{"phase1_DF"}
 			},
 			{//Green Chaos Serpent
 				{"gran___DF"}
@@ -6354,7 +6358,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"probe_droid"}
 			},
 			{//Brown Chaos Serpent
-				{"phase1_DF"}
+				{"gran___DF"}
 			},
 			{//Traductus
 				{"Phase2_DF"},
@@ -6571,7 +6575,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"IPOGBerserker"}
 			},
 			{//Slaughtaur
-				{"IPOGBerserker"}
+				{"IPOGWizard"}
 			},
 			{//Green Chaos Serpent
 				{"IPOGGuard"}
@@ -6592,7 +6596,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"IPOGImperialDrone"}
 			},
 			{//Brown Chaos Serpent
-				{"IPOGWizard"}
+				{"IPOGVeekWarrior"}
 			},
 			{//Traductus
 				{"IPOGWizard"}
@@ -6835,7 +6839,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DsrptSawRobot"}
 			},
 			{//Slaughtaur
-				{"DisruptorNightmareSpider"}
+				{"DisruptorNDisruptor"},
+				{"DisruptorAGuardian"}
 			},
 			{//Green Chaos Serpent
 				{"DisruptorIceDisruptor"}
@@ -6861,8 +6866,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DisruptorNightmareSphere"}
 			},
 			{//Brown Chaos Serpent
-				{"DisruptorNDisruptor"},
-				{"DisruptorAGuardian"}
+				{"DisruptorTerroristDroid2"},
+				{"DisruptorTerroristElite"}
 			},
 			{//Traductus
 				{"Nightmare_Demon"}
@@ -7213,10 +7218,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"MinoDrake"}
 			},
 			{//Slaughtaur
-				{"WitchavenShadowHound"},
-				{"WTGiryonKnight2HSword"},
-				{"WTGiryonKnight1HSword"},
-				{"WTGiryonKnightMace"}
+				{"WTGreyWitch"}
 			},
 			{//Green Chaos Serpent
 				{"WTPurpleMidianWarriorSpell"},
@@ -7254,7 +7256,11 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Witchaven2Guardian"}
 			},
 			{//Brown Chaos Serpent
-				{"WTGreyWitch"}
+				{"WTBlueMidianWarriorSpell"},
+				{"WTBlueMidianWarriorHalberd"},
+				{"WTBlueMidianWarriorSword"},
+				{"WTArgothonianPikeAxe_2"},
+				{"WTArgothonianPikeAxe_3"}
 			},
 			{//Traductus
 				{"WitchavenScaryScreamer"}
@@ -7566,10 +7572,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Bullsquid","","","HLNormal","HLHard","HLHard"}
 			},
 			{//Slaughtaur
-				{"Headcrab_Scientist"},
-				{"Headcrab_Barney"},
-				{"Headcrab_Soldier"},
-				{"HLPitDrone"}
+				{"ShockTrooper"}
 			},
 			{//Green Chaos Serpent
 				{"AlienGrunt","HLEasy","HLEasy","HLNormal","HLHard","HLNightmare"}
@@ -7603,7 +7606,14 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"HLController"}
 			},
 			{//Brown Chaos Serpent
-				{"ShockTrooper"}
+				{"Gonome"},
+				{"MaleAssassin1_MP5"},
+				{"MaleAssassin2_MP5"},
+				{"MaleAssassin3_MP5"},
+				{"MaleAssassin1_M40"},
+				{"MaleAssassin2_M40"},
+				{"MaleAssassin3_M40"},
+				{"HLAssassin"}
 			},
 			{//Traductus
 				{"HECU_Robot1"},
@@ -8255,8 +8265,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SWRipper"}
 			},
 			{//Slaughtaur
-				{"SWCoolie"},
-				{"SWRipper"}
+				{"SerpentGod"}
 			},
 			{//Green Chaos Serpent
 				{"SWGuardian"},
@@ -8290,7 +8299,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"SWCoolieGhost"}
 			},
 			{//Brown Chaos Serpent
-				{"SerpentGod"}
+				{"NinjaOrange"},
+				{"NinjaGray"},
+				{"SWHenchmanPurple"},
+				{"SWHenchmanOrange"}
 			},
 			{//Traductus
 				{"NinjaDark"},
@@ -8584,13 +8596,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PoweredGhoulie"}
 			},
 			{//Slaughtaur
-				{"CMSlugg"},
-				{"Ghoulie"},
-				{"GangerMale"},
-				{"GangerFemale"},
-				{"CMGenno"},
-				{"WildMung"},
-				{"CMHellspider"}
+				{"CMLoD"}
 			},
 			{//Green Chaos Serpent
 				{"CMMongo"},
@@ -8614,7 +8620,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"CMAircar"}
 			},
 			{//Brown Chaos Serpent
-				{"CMLoD"}
+				{"CMGangX"},
+				{"CMMung"}
 			},
 			{//Traductus
 				{"Srifeng"}
@@ -8834,8 +8841,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"OmenWasp"}
 			},
 			{//Slaughtaur
-				{"Bastet"},
-				{"OmenWasp"}
+				{"ExMummy"}
 			},
 			{//Green Chaos Serpent
 				{"ExMummy"}
@@ -8858,7 +8864,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"OmenWaspNecro"}
 			},
 			{//Brown Chaos Serpent
-				{"ExMummy"}
+				{"KilmaatSentry"}
 			},
 			{//Traductus
 				{"ExMummy"}
@@ -9276,10 +9282,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Alligator"}
 			},
 			{//Slaughtaur
-				{"GuardDog"},
-				{"GuardDog_Blood"},
-				{"Jackelope"},
-				{"Alligator"}
+				{"AlienHulk"},
+				{"AlienHulk_Blue"}
 			},
 			{//Green Chaos Serpent
 				{"SheriffHobbes"},
@@ -9328,8 +9332,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"BillyRayUFO"}
 			},
 			{//Brown Chaos Serpent
-				{"AlienHulk"},
-				{"AlienHulk_Blue"}
+				{"DaisyNDoylie"}
 			},
 			{//Traductus
 				{"DarkGreenVixen"},
@@ -9623,10 +9626,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Q2Parasite"}
 			},
 			{//Slaughtaur
-				{"Q2Mutant"},
-				{"Q2Brain"},
-				{"Q2Parasite"},
-				{"Q2Gekk"}
+				{"Q2TankCommander"}
 			},
 			{//Green Chaos Serpent
 				{"Q2Tank"}
@@ -9651,7 +9651,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Q2Technician"}
 			},
 			{//Brown Chaos Serpent
-				{"Q2TankCommander"}
+				{"Q2IronMaiden"},
+				{"Q2Gunner"}
 			},
 			{//Traductus
 				{"Q2IronMaidenBetaClass"},
@@ -9937,10 +9938,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Hexen2WereJaguar"}
 			},
 			{//Slaughtaur
-				{"Hexen2Scorpion"},
-				{"Hexen2StoneGolem"},
-				{"Hexen2Pentacle"},
-				{"Hexen2WereJaguar"}
+				{"Hexen2ShadowWizard"}
 			},
 			{//Green Chaos Serpent
 				{"Hexen2IronGolem"},
@@ -9967,7 +9965,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Hexen2FallenAngelLord"}
 			},
 			{//Brown Chaos Serpent
-				{"Hexen2ShadowWizard"}
+				{"Hexen2ArcherLord"},
+				{"Hexen2IronGolem"},
+				{"Hexen2SnowTiger"},
+				{"Hexen2Mummy"}
 			},
 			{//Traductus
 				{"Hexen2Medusa"},
@@ -10198,7 +10199,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Goldeneye_BlueCamGuard"}
 			},
 			{//Slaughtaur
-				{"Goldeneye_BlueCamGuard"}
+				{"Goldeneye_Oddjob"},
+				{"Goldeneye_Jaws"},
+				{"Goldeneye_Mayday"},
+				{"Goldeneye_ArmorGuard"}
 			},
 			{//Green Chaos Serpent
 				{"Goldeneye_SiberianForces"}
@@ -10219,10 +10223,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"Goldeneye_Drone"}
 			},
 			{//Brown Chaos Serpent
-				{"Goldeneye_Oddjob"},
-				{"Goldeneye_Jaws"},
-				{"Goldeneye_Mayday"},
-				{"Goldeneye_ArmorGuard"}
+				{"Goldeneye_CamGuard"}
 			},
 			{//Traductus
 				{"Goldeneye_MoonGuard"},
@@ -10537,10 +10538,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"CatacombApocalypse_GoldTroll"}
 			},
 			{//Slaughtaur
-				{"CatacombArmageddon_Pox"},
-				{"CatacombArmageddon_Bunny"},
-				{"CatacombApocalypse_InvisibleHorror"},
-				{"CatacombApocalypse_Spectre"}
+				{"Catacomb3D_RedDemon"},
+				{"CatacombArmageddon_TwoHeadedDemon"}
 			},
 			{//Green Chaos Serpent
 				{"CatacombAbyss_BlueDemon"},
@@ -10567,8 +10566,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"CatacombArmageddon_EvilEye"}
 			},
 			{//Brown Chaos Serpent
-				{"Catacomb3D_RedDemon"},
-				{"CatacombArmageddon_TwoHeadedDemon"}
+				{"CatacombApocalypse_CyberAnt"},
+				{"CatacombApocalypse_Wizard"}
 			},
 			{//Traductus
 				{"Catacomb3D_NemesisClone"},
@@ -10781,7 +10780,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DoomDemon3"}
 			},
 			{//Slaughtaur
-				{"Spectre3"}
+				{"BaronofHell3"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight3"}
@@ -10802,7 +10801,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PainElemental3"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell3"}
+				{"Revenant3"}
 			},
 			{//Traductus
 				{"Archvile3"}
@@ -11004,7 +11003,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DoomDemon3"}
 			},
 			{//Slaughtaur
-				{"Spectre3"}
+				{"BaronofHell3"}
 			},
 			{//Green Chaos Serpent
 				{"HellKnight3"}
@@ -11025,7 +11024,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"PainElemental3"}
 			},
 			{//Brown Chaos Serpent
-				{"BaronofHell3"}
+				{"Revenant3"}
 			},
 			{//Traductus
 				{"Archvile3"}
@@ -11251,7 +11250,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"WolfDog"}
 			},
 			{//Slaughtaur
-				{"WolfDogSpectre"}
+				{"HansGrosseDoom"},
+				{"GretelGrosseDoom"}
 			},
 			{//Green Chaos Serpent
 				{"WolfMutant"}
@@ -11273,8 +11273,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"FakeHitler"}
 			},
 			{//Brown Chaos Serpent
-				{"HansGrosseDoom"},
-				{"GretelGrosseDoom"}
+				{"WolfMutant"}
 			},
 			{//Traductus
 				{"TransGrosseDoom"}
@@ -11660,14 +11659,11 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QGremlin"}
 			},
 			{//Slaughtaur
-				{"Q2Mutant"},
-				{"Q2Brain"},
-				{"Q2Parasite"},
-				{"Q2Gekk"},
-				{"QPhantomSwordsman"},
-				{"Quake_Spawn"},
-				{"Quake_HellSpawn"},
-				{"Quake_HellSpawn_2"}
+				{"Q2TankCommander"},
+				{"QGuardian2"},
+				{"QGuardian3"},
+				{"QGuardian4"},
+				{"QMummy"}
 			},
 			{//Green Chaos Serpent
 				{"Q2Tank"},
@@ -11701,11 +11697,10 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"QWrath"}
 			},
 			{//Brown Chaos Serpent
-				{"Q2TankCommander"},
-				{"QGuardian2"},
-				{"QGuardian3"},
-				{"QGuardian4"},
-				{"QMummy"}
+				{"Q2IronMaiden"},
+				{"Q2Gunner"},
+				{"QOgre"},
+				{"QMultiOgre"}
 			},
 			{//Traductus
 				{"Q2IronMaidenBetaClass"},
@@ -11969,7 +11964,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DsrptSawRobot"}
 			},
 			{//Slaughtaur
-				{"DisruptorNightmareSpider"}
+				{"DisruptorNDisruptor"},
+				{"DisruptorAGuardian"}
 			},
 			{//Green Chaos Serpent
 				{"DisruptorIceDisruptor"}
@@ -11995,8 +11991,8 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"DisruptorNightmareSphere"}
 			},
 			{//Brown Chaos Serpent
-				{"DisruptorNDisruptor"},
-				{"DisruptorAGuardian"}
+				{"DisruptorTerroristDroid2"},
+				{"DisruptorTerroristElite"}
 			},
 			{//Traductus
 				{"Nightmare_Demon"}
@@ -12220,7 +12216,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"StrifeStalker"}
 			},
 			{//Slaughtaur
-				{"ShadowStalker"}
+				{"NewStrifeBishop"}
 			},
 			{//Green Chaos Serpent
 				{"StrifeTemplar"}
@@ -12244,7 +12240,7 @@ str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STR
 				{"NewAlienSpectre1"}
 			},
 			{//Brown Chaos Serpent
-				{"NewStrifeBishop"}
+				{"StrifeReaver"}
 			},
 			{//Traductus
 				{"NewAlienSpectre3"},
@@ -13160,8 +13156,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			},
 			{//Slaughtaur
 				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,8},
-				{0,0,6,0,0,6,0,0,6,0,0,6,0,0,6},
-				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4}
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Green Chaos Serpent
 				{0,0,6,0,0,6,0,0,6,0,0,6,0,0,6},
@@ -13209,10 +13207,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 			},
 			{//Brown Chaos Serpent
 				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,8},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,6,0,0,6,0,0,6,0,0,6,0,0,6},
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3}
 			},
 			{//Traductus
 				{0,0,10,0,0,10,0,0,10,0,0,10,0,0,10},
@@ -13447,8 +13444,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Slaughtaur
-				{0,0,9,0,0,71,0,0,7,0,0,69,0,0,17},
-				{0,0,1,0,0,9,0,0,1,0,0,11,0,0,3}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -13680,7 +13676,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -13915,8 +13910,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -14164,6 +14157,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -14186,7 +14180,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -14706,7 +14699,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -14741,6 +14733,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -15595,6 +15590,11 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -15883,7 +15883,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 	{//Marathon
 		{//Main
 			{//Zombieman
-				{0.5,0.5,4,0.75,0.75,4,0,0,3,1.25,1.25,1,1.5,1.5,-1},
+				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
 				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
@@ -16012,7 +16012,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Commonus
-				{0.5,0.5,4,0.75,0.75,4,0,0,3,1.25,1.25,1,1.5,1.5,-1},
+				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
 				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
@@ -16105,7 +16105,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.88,0.5,-1,0.94,0.75,-1,0,0,1,1.13,1.25,2,1.25,1.5,3}
 			},
 			{//Golem
-				{0.5,0.5,4,0.75,0.75,4,0,0,3,1.25,1.25,1,1.5,1.5,-1},
+				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
 				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
@@ -16189,7 +16189,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Ettin
-				{0.5,0.5,4,0.75,0.75,4,0,0,3,1.25,1.25,1,1.5,1.5,-1},
+				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
 				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,1,1.25,1.5,-1},
 				{0.81,0.5,-1,0.87,0.75,2,0,0,3,1.05,1.25,4,1.15,1.5,4},
@@ -16218,12 +16218,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.73,0.5,3,0.8,0.66,3,0,0,4,1.13,1.34,3,1.25,1.5,2}
 			},
 			{//Slaughtaur
-				{0.88,0.5,4,0.94,0.75,4,0,0,4,1.13,1.25,5,1.25,1.5,4},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,3},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,3},
-				{0.76,0.8,1,0.95,0.9,1,0,0,2,1.19,1.2,2,1.5,1.4,3},
-				{0.89,0.7,-1,0.96,0.8,-1,0,0,1,1.19,1.2,1,1.32,1.5,1},
-				{0.73,0.5,5,0.8,0.66,5,0,0,2,1.13,1.34,2,1.25,1.5,1}
+				{0.88,0.5,5,0.94,0.75,5,0,0,5,1.13,1.25,5,1.25,1.5,5},
+				{0.88,0.5,5,0.94,0.75,5,0,0,5,1.13,1.25,5,1.25,1.5,5},
+				{0.88,0.5,1,0.94,0.75,1,0,0,2,1.13,1.25,3,1.25,1.5,4}
 			},
 			{//Green Chaos Serpent
 				{0.88,0.5,5,0.94,0.75,5,0,0,5,1.13,1.25,5,1.25,1.5,5},
@@ -16263,9 +16260,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.88,0.5,2,0.94,0.75,2,0,0,3,1.13,1.25,2,1.25,1.5,4}
 			},
 			{//Brown Chaos Serpent
-				{0.88,0.5,5,0.94,0.75,5,0,0,5,1.13,1.25,5,1.25,1.5,5},
-				{0.88,0.5,5,0.94,0.75,5,0,0,5,1.13,1.25,5,1.25,1.5,5},
-				{0.88,0.5,1,0.94,0.75,1,0,0,2,1.13,1.25,3,1.25,1.5,4}
+				{0.88,0.5,2,0.94,0.75,2,0,0,3,1.13,1.25,1,1.25,1.5,2},
+				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,2,1.25,1.5,1},
+				{0.88,0.5,1,0.94,0.75,1,0,0,2,1.13,1.25,1,1.25,1.5,2},
+				{0.88,0.5,3,0.94,0.75,3,0,0,2,1.13,1.25,4,1.25,1.5,4}
 			},
 			{//Traductus
 				{0.88,0.5,4,0.94,0.75,4,0,0,3,1.13,1.25,2,1.25,1.5,1},
@@ -16528,10 +16526,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,2,0,0,2,0,0,2,1.25,0,1,2.0,0,1}
 			},
 			{//Slaughtaur
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Green Chaos Serpent
 				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,2},
@@ -16555,10 +16553,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
+				{0,0,3,0,0,5,0,0,3,0,0,2,0,0,-1},
+				{0,0,-1,0,0,1,0,0,1,0,0,3,0,0,3}
 			},
 			{//Traductus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -16781,7 +16777,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.8,0.8,0,0,0,0,1.1,1.1,0,1.2,1.2,0,1.4,1.4,0}
 			},
 			{//Slaughtaur
-				{0,0.8,0,0,0,0,0,1.1,0,0,1.2,0,0,1.4,0}
+				{0.65,0.65,0,0,0,0,1.05,1.05,0,1.22,1.22,0,1.44,1.44,0}
 			},
 			{//Green Chaos Serpent
 				{0,0.8,0,0,0,0,1.2,1.2,0,1.4,1.4,0,1.6,1.6,0}
@@ -16803,7 +16799,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0.8,0.8,0,0,0,0,1.2,1.2,0,1.4,1.4,0,1.6,1.6,0}
 			},
 			{//Brown Chaos Serpent
-				{0.65,0.65,0,0,0,0,1.05,1.05,0,1.22,1.22,0,1.44,1.44,0}
+				{0.9,0.9,0,0,0,0,1.09,1.09,0,1.27,1.27,0,2.0,2.0,0}
 			},
 			{//Traductus
 				{0,0.9,0,0,0,0,1.1,1.1,0,1.1,1.1,0,1.4,1.4,0}
@@ -16833,9 +16829,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 	{//Blake Stone
 		{//Main
 			{//Zombieman
-				{0.4,0.4,2,0.6,0.6,2,0,0,2,1.2,1.2,2,1.4,1.4,2},
-				{0,0.4,2,0,0.6,2,0,0,2,1.25,1.25,2,1.5,1.5,2},
-				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,2,0,1.5,2}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Shotgun Guy
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,3,0,1.5,2},
@@ -16843,94 +16839,94 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.4,1,0,0.6,1,0,0,1,0,1.2,1,0,1.5,1}
 			},
 			{//Imp
-				{0,0.4,0,0,0.6,0,0,0,0,1.33,1.33,0,0,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.33,0,0,1.5,0}
 			},
 			{//Chaingun Guy
-				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,1.4,1.4,5},
-				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0}
 			},
 			{//Super Shotgun Guy
-				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,0,1.4,5},
-				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0}
 			},
 			{//Demon
-				{0,0.4,0,0,0.6,0,0,0,0,1.2,1.2,0,0,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Dark Imp
-				{0,0.4,0,0,0.6,0,0,0,0,1.33,1.33,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.33,0,0,1.5,0}
 			},
 			{//Spectre
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Blood Demon
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,0,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Lost Soul
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,0,1.5,4},
-				{0.75,0,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
+				{0,0.75,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
 			},
 			{//Cacodemon
 				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Revenant
-				{0.4,0.4,4,0.6,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
+				{0,0.4,4,0,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
 				{0,0.6,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2}
 			},
 			{//Cacolantern
-				{0.6,0.6,0,0.8,0.8,0,1.4,0,0,1.2,1.2,0,1.75,1.5,0}
+				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Pain Elemental
-				{0.6,0.6,0,0.8,0.8,0,1.4,0,0,1.2,1.2,0,1.75,1.5,0}
+				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Hell Knight
-				{0.5,0.5,5,0.7,0.7,5,0,0,5,1.3,1.3,5,0,1.5,5},
+				{0,0.5,5,0,0.7,5,0,0,5,0,1.3,5,0,1.5,5},
 				{0,0.5,2,0,0.75,3,0,0,3,0,1.25,3,0,1.5,4},
 				{0,0.5,5,0,0.75,4,0,0,4,0,1.25,3,0,1.5,3}
 			},
 			{//Arachnotron
-				{0.6,0.6,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
+				{0,0.6,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Mancubus
-				{0.5,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5},
+				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5},
 				{0,0.4,3,0,0.6,3,0,0,3,0,1.2,3,0,1.4,4}
 			},
 			{//Abaddon
 				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Arch-vile
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Baron of Hell
-				{0,0.5,5,0.75,0.75,5,0,0,5,1.25,1.25,5,0,1.5,5},
-				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5}
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Hectebus
-				{0.5,0.5,5,0.75,0.75,5,0,0,5,1.25,1.25,5,0,1.5,5},
+				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5},
 				{0,0.4,3,0,0.6,3,0,0,3,0,1.2,3,0,1.4,4}
 			},
 			{//Belphegor
-				{0.5,0.5,5,0.75,0.75,5,0,0,5,1.25,1.25,5,1.5,1.5,5},
-				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5}
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Spider Mastermind
 				{0,0,0,0,0,0,0,0,0,1.66,1.66,0,2.0,2.0,0}
 			},
 			{//Cyberdemon
-				{0.5,0.5,4,0.66,0.66,4,0,0,4,1.2,1.2,4,1.5,1.5,4},
-				{0,0.5,4,0.75,0.75,4,0,0,4,1.25,1.25,4,1.4,1.4,4},
-				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,1.5,1.5,4},
-				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,1.4,1.4,2}
+				{0,0.5,2,0,0.66,2,0,0,2,0,1.2,2,0,1.5,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.4,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.5,2},
+				{0,0.5,1,0,0.75,1,0,0,1,0,1.25,1,0,1.4,1}
 			},
 			{//Wolfenstein SS
-				{0.4,0.4,0,0.6,0.6,0,0,0,0,1.2,1.2,0,1.4,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Flemoidus Commonus
-				{0.4,0.4,2,0.6,0.6,2,0,0,2,1.2,1.2,2,1.4,1.4,2},
-				{0,0.4,2,0,0.6,2,0,0,2,1.25,1.25,2,1.5,1.5,2},
-				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,2,0,1.5,2}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Flemoidus Bipedicus
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,3,0,1.5,2},
@@ -16938,61 +16934,61 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.4,1,0,0.6,1,0,0,1,0,1.2,1,0,1.5,1}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0.4,0,0,0.6,0,0,0,0,1.33,1.33,0,0,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.33,0,0,1.5,0}
 			},
 			{//Flemoidus Stridicus
-				{0,0.4,0,0,0.6,0,0,0,0,1.2,1.2,0,0,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Larva
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Flem Mine
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,0,1.5,4},
-				{0.75,0,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
+				{0,0.75,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
 			},
 			{//Flemoidus Cycloptis Commonus
 				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Super Cycloptis
-				{0.6,0.6,0,0.8,0.8,0,1.4,0,0,1.2,1.2,0,1.75,1.5,0}
+				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Quadrumpus
-				{0.4,0.4,4,0.6,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
+				{0,0.4,4,0,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
 				{0,0.6,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2}
 			},
 			{//Flemoidus Maximus
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Flembrane
-				{0,0.5,5,0.75,0.75,5,0,0,5,1.25,1.25,5,0,1.5,5},
-				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5}
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Flembomination
-				{0,0,0,0,0,0,0,0,0,1.66,1.66,0,2.0,2.0,0}
+				{0,0,0,0,0,0,0,0,0,0,1.66,0,0,2.0,0}
 			},
 			{//Snotfolus
-				{0.5,0.5,4,0.66,0.66,4,0,0,4,1.2,1.2,4,1.5,1.5,4},
-				{0,0.5,4,0.75,0.75,4,0,0,4,1.25,1.25,4,1.4,1.4,4},
-				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,1.5,1.5,4},
-				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,1.4,1.4,2}
+				{0,0.5,2,0,0.66,2,0,0,2,0,1.2,2,0,1.5,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.4,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.5,2},
+				{0,0.5,1,0,0.75,1,0,0,1,0,1.25,1,0,1.4,1}
 			},
 			{//Gargoyle
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,0,1.5,4},
-				{0.75,0,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
+				{0,0.75,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
 			},
 			{//Fire Gargoyle
-				{0,0.4,0,0,0.6,0,0,0,0,1.33,1.33,0,0,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.33,0,0,1.5,0}
 			},
 			{//Golem
-				{0.4,0.4,2,0.6,0.6,2,0,0,2,1.2,1.2,2,1.4,1.4,2},
-				{0,0.4,2,0,0.6,2,0,0,2,1.25,1.25,2,1.5,1.5,2},
-				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,2,0,1.5,2}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Golem Ghost
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Nitrogolem
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,3,0,1.5,2},
@@ -17000,69 +16996,70 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.4,1,0,0.6,1,0,0,1,0,1.2,1,0,1.5,1}
 			},
 			{//Nitrogolem Ghost
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Disciple of D'Sparil
 				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Undead Warrior
-				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,1.4,1.4,5},
-				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0}
 			},
 			{//Undead Warrior Ghost
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Sabreclaw
-				{0,0.4,0,0,0.6,0,0,0,0,1.2,1.2,0,0,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Ophidian
-				{0.4,0.4,4,0.6,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
+				{0,0.4,4,0,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
 				{0,0.6,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2}
 			},
 			{//Weredragon
-				{0.5,0.5,5,0.7,0.7,5,0,0,5,1.3,1.3,5,0,1.5,5},
+				{0,0.5,5,0,0.7,5,0,0,5,0,1.3,5,0,1.5,5},
 				{0,0.5,2,0,0.75,3,0,0,3,0,1.25,3,0,1.5,4},
 				{0,0.5,5,0,0.75,4,0,0,4,0,1.25,3,0,1.5,3}
 			},
 			{//Iron Lich
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Maulotaur
-				{0.5,0.5,4,0.66,0.66,4,0,0,4,1.2,1.2,4,1.5,1.5,4},
-				{0,0.5,4,0.75,0.75,4,0,0,4,1.25,1.25,4,1.4,1.4,4},
-				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,1.5,1.5,4},
-				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,1.4,1.4,2}
+				{0,0.5,2,0,0.66,2,0,0,2,0,1.2,2,0,1.5,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.4,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.5,2},
+				{0,0.5,1,0,0.75,1,0,0,1,0,1.25,1,0,1.4,1}
 			},
 			{//D'Sparil
-				{0,0,0,0,0,0,0,0,0,1.66,1.66,0,2.0,2.0,0}
+				{0,0,0,0,0,0,0,0,0,0,1.66,0,0,2.0,0}
 			},
 			{//Chicken
-				{0.4,0.4,0,0.6,0.6,0,0,0,0,1.2,1.2,0,1.4,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Ettin
-				{0.4,0.4,2,0.6,0.6,2,0,0,2,1.2,1.2,2,1.4,1.4,2},
-				{0,0.4,2,0,0.6,2,0,0,2,1.25,1.25,2,1.5,1.5,2},
-				{0,0.4,2,0,0.6,2,0,0,2,0,1.25,2,0,1.5,2}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Afrit
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,0,1.5,4},
-				{0.75,0,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
+				{0,0.75,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3}
 			},
 			{//Dark Bishop
-				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,1.4,1.4,5},
-				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0}
 			},
 			{//Centaur
-				{0,0.4,0,0,0.6,0,0,0,0,1.2,1.2,0,0,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			},
 			{//Slaughtaur
-				{0,0.4,0,0,0.6,0,0,0,0,1.25,1.25,0,1.5,1.5,0}
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0},
+				{0,0.5,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0}
 			},
 			{//Green Chaos Serpent
-				{0.5,0.5,5,0.7,0.7,5,0,0,5,1.3,1.3,5,0,1.5,5},
+				{0,0.5,5,0,0.7,5,0,0,5,0,1.3,5,0,1.5,5},
 				{0,0.5,2,0,0.75,3,0,0,3,0,1.25,3,0,1.5,4},
 				{0,0.5,5,0,0.75,4,0,0,4,0,1.25,3,0,1.5,3}
 			},
@@ -17072,11 +17069,11 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.4,1,0,0.6,1,0,0,1,0,1.2,1,0,1.5,1}
 			},
 			{//Stalker Boss
-				{0,0.4,5,0,0.6,5,0,0,5,1.166,1.166,5,1.4,1.4,5},
-				{0,0.4,5,0,0.6,5,0,0,5,0,1.166,5,0,1.4,5}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0},
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.166,0,0,1.4,0}
 			},
 			{//Wendigo
-				{0.4,0.4,4,0.6,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
+				{0,0.4,4,0,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
 				{0,0.6,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2},
 				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2}
@@ -17085,271 +17082,273 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Reiver (Buried)
-				{0.6,0.6,0,0.8,0.8,0,1.4,0,0,1.2,1.2,0,1.75,1.5,0}
+				{0,0.6,0,1.2,0.8,0,1.4,0,0,1.6,1.2,0,1.75,1.5,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0.5,5,0.75,0.75,5,0,0,5,1.25,1.25,5,0,1.5,5},
-				{0,0.5,5,0,0.75,5,0,0,5,0,1.25,5,0,1.5,5}
+				{0,0.4,4,0,0.6,4,0,0,4,0,1.2,4,0,1.5,4},
+				{0,0.6,3,0,0.9,3,0,0,3,0,1.2,3,0,1.4,3},
+				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2},
+				{0,0.4,2,0,0.6,2,0,0,2,0,1.31,2,0,1.6,2}
 			},
 			{//Traductus
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Zedek
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Menelkir
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Death Wyvern
-				{0,0.4,3,0.8,0.8,3,0,0,3,0,1.2,3,1.4,1.4,3},
+				{0,0.4,3,0,0.8,3,0,0,3,0,1.2,3,0,1.4,3},
 				{0,0.5,4,0,0.75,4,0,0,4,0,1.33,4,0,1.66,4}
 			},
 			{//Heresiarch
-				{0.5,0.5,4,0.66,0.66,4,0,0,4,1.2,1.2,4,1.5,1.5,4},
-				{0,0.5,4,0.75,0.75,4,0,0,4,1.25,1.25,4,1.4,1.4,4},
-				{0,0.5,4,0,0.75,4,0,0,4,0,1.25,4,1.5,1.5,4},
-				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,1.4,1.4,2}
+				{0,0.5,2,0,0.66,2,0,0,2,0,1.2,2,0,1.5,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.4,2},
+				{0,0.5,2,0,0.75,2,0,0,2,0,1.25,2,0,1.5,2},
+				{0,0.5,1,0,0.75,1,0,0,1,0,1.25,1,0,1.4,1}
 			},
 			{//Korax
-				{0,0,0,0,0,0,0,0,0,1.66,1.66,0,2.0,2.0,0}
+				{0,0,0,0,0,0,0,0,0,0,1.66,0,0,2.0,0}
 			},
 			{//Pig
-				{0.4,0.4,0,0.6,0.6,0,0,0,0,1.2,1.2,0,1.4,1.4,0}
+				{0,0.4,0,0,0.6,0,0,0,0,0,1.2,0,0,1.4,0}
 			}
 		}
 	},
 	{//Blood
 		{//Main
 			{//Zombieman
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Shotgun Guy
-				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Imp
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Chaingun Guy
-				{0,0,2,1.5,1.5,2,0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Super Shotgun Guy
-				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Demon
-				{0,0,3,0,1.32,3,0,1.91,3,0,2.5,3,0,3.23,3},
-				{0,0,3,0,1.41,3,0,2.17,3,0,2.65,3,0,3.37,3}
+				{0,0,0,0,1.32,0,0,1.91,0,0,2.5,0,0,3.23,0},
+				{0,0,0,0,1.41,0,0,2.17,0,0,2.65,0,0,3.37,0}
 			},
 			{//Dark Imp
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Spectre
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.75,0,0,2.5,0,0,3.5,0,0,4.5,0}
 			},
 			{//Blood Demon
-				{0,0,3,0,1.32,3,0,1.91,3,0,2.5,3,0,3.23,3},
-				{0,0,3,0,1.41,3,0,2.17,3,0,2.65,3,0,3.37,3}
+				{0,0,0,0,1.32,0,0,1.91,0,0,2.5,0,0,3.23,0},
+				{0,0,0,0,1.41,0,0,2.17,0,0,2.65,0,0,3.37,0}
 			},
 			{//Lost Soul
-				{0,0,3,0,1.5,3,0,2.0,3,0,3.5,3,0,5.0,3}
+				{0,0,0,0,1.5,0,0,2.0,0,0,3.5,0,0,5.0,0}
 			},
 			{//Cacodemon
-				{0,0,3,0,1.3,3,0,1.5,3,0,2.3,3,0,3.2,3}
+				{0,0,0,0,1.3,0,0,1.5,0,0,2.3,0,0,3.2,0}
 			},
 			{//Revenant
-				{0,0,3,0,1.35,3,0,2.0,3,0,2.7,3,0,3.0,3}
+				{0,0,0,0,1.35,0,0,2.0,0,0,2.7,0,0,3.0,0}
 			},
 			{//Cacolantern
-				{0,0,3,0,1.35,3,0,2.04,3,0,2.63,3,0,3.37,3}
+				{0,0,0,0,1.3,0,0,1.5,0,0,2.3,0,0,3.2,0}
 			},
 			{//Pain Elemental
-				{0,0,3,0,1.35,3,0,2.04,3,0,2.63,3,0,3.37,3}
+				{0,0,0,0,1.35,0,0,2.04,0,0,2.63,0,0,3.37,0}
 			},
 			{//Hell Knight
-				{0,0,3,0,1.41,3,0,2.0,3,0,2.76,3,0,3.4,3}
+				{0,0,0,0,1.41,0,0,2.0,0,0,2.76,0,0,3.4,0}
 			},
 			{//Arachnotron
-				{0,0,3,1.4,1.4,3,2.0,2.0,3,2.6,2.6,3,3.4,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Mancubus
-				{0,0,3,0,1.78,3,0,2.22,3,0,3.11,3,0,3.55,3}
+				{0,0,0,0,1.78,0,0,2.22,0,0,3.11,0,0,3.55,0}
 			},
 			{//Abaddon
-				{0,0,3,0,1.3,3,0,1.5,3,0,2.3,3,0,3.2,3}
+				{0,0,0,0,1.35,0,0,2.04,0,0,2.63,0,0,3.37,0}
 			},
 			{//Arch-vile
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Baron of Hell
-				{0,0,3,0,1.2,3,0,1.5,3,0,1.7,3,0,2.0,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,1.7,0,0,2.0,0}
 			},
 			{//Hectebus
-				{0,0,3,0,1.78,3,0,2.22,3,0,3.11,3,0,3.55,3}
+				{0,0,0,0,1.78,0,0,2.22,0,0,3.11,0,0,3.55,0}
 			},
 			{//Belphegor
-				{0,0,3,1.2,1.2,3,1.5,1.5,3,1.7,1.7,3,2.0,2.0,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,1.7,0,0,2.0,0}
 			},
 			{//Spider Mastermind
-				{0,0,3,1.2,1.2,3,1.5,1.5,3,2.0,2.0,3,3.2,3.2,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,2.0,0,0,3.2,0}
 			},
 			{//Cyberdemon
-				{0,0,3,0,1.2,3,0,2.0,3,0,2.4,3,0,3.2,3},
-				{0,0,3,0,1.25,3,0,2.35,3,0,2.4,3,0,3.5,3}
+				{0,0,0,0,1.2,0,0,2.0,0,0,2.4,0,0,3.2,0},
+				{0,0,0,0,1.25,0,0,2.35,0,0,2.4,0,0,3.5,0}
 			},
 			{//Wolfenstein SS
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Flemoidus Commonus
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Flemoidus Bipedicus
-				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Flemoidus Stridicus
-				{0,0,3,0,1.32,3,0,1.91,3,0,2.5,3,0,3.23,3},
-				{0,0,3,0,1.41,3,0,2.17,3,0,2.65,3,0,3.37,3}
+				{0,0,0,0,1.32,0,0,1.91,0,0,2.5,0,0,3.23,0},
+				{0,0,0,0,1.41,0,0,2.17,0,0,2.65,0,0,3.37,0}
 			},
 			{//Larva
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.75,0,0,2.5,0,0,3.5,0,0,4.5,0}
 			},
 			{//Flem Mine
-				{0,0,3,0,1.5,3,0,2.0,3,0,3.5,3,0,5.0,3}
+				{0,0,0,0,1.5,0,0,2.0,0,0,3.5,0,0,5.0,0}
 			},
 			{//Flemoidus Cycloptis Commonus
-				{0,0,3,0,1.3,3,0,1.5,3,0,2.3,3,0,3.2,3}
+				{0,0,0,0,1.3,0,0,1.5,0,0,2.3,0,0,3.2,0}
 			},
 			{//Super Cycloptis
-				{0,0,3,0,1.35,3,0,2.04,3,0,2.63,3,0,3.37,3}
+				{0,0,0,0,1.35,0,0,2.04,0,0,2.63,0,0,3.37,0}
 			},
 			{//Quadrumpus
-				{0,0,3,0,1.35,3,0,2.0,3,0,2.7,3,0,3.0,3}
+				{0,0,0,0,1.35,0,0,2.0,0,0,2.7,0,0,3.0,0}
 			},
 			{//Flemoidus Maximus
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Flembrane
-				{0,0,3,0,1.2,3,0,1.5,3,0,1.7,3,0,2.0,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,1.7,0,0,2.0,0}
 			},
 			{//Flembomination
-				{0,0,3,1.2,1.2,3,1.5,1.5,3,2.0,2.0,3,3.2,3.2,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,2.0,0,0,3.2,0}
 			},
 			{//Snotfolus
-				{0,0,3,0,1.2,3,0,2.0,3,0,2.4,3,0,3.2,3},
-				{0,0,3,0,1.25,3,0,2.35,3,0,2.4,3,0,3.5,3}
+				{0,0,0,0,1.2,0,0,2.0,0,0,2.4,0,0,3.2,0},
+				{0,0,0,0,1.25,0,0,2.35,0,0,2.4,0,0,3.5,0}
 			},
 			{//Gargoyle
-				{0,0,3,0,1.5,3,0,2.0,3,0,3.5,3,0,5.0,3}
+				{0,0,0,0,1.5,0,0,2.0,0,0,3.5,0,0,5.0,0}
 			},
 			{//Fire Gargoyle
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Golem
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Golem Ghost
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.75,0,0,2.5,0,0,3.5,0,0,4.5,0}
 			},
 			{//Nitrogolem
-				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Nitrogolem Ghost
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.75,0,0,2.5,0,0,3.5,0,0,4.5,0}
 			},
 			{//Disciple of D'Sparil
-				{0,0,3,0,1.3,3,0,1.5,3,0,2.3,3,0,3.2,3}
+				{0,0,0,0,1.3,0,0,1.5,0,0,2.3,0,0,3.2,0}
 			},
 			{//Undead Warrior
-				{0,0,2,1.5,1.5,2,0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Undead Warrior Ghost
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.75,0,0,2.5,0,0,3.5,0,0,4.5,0}
 			},
 			{//Sabreclaw
-				{0,0,3,0,1.32,3,0,1.91,3,0,2.5,3,0,3.23,3},
-				{0,0,3,0,1.41,3,0,2.17,3,0,2.65,3,0,3.37,3}
+				{0,0,0,0,1.32,0,0,1.91,0,0,2.5,0,0,3.23,0},
+				{0,0,0,0,1.41,0,0,2.17,0,0,2.65,0,0,3.37,0}
 			},
 			{//Ophidian
-				{0,0,3,0,1.35,3,0,2.0,3,0,2.7,3,0,3.0,3}
+				{0,0,0,0,1.35,0,0,2.0,0,0,2.7,0,0,3.0,0}
 			},
 			{//Weredragon
-				{0,0,3,0,1.41,3,0,2.0,3,0,2.76,3,0,3.4,3}
+				{0,0,0,0,1.41,0,0,2.0,0,0,2.76,0,0,3.4,0}
 			},
 			{//Iron Lich
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Maulotaur
-				{0,0,3,0,1.2,3,0,2.0,3,0,2.4,3,0,3.2,3},
-				{0,0,3,0,1.25,3,0,2.35,3,0,2.4,3,0,3.5,3}
+				{0,0,0,0,1.2,0,0,2.0,0,0,2.4,0,0,3.2,0},
+				{0,0,0,0,1.25,0,0,2.35,0,0,2.4,0,0,3.5,0}
 			},
 			{//D'Sparil
-				{0,0,3,1.2,1.2,3,1.5,1.5,3,2.0,2.0,3,3.2,3.2,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,2.0,0,0,3.2,0}
 			},
 			{//Chicken
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Ettin
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Afrit
-				{0,0,3,0,1.5,3,0,2.0,3,0,3.5,3,0,5.0,3}
+				{0,0,0,0,1.5,0,0,2.0,0,0,3.5,0,0,5.0,0}
 			},
 			{//Dark Bishop
-				{0,0,2,1.5,1.5,2,0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Centaur
-				{0,0,3,0,1.32,3,0,1.91,3,0,2.5,3,0,3.23,3},
-				{0,0,3,0,1.41,3,0,2.17,3,0,2.65,3,0,3.37,3}
+				{0,0,0,0,1.32,0,0,1.91,0,0,2.5,0,0,3.23,0},
+				{0,0,0,0,1.41,0,0,2.17,0,0,2.65,0,0,3.37,0}
 			},
 			{//Slaughtaur
-				{0,0,3,0,1.75,3,0,2.5,3,0,3.5,3,0,4.5,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,1.7,0,0,2.0,0}
 			},
 			{//Green Chaos Serpent
-				{0,0,3,0,1.41,3,0,2.0,3,0,2.76,3,0,3.4,3}
+				{0,0,0,0,1.41,0,0,2.0,0,0,2.76,0,0,3.4,0}
 			},
 			{//Stalker
-				{0,0,2,0,1.5,2,0,2.0,2,0,2.5,2,0,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Stalker Boss
-				{0,0,2,1.5,1.5,2,0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			},
 			{//Wendigo
-				{0,0,3,0,1.35,3,0,2.0,3,0,2.7,3,0,3.0,3}
+				{0,0,0,0,1.35,0,0,2.0,0,0,2.7,0,0,3.0,0}
 			},
 			{//Reiver
-				{0,0,3,0,1.3,3,0,1.5,3,0,2.3,3,0,3.2,3}
+				{0,0,0,0,1.3,0,0,1.5,0,0,2.3,0,0,3.2,0}
 			},
 			{//Reiver (Buried)
-				{0,0,3,0,1.35,3,0,2.04,3,0,2.63,3,0,3.37,3}
+				{0,0,0,0,1.35,0,0,2.04,0,0,2.63,0,0,3.37,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,3,0,1.2,3,0,1.5,3,0,1.7,3,0,2.0,3}
+				{0,0,0,0,1.35,0,0,2.0,0,0,2.7,0,0,3.0,0}
 			},
 			{//Traductus
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Zedek
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Menelkir
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Death Wyvern
-				{0,0,3,0,1.4,3,0,2.0,3,0,2.6,3,0,3.4,3}
+				{0,0,0,0,1.4,0,0,2.0,0,0,2.6,0,0,3.4,0}
 			},
 			{//Heresiarch
-				{0,0,3,0,1.2,3,0,2.0,3,0,2.4,3,0,3.2,3},
-				{0,0,3,0,1.25,3,0,2.35,3,0,2.4,3,0,3.5,3}
+				{0,0,0,0,1.2,0,0,2.0,0,0,2.4,0,0,3.2,0},
+				{0,0,0,0,1.25,0,0,2.35,0,0,2.4,0,0,3.5,0}
 			},
 			{//Korax
-				{0,0,3,1.2,1.2,3,1.5,1.5,3,2.0,2.0,3,3.2,3.2,3}
+				{0,0,0,0,1.2,0,0,1.5,0,0,2.0,0,0,3.2,0}
 			},
 			{//Pig
-				{0,0,2,1.5,1.5,2,2.0,2.0,2,2.5,2.5,2,3.1,3.1,2}
+				{0,0,0,0,1.5,0,0,2.0,0,0,2.5,0,0,3.1,0}
 			}
 		}
 	},
@@ -17625,13 +17624,13 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Demon
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Dark Imp
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Spectre
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Blood Demon
 				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
@@ -17699,10 +17698,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Stridicus
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Larva
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Flem Mine
 				{0.8,0,4,0.9,0,4,1.25,0,4,1.5,0,4,2.0,0,4},
@@ -17744,13 +17743,13 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Golem Ghost
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Nitrogolem
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Nitrogolem Ghost
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Disciple of D'Sparil
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -17760,10 +17759,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Undead Warrior Ghost
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Sabreclaw
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Ophidian
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -17796,10 +17795,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Centaur
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0.66,0,0,0.75,0,0,0,0,0,1.25,0,0,1.5,0,0}
 			},
 			{//Slaughtaur
-				{0.66,0,5,0.75,0,5,0,0,5,1.25,0,5,1.5,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -18055,6 +18054,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -18788,8 +18788,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
 			{//Imp
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Chaingun Guy
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
@@ -18803,8 +18803,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Dark Imp
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Spectre
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -18879,8 +18879,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Stridicus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -18928,8 +18928,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,5,0,0,7}
 			},
 			{//Fire Gargoyle
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Golem
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -18995,7 +18995,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,3,0,0,3,0,0,4,0,0,5},
+				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
 			},
 			{//Green Chaos Serpent
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -19021,8 +19022,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,4,0,0,3,0,0,6,0,0,8}
 			},
 			{//Brown Chaos Serpent
-				{0,0,2,0,0,3,0,0,3,0,0,4,0,0,5},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,5,0,0,4,0,0,3,0,0,3,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,4}
 			},
 			{//Traductus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -19373,10 +19374,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,6,0,0,6,0,0,3,0,0,9}
 			},
 			{//Slaughtaur
-				{0,0,3,0,0,6,0,0,3,0,0,2,0,0,3},
-				{0,0,2,0,0,5,0,0,2,0,0,1,0,0,1},
-				{0,0,2,0,0,5,0,0,2,0,0,1,0,0,1},
-				{0,0,2,0,0,5,0,0,2,0,0,1,0,0,1}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -19414,7 +19412,11 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,8,0,0,4,0,0,2,0,0,4,0,0,2},
+				{0,0,8,0,0,4,0,0,2,0,0,4,0,0,2},
+				{0,0,8,0,0,4,0,0,2,0,0,4,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,9,0,0,9},
+				{0,0,3,0,0,3,0,0,3,0,0,9,0,0,9}
 			},
 			{//Traductus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -19445,18 +19447,18 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 	{//Half Life
 		{//Main
 			{//Zombieman
-				{0,0,2,0,0,2,0,0,3,2.0,2.0,3,2.25,2.25,1},
-				{0,0,3,0,0,4,0,0,3,1.5,1.5,4,2.0,2.0,4}
+				{0,0,2,0,0,2,0,0,3,0,2.0,3,0,2.25,1},
+				{0,0,3,0,0,4,0,0,3,0,1.5,4,0,2.0,4}
 			},
 			{//Shotgun Guy
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0},
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0}
 			},
 			{//Imp
-				{0,0,5,0,0,5,0,0,4,0,2.0,3,2.0,2.0,3}
+				{0,0,5,0,0,5,0,0,4,0,2.0,3,0,2.0,3}
 			},
 			{//Chaingun Guy
-				{0.5,0.5,6,0.5,0.5,6,0.75,0.75,6,0,0,6,1.5,1.5,5},
+				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,1,0,0.5,1,0,0.75,2,0,0,3,0,1.5,4},
 				{0,0.5,2,0,0.5,2,0,0.75,2,0,0,2,0,1.5,2},
@@ -19464,8 +19466,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.5,3,0,0.5,3,0,0.75,3,0,0,3,0,1.5,3}
 			},
 			{//Super Shotgun Guy
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0},
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0}
 			},
 			{//Demon
 				{0,0,4,0,0,4,0,0,5,0,2.0,6,0,2.0,6},
@@ -19491,26 +19493,26 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,5,0,0,5,0,0,5,0,2.0,5,0,2.0,5}
 			},
 			{//Cacodemon
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Revenant
-				{0,0,4,0,0,4,0,0,4,2.0,2.0,4,2.4,2.4,4},
+				{0,0,4,0,0,4,0,0,4,0,2.0,4,0,2.4,4},
 				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Cacolantern
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Pain Elemental
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Hell Knight
-				{0,0.5,4,0,0.5,4,0,0.75,5,0,0,5,0,1.2,5}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.2,0}
 			},
 			{//Arachnotron
 				{0,0,2,0,0,3,0,0,3,0,0,4,0,0,5},
@@ -19522,14 +19524,14 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,3,0,0,5,0,0,7}
 			},
 			{//Abaddon
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Arch-vile
 				{0,0.5,5,0,0.5,5,0,0.75,5,0,0,5,0,1.5,5},
 				{0,0.5,3,0,0.5,3,0,0.75,3,0,0,3,0,1.5,3}
 			},
 			{//Baron of Hell
-				{0,0.6,5,0,0.6,4,0,0,4,0,0,4,0,2.0,4}
+				{0,0.6,0,0,0.6,0,0,0,0,0,0,0,0,2.0,0}
 			},
 			{//Hectebus
 				{0,0.711,5,0,0.711,5,0,0.711,5,0,0,5,0,0,5},
@@ -19537,7 +19539,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,3,0,0,5,0,0,7}
 			},
 			{//Belphegor
-				{0.6,0.6,5,0.6,0.6,4,0,0,4,0,0,4,2.0,2.0,4}
+				{0,0.6,0,0,0.6,0,0,0,0,0,0,0,0,2.0,0}
 			},
 			{//Spider Mastermind
 				{0,0.8,6,0,0.8,6,0,0.8,6,0,0,6,0,1.6,6},
@@ -19554,21 +19556,21 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Flemoidus Commonus
-				{0,0,2,0,0,2,0,0,3,2.0,2.0,3,2.25,2.25,1},
-				{0,0,3,0,0,4,0,0,3,1.5,1.5,4,2.0,2.0,4}
+				{0,0,2,0,0,2,0,0,3,0,2.0,3,0,2.25,1},
+				{0,0,3,0,0,4,0,0,3,0,1.5,4,0,2.0,4}
 			},
 			{//Flemoidus Bipedicus
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0},
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0,5,0,0,5,0,0,4,0,2.0,3,2.0,2.0,3}
+				{0,0,0,0,0,0,0,0,0,0,2.0,0,0,2.0,0}
 			},
 			{//Flemoidus Stridicus
 				{0,0,4,0,0,4,0,0,5,0,2.0,6,0,2.0,6},
@@ -19583,21 +19585,21 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,2,0,2.75,1,0,2.75,2}
 			},
 			{//Flem Mine
-				{0,0,5,0,0,5,0,0,5,0,2.0,5,0,2.0,5}
+				{0,0,0,0,0,0,0,0,0,0,2.0,0,0,2.0,0}
 			},
 			{//Flemoidus Cycloptis Commonus
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Super Cycloptis
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Quadrumpus
-				{0,0,4,0,0,4,0,0,4,2.0,2.0,4,2.4,2.4,4},
+				{0,0,4,0,0,4,0,0,4,0,2.0,4,0,2.4,4},
 				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
@@ -19606,7 +19608,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.5,3,0,0.5,3,0,0.75,3,0,0,3,0,1.5,3}
 			},
 			{//Flembrane
-				{0,0.6,5,0,0.6,4,0,0,4,0,0,4,0,2.0,4}
+				{0,0.6,0,0,0.6,0,0,0,0,0,0,0,0,2.0,0}
 			},
 			{//Flembomination
 				{0,0.8,6,0,0.8,6,0,0.8,6,0,0,6,0,1.6,6},
@@ -19619,14 +19621,14 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Gargoyle
-				{0,0,5,0,0,5,0,0,5,0,2.0,5,0,2.0,5}
+				{0,0,0,0,0,0,0,0,0,0,2.0,0,0,2.0,0}
 			},
 			{//Fire Gargoyle
-				{0,0,5,0,0,5,0,0,4,0,2.0,3,2.0,2.0,3}
+				{0,0,5,0,0,5,0,0,4,0,2.0,3,0,2.0,3}
 			},
 			{//Golem
-				{0,0,2,0,0,2,0,0,3,2.0,2.0,3,2.25,2.25,1},
-				{0,0,3,0,0,4,0,0,3,1.5,1.5,4,2.0,2.0,4}
+				{0,0,2,0,0,2,0,0,3,0,2.0,3,0,2.25,1},
+				{0,0,3,0,0,4,0,0,3,0,1.5,4,0,2.0,4}
 			},
 			{//Golem Ghost
 				{0,0,4,0,0,4,0,0,5,0,2.0,6,0,2.0,6},
@@ -19635,8 +19637,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,2,0,2.75,1,0,2.75,2}
 			},
 			{//Nitrogolem
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0},
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0}
 			},
 			{//Nitrogolem Ghost
 				{0,0,4,0,0,4,0,0,5,0,2.0,6,0,2.0,6},
@@ -19645,10 +19647,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,2,0,0,2,0,2.75,1,0,2.75,2}
 			},
 			{//Disciple of D'Sparil
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Undead Warrior
-				{0.5,0.5,6,0.5,0.5,6,0.75,0.75,6,0,0,6,1.5,1.5,5},
+				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,1,0,0.5,1,0,0.75,2,0,0,3,0,1.5,4},
 				{0,0.5,2,0,0.5,2,0,0.75,2,0,0,2,0,1.5,2},
@@ -19668,17 +19670,17 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,1,0,0,2,0,3.0,2,0,3.0,3}
 			},
 			{//Ophidian
-				{0,0,4,0,0,4,0,0,4,2.0,2.0,4,2.4,2.4,4},
+				{0,0,4,0,0,4,0,0,4,0,2.0,4,0,2.4,4},
 				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Weredragon
-				{0,0.5,4,0,0.5,4,0,0.75,5,0,0,5,0,1.2,5}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.2,0}
 			},
 			{//Iron Lich
 				{0,0.5,5,0,0.5,5,0,0.75,5,0,0,5,0,1.5,5},
@@ -19699,20 +19701,20 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Ettin
-				{0,0,2,0,0,2,0,0,3,2.0,2.0,3,2.25,2.25,1},
-				{0,0,3,0,0,4,0,0,3,1.5,1.5,4,2.0,2.0,4}
+				{0,0,2,0,0,2,0,0,3,0,2.0,3,0,2.25,1},
+				{0,0,3,0,0,4,0,0,3,0,1.5,4,0,2.0,4}
 			},
 			{//Afrit
-				{0,0,5,0,0,5,0,0,5,0,2.0,5,0,2.0,5}
+				{0,0,0,0,0,0,0,0,0,0,2.0,0,0,2.0,0}
 			},
 			{//Dark Bishop
-				{0.5,0.5,6,0.5,0.5,6,0.75,0.75,6,0,0,6,1.5,1.5,5},
+				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,1,0,0.5,1,0,0.75,2,0,0,3,0,1.5,4},
 				{0,0.5,2,0,0.5,2,0,0.75,2,0,0,2,0,1.5,2},
@@ -19726,20 +19728,17 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,1,0,0,1,0,0,2,0,3.0,2,0,3.0,3}
 			},
 			{//Slaughtaur
-				{0,0,4,0,0,4,0,0,5,0,2.0,6,0,2.0,6},
-				{0,0,3,0,0,3,0,0,3,0,2.0,2,0,2.0,2},
-				{0,0,2,0,0,2,0,0,1,0,2.0,1,0,2.0,1},
-				{0,0,1,0,0,2,0,0,2,0,2.75,1,0,2.75,2}
+				{0,0.6,0,0,0.6,0,0,0,0,0,0,0,0,2.0,0}
 			},
 			{//Green Chaos Serpent
-				{0,0.5,4,0,0.5,4,0,0.75,5,0,0,5,0,1.2,5}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.2,0}
 			},
 			{//Stalker
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2},
-				{0,0.5,5,0,0.5,5,0,0.75,4,0,0,3,0,1.5,2}
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0},
+				{0,0.5,0,0,0.5,0,0,0.75,0,0,0,0,0,1.5,0}
 			},
 			{//Stalker Boss
-				{0.5,0.5,6,0.5,0.5,6,0.75,0.75,6,0,0,6,1.5,1.5,5},
+				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,6,0,0.5,6,0,0.75,6,0,0,6,0,1.5,5},
 				{0,0.5,1,0,0.5,1,0,0.75,2,0,0,3,0,1.5,4},
 				{0,0.5,2,0,0.5,2,0,0.75,2,0,0,2,0,1.5,2},
@@ -19747,23 +19746,30 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0.5,3,0,0.5,3,0,0.75,3,0,0,3,0,1.5,3}
 			},
 			{//Wendigo
-				{0,0,4,0,0,4,0,0,4,2.0,2.0,4,2.4,2.4,4},
+				{0,0,4,0,0,4,0,0,4,0,2.0,4,0,2.4,4},
 				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{0.5,0.5,3,0.5,0.5,3,0.75,0.75,4,0,0,5,1.5,1.5,6},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
-				{1.25,1.25,3,1.25,1.25,3,1.5,1.5,3,2.0,2.0,3,2.5,2.5,4},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Reiver
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Reiver (Buried)
-				{0,0.6,5,0,0.6,5,0,0.6,5,0,0,5,0,2.0,5}
+				{0,0.6,0,0,0.6,0,0,0.6,0,0,0,0,0,2.0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0.6,5,0,0.6,4,0,0,4,0,0,4,0,2.0,4}
+				{0,0,4,0,0,4,0,0,4,0,2.0,4,0,2.4,4},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,0.5,3,0,0.5,3,0,0.75,4,0,0,5,0,1.5,6},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,1.25,3,0,1.25,3,0,1.5,3,0,2.0,3,0,2.5,4},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
 				{0,0.5,5,0,0.5,5,0,0.75,5,0,0,5,0,1.5,5},
@@ -19796,8 +19802,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
-				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
 				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			}
@@ -20415,7 +20421,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -20450,7 +20455,10 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Traductus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -20744,12 +20752,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -20774,6 +20776,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -20994,7 +20997,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,4,0,0,4,0,0,4,0,0,3,0,0,3},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -21436,10 +21438,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Slaughtaur
-				{0,0,8,0,0,8,0,0,8,0,0,8,0,0,8},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
-				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9},
-				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
+				{0,0,25,0,0,25,0,0,25,0,0,25,0,0,25},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
 			},
 			{//Green Chaos Serpent
 				{0,0,19,0,0,19,0,0,19,0,0,19,0,0,19},
@@ -21488,8 +21488,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,25,0,0,25,0,0,25,0,0,25,0,0,25},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
 				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
@@ -21783,9 +21782,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -21811,6 +21807,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -22097,9 +22094,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,2,0,0,2,0,0,2,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -22127,6 +22121,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -22358,6 +22355,9 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -22379,9 +22379,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -22697,8 +22694,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
@@ -23411,6 +23406,7 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Green Chaos Serpent
@@ -23433,7 +23429,6 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Traductus
@@ -23468,60 +23463,60 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 	{//Quake 3
 		{//Main
 			{//Zombieman
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,4,0,0,4},
-				{0,0,2,0,0,2,0,0,1,1.25,0,1,2.0,0,1}
+				{0,0,3,0,0,3,0,0,12,0,0,3,0,0,3},
+				{0,0,3,0,0,3,0,0,15,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,5,1.25,0,1,2.0,0,1}
 			},
 			{//Shotgun Guy
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Imp
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,12,0,0,12,0,0,12,0,0,12,0,0,12}
 			},
 			{//Chaingun Guy
-				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,2,0,0,2,0,0,9,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,6,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,6,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,7,0,0,2}
 			},
 			{//Super Shotgun Guy
-				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,2,0,0,2,0,0,9,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,6,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,6,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,7,0,0,2}
 			},
 			{//Demon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,1.25,0,4,2.0,0,3},
-				{0,0,1,0,0,1,0,0,1,1.25,0,2,2.0,0,2},
-				{0,0,2,0,0,2,0,0,2,1.25,0,1,2.0,0,1}
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,55,0,0,55,0,0,44,1.25,0,44,2.0,0,33},
+				{0,0,11,0,0,11,0,0,11,1.25,0,22,2.0,0,22},
+				{0,0,22,0,0,22,0,0,22,1.25,0,11,2.0,0,11}
 			},
 			{//Dark Imp
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Spectre
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,55,0,0,55,0,0,176,0,0,88,0,0,176},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132}
 			},
 			{//Blood Demon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1},
 				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
 				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
 			},
@@ -23530,15 +23525,15 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Cacodemon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Revenant
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,5,0,0,3,0,0,2,0,0,-1},
-				{0,0,-1,0,0,1,0,0,1,0,0,3,0,0,3}
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,3,0,0,5,0,0,9,0,0,6,0,0,-1},
+				{0,0,-1,0,0,1,0,0,3,0,0,9,0,0,3}
 			},
 			{//Cacolantern
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -23549,60 +23544,60 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Hell Knight
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,3}
+				{0,0,2,0,0,2,0,0,7,0,0,1,0,0,7},
+				{0,0,3,0,0,3,0,0,8,0,0,1,0,0,6},
+				{0,0,1,0,0,1,0,0,6,0,0,1,0,0,8}
 			},
 			{//Arachnotron
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Mancubus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,4,0,0,4,0,0,3,0,0,4,0,0,2},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,2}
+				{0,0,5,0,0,5,0,0,2,0,0,3,0,0,1},
+				{0,0,8,0,0,8,0,0,3,0,0,4,0,0,1},
+				{0,0,2,0,0,2,0,0,1,0,0,2,0,0,1}
 			},
 			{//Abaddon
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Arch-vile
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Baron of Hell
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Hectebus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Belphegor
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Spider Mastermind
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,4},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,1}
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,2,0,0,2,0,0,1,0,0,6,0,0,8},
+				{0,0,4,0,0,4,0,0,1,0,0,4,0,0,2}
 			},
 			{//Cyberdemon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,4,0,0,4,0,0,1,0,0,1,0,0,6},
+				{0,0,2,0,0,2,0,0,1,0,0,1,0,0,4}
 			},
 			{//Wolfenstein SS
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -23610,186 +23605,186 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Commonus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,4,0,0,4},
-				{0,0,2,0,0,2,0,0,1,1.25,0,1,2.0,0,1}
+				{0,0,3,0,0,3,0,0,12,0,0,3,0,0,3},
+				{0,0,3,0,0,3,0,0,15,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,5,1.25,0,1,2.0,0,1}
 			},
 			{//Flemoidus Bipedicus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,12,0,0,12,0,0,12,0,0,12,0,0,12}
 			},
 			{//Flemoidus Stridicus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,1.25,0,4,2.0,0,3},
-				{0,0,1,0,0,1,0,0,1,1.25,0,2,2.0,0,2},
-				{0,0,2,0,0,2,0,0,2,1.25,0,1,2.0,0,1}
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,55,0,0,55,0,0,43,1.25,0,43,2.0,0,33},
+				{0,0,11,0,0,11,0,0,11,1.25,0,22,2.0,0,22},
+				{0,0,22,0,0,22,0,0,22,1.25,0,11,2.0,0,11}
 			},
 			{//Larva
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,55,0,0,55,0,0,176,0,0,88,0,0,176},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132}
 			},
 			{//Flem Mine
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Cycloptis Commonus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Super Cycloptis
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Quadrumpus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,5,0,0,3,0,0,2,0,0,-1},
-				{0,0,-1,0,0,1,0,0,1,0,0,3,0,0,3}
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,3,0,0,5,0,0,9,0,0,6,0,0,-1},
+				{0,0,-1,0,0,1,0,0,3,0,0,9,0,0,3}
 			},
 			{//Flemoidus Maximus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Flembrane
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Flembomination
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,4},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,1}
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,2,0,0,2,0,0,1,0,0,6,0,0,8},
+				{0,0,4,0,0,4,0,0,1,0,0,4,0,0,2}
 			},
 			{//Snotfolus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,4,0,0,4,0,0,1,0,0,1,0,0,6},
+				{0,0,2,0,0,2,0,0,1,0,0,1,0,0,4}
 			},
 			{//Gargoyle
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Fire Gargoyle
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,12,0,0,12,0,0,12,0,0,12,0,0,12}
 			},
 			{//Golem
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,4,0,0,4},
-				{0,0,2,0,0,2,0,0,1,1.25,0,1,2.0,0,1}
+				{0,0,3,0,0,3,0,0,15,0,0,3,0,0,3},
+				{0,0,3,0,0,3,0,0,15,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,5,1.25,0,1,2.0,0,1}
 			},
 			{//Golem Ghost
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,55,0,0,55,0,0,176,0,0,88,0,0,176},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132}
 			},
 			{//Nitrogolem
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Nitrogolem Ghost
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,55,0,0,55,0,0,176,0,0,88,0,0,176},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132}
 			},
 			{//Disciple of D'Sparil
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Undead Warrior
-				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,2,0,0,2,0,0,9,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,6,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,6,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,7,0,0,2}
 			},
 			{//Undead Warrior Ghost
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,18,0,0,18,0,0,63,0,0,45,0,0,117},
+				{0,0,55,0,0,55,0,0,176,0,0,88,0,0,176},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132},
+				{0,0,11,0,0,11,0,0,44,0,0,44,0,0,132}
 			},
 			{//Sabreclaw
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,1.25,0,4,2.0,0,3},
-				{0,0,1,0,0,1,0,0,1,1.25,0,2,2.0,0,2},
-				{0,0,2,0,0,2,0,0,2,1.25,0,1,2.0,0,1}
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,55,0,0,55,0,0,44,1.25,0,44,2.0,0,33},
+				{0,0,11,0,0,11,0,0,11,1.25,0,22,2.0,0,22},
+				{0,0,22,0,0,22,0,0,22,1.25,0,11,2.0,0,11}
 			},
 			{//Ophidian
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,5,0,0,3,0,0,2,0,0,-1},
-				{0,0,-1,0,0,1,0,0,1,0,0,3,0,0,3}
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,3,0,0,5,0,0,9,0,0,6,0,0,-1},
+				{0,0,-1,0,0,1,0,0,3,0,0,9,0,0,3}
 			},
 			{//Weredragon
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,3}
+				{0,0,2,0,0,2,0,0,7,0,0,1,0,0,7},
+				{0,0,3,0,0,3,0,0,8,0,0,1,0,0,6},
+				{0,0,1,0,0,1,0,0,6,0,0,1,0,0,8}
 			},
 			{//Iron Lich
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Maulotaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,4,0,0,4,0,0,1,0,0,1,0,0,6},
+				{0,0,2,0,0,2,0,0,1,0,0,1,0,0,4}
 			},
 			{//D'Sparil
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,4},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,1}
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,2,0,0,2,0,0,1,0,0,6,0,0,8},
+				{0,0,4,0,0,4,0,0,1,0,0,4,0,0,2}
 			},
 			{//Chicken
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -23797,113 +23792,109 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Ettin
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,4,0,0,4},
-				{0,0,2,0,0,2,0,0,1,1.25,0,1,2.0,0,1}
+				{0,0,3,0,0,3,0,0,15,0,0,3,0,0,3},
+				{0,0,3,0,0,3,0,0,15,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,5,1.25,0,1,2.0,0,1}
 			},
 			{//Afrit
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Dark Bishop
-				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,2,0,0,2,0,0,9,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,6,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,6,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,7,0,0,2}
 			},
 			{//Centaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,1.25,0,4,2.0,0,3},
-				{0,0,1,0,0,1,0,0,1,1.25,0,2,2.0,0,2},
-				{0,0,2,0,0,2,0,0,2,1.25,0,1,2.0,0,1}
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,24,0,0,24,0,0,21,0,0,21,0,0,18},
+				{0,0,55,0,0,55,0,0,44,1.25,0,44,2.0,0,33},
+				{0,0,11,0,0,11,0,0,11,1.25,0,22,2.0,0,22},
+				{0,0,22,0,0,22,0,0,22,1.25,0,11,2.0,0,11}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,5,0,0,5,0,0,4,0,0,4,0,0,4},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Green Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,3}
+				{0,0,2,0,0,2,0,0,7,0,0,1,0,0,7},
+				{0,0,3,0,0,3,0,0,8,0,0,1,0,0,6},
+				{0,0,1,0,0,1,0,0,6,0,0,1,0,0,8}
 			},
 			{//Stalker
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,3,0,0,3,0,0,3,0,0,3,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2}
 			},
 			{//Stalker Boss
-				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,2},
-				{0,0,3,0,0,3,0,0,3,0,0,2,0,0,1},
-				{0,0,1,0,0,1,0,0,1,0,0,2,0,0,3},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,2,0,0,2,0,0,9,0,0,2},
+				{0,0,3,0,0,3,0,0,3,0,0,6,0,0,1},
+				{0,0,1,0,0,1,0,0,1,0,0,6,0,0,3},
+				{0,0,2,0,0,2,0,0,2,0,0,7,0,0,2}
 			},
 			{//Wendigo
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,3,0,0,5,0,0,3,0,0,2,0,0,-1},
-				{0,0,-1,0,0,1,0,0,1,0,0,3,0,0,3}
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,2,0,0,4,0,0,10,0,0,8,0,0,2},
+				{0,0,3,0,0,5,0,0,9,0,0,6,0,0,-1},
+				{0,0,-1,0,0,1,0,0,3,0,0,9,0,0,3}
 			},
 			{//Reiver
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,4,0,0,4,0,0,4,0,0,4,0,0,4},
+				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
 			},
 			{//Reiver (Buried)
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Brown Chaos Serpent
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,2},
-				{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,2,0,0,4,0,0,8,0,0,10,0,0,2},
+				{0,0,3,0,0,5,0,0,9,0,0,6,0,0,-1},
+				{0,0,-1,0,0,1,0,0,3,0,0,9,0,0,3}
 			},
 			{//Traductus
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Zedek
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Menelkir
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Death Wyvern
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,7,0,0,7,0,0,7,0,0,7,0,0,7},
+				{0,0,9,0,0,9,0,0,9,0,0,9,0,0,9}
 			},
 			{//Heresiarch
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,3},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,1,0,0,5},
+				{0,0,4,0,0,4,0,0,1,0,0,1,0,0,6},
+				{0,0,2,0,0,2,0,0,1,0,0,1,0,0,4}
 			},
 			{//Korax
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-				{0,0,1,0,0,1,0,0,2,0,0,3,0,0,4},
-				{0,0,2,0,0,2,0,0,2,0,0,2,0,0,1}
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,3,0,0,3,0,0,1,0,0,5,0,0,5},
+				{0,0,2,0,0,2,0,0,1,0,0,6,0,0,8},
+				{0,0,4,0,0,4,0,0,1,0,0,4,0,0,2}
 			},
 			{//Pig
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -23922,8 +23913,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
 			{//Imp
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Chaingun Guy
 				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
@@ -23937,8 +23928,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Dark Imp
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Spectre
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -24013,8 +24004,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,3,0,0,5}
 			},
 			{//Armored Flemoidus Bipedicus
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Flemoidus Stridicus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -24062,8 +24053,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,-1,0,0,1,0,0,2,0,0,5,0,0,7}
 			},
 			{//Fire Gargoyle
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5},
-				{0,0,5,0,0,5,0,0,5,0,0,5,0,0,5}
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Golem
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -24129,7 +24120,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 			},
 			{//Slaughtaur
-				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+				{0,0,2,0,0,3,0,0,3,0,0,4,0,0,5},
+				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
 			},
 			{//Green Chaos Serpent
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
@@ -24155,8 +24147,8 @@ int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_IT
 				{0,0,3,0,0,4,0,0,3,0,0,6,0,0,8}
 			},
 			{//Brown Chaos Serpent
-				{0,0,2,0,0,3,0,0,3,0,0,4,0,0,5},
-				{0,0,1,0,0,1,0,0,2,0,0,2,0,0,2}
+				{0,0,5,0,0,4,0,0,3,0,0,3,0,0,2},
+				{0,0,2,0,0,2,0,0,2,0,0,3,0,0,4}
 			},
 			{//Traductus
 				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
