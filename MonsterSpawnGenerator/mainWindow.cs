@@ -82,7 +82,18 @@ namespace MonsterSpawnGenerator
             "Death Wyvern",
             "Heresiarch",
             "Korax",
-            "Pig"
+            "Pig",
+            "Stalker (Strife)",
+            "Sentinel",
+            "Reaver",
+            "Crusader",
+            "Inquisitor",
+            "Ghoul",
+            "Banshee",
+            "Shocktrooper",
+            "Mindweaver",
+            "Vassago",
+            "Tyrant"
         };
 
         public mainWindow()
