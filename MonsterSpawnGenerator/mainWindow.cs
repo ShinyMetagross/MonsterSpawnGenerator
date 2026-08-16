@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MonsterSpawnGenerator
 {
@@ -805,7 +807,7 @@ namespace MonsterSpawnGenerator
         private void dissectValues(string file)
         {
             int startPosition = file.IndexOf("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =") + "int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =".Length;
-            string virtualString = file.Substring(startPosition).Replace("\t", "");
+            string virtualString = Regex.Replace(file.Substring(startPosition), @"\s", ""); 
 
             StringReader stringReader = new StringReader(virtualString);
 
