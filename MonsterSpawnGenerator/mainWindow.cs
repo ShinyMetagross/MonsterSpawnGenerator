@@ -910,8 +910,6 @@ namespace MonsterSpawnGenerator
                         string dissection = line.Substring(1, line.LastIndexOf("}") - 1);
 
                         List<string> tokens = dissection.Split(',').ToList();
-                        if (slot.monsters[monsterIndex].ToString() == "Cultist")
-                            Console.WriteLine(tokens.Count);
                         for (int i = 0; i < tokens.Count / 3; i++)
                         {
                             slot.monsters[monsterIndex].setMonsterSpeedByDifficulty(tokens[i * 3], i);
