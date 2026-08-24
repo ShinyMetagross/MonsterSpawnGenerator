@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -84,7 +88,18 @@ namespace MonsterSpawnGenerator
             "Death Wyvern",
             "Heresiarch",
             "Korax",
-            "Pig"
+            "Pig",
+            "Stalker (Strife)",
+            "Sentinel",
+            "Reaver",
+            "Crusader",
+            "Inquisitor",
+            "Ghoul",
+            "Banshee",
+            "Shocktrooper",
+            "Mindweaver",
+            "Vassago",
+            "Tyrant"
         };
 
         public mainWindow()
@@ -138,7 +153,7 @@ namespace MonsterSpawnGenerator
             }
             else
             {
-                gameList.Items.Add(new game(gameList.Text));
+                gameList.Items.Add(new Game(gameList.Text));
                 gameList.Text = null;
             }
         }
@@ -150,13 +165,13 @@ namespace MonsterSpawnGenerator
         
         private void changeGame(object sender, EventArgs e)
         {
-            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(Game)))
             {
-                game thisGame = (game)gameList.SelectedItem;
+                Game thisGame = (Game)gameList.SelectedItem;
                 altGameList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
-                foreach (altGame anAltGame in thisGame.altGames)
+                foreach (AltGame anAltGame in thisGame.altGames)
                 {
                     altGameList.Items.Add(anAltGame);
                 }
@@ -175,9 +190,9 @@ namespace MonsterSpawnGenerator
 
         private void moveGameUp(object sender, EventArgs e)
         {
-            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(Game)))
             {
-                game thisGame = (game)gameList.SelectedItem;
+                Game thisGame = (Game)gameList.SelectedItem;
                 int gameIndex = gameList.SelectedIndex;
 
                 if (gameIndex > 0)
@@ -191,9 +206,9 @@ namespace MonsterSpawnGenerator
 
         private void moveGameDown(object sender, EventArgs e)
         {
-            if (isListItemSelected(gameList.SelectedItem, typeof(game)))
+            if (isListItemSelected(gameList.SelectedItem, typeof(Game)))
             {
-                game thisGame = (game)gameList.SelectedItem;
+                Game thisGame = (Game)gameList.SelectedItem;
                 int gameIndex = gameList.SelectedIndex;
 
                 if (gameIndex < gameList.Items.Count - 1)
@@ -215,16 +230,16 @@ namespace MonsterSpawnGenerator
             }
             else
             {
-                if (isListItemSelected(gameList.SelectedItem, typeof(game)))
+                if (isListItemSelected(gameList.SelectedItem, typeof(Game)))
                 {
-                    game thisGame = (game)gameList.SelectedItem;
-                    altGame newAltGame = new altGame(altGameList.Text);
+                    Game thisGame = (Game)gameList.SelectedItem;
+                    AltGame newAltGame = new AltGame(altGameList.Text);
                     generateMonsterSlots(newAltGame);
 
                     thisGame.gameAdd(newAltGame);
 
                     altGameList.Items.Clear();
-                    foreach (altGame anAltGame in thisGame.altGames)
+                    foreach (AltGame anAltGame in thisGame.altGames)
                     {
                         altGameList.Items.Add(anAltGame);
                     }
@@ -236,15 +251,15 @@ namespace MonsterSpawnGenerator
 
         private void removeAltGame(object sender, EventArgs e)
         {
-            game thisGame = (game)gameList.SelectedItem;
-            thisGame.altGames.Remove((altGame)altGameList.SelectedItem);
+            Game thisGame = (Game)gameList.SelectedItem;
+            thisGame.altGames.Remove((AltGame)altGameList.SelectedItem);
             altGameList.Items.Remove(altGameList.SelectedItem);
         }
 
-        private void generateMonsterSlots(altGame thisAltGame)
+        private void generateMonsterSlots(AltGame thisAltGame)
         {
             monsterSlotList.Items.Clear();
-            foreach (monsterSlot mSlot in globalSlotListView.Items)
+            foreach (MonsterSlot mSlot in globalSlotListView.Items)
             {
                 thisAltGame.monsterSlotAdd(mSlot);
                 monsterSlotList.Items.Add(mSlot);
@@ -253,13 +268,13 @@ namespace MonsterSpawnGenerator
 
         private void changeAltGame(object sender, EventArgs e)
         {
-            if (isListItemSelected(altGameList.SelectedItem, typeof(altGame)))
+            if (isListItemSelected(altGameList.SelectedItem, typeof(AltGame)))
             {
-                altGame thisAltGame = (altGame)altGameList.SelectedItem;
+                AltGame thisAltGame = (AltGame)altGameList.SelectedItem;
                 monsterSlotList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
-                foreach (monsterSlot aMonsterSlot in thisAltGame.monsterslots)
+                foreach (MonsterSlot aMonsterSlot in thisAltGame.monsterslots)
                 {
                     monsterSlotList.Items.Add(aMonsterSlot);
                 }
@@ -276,13 +291,13 @@ namespace MonsterSpawnGenerator
 
         private void changeMonsterSlot(object sender, EventArgs e)
         {
-            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
+            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(MonsterSlot)))
             {
-                monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                MonsterSlot thisMonsterSlot = (MonsterSlot)monsterSlotList.SelectedItem;
                 monsterList.Items.Clear();
 
                 //We add the items from the selected game's alt games, to give it an actual attachment versus just what's on screen.
-                foreach (monster aMonster in thisMonsterSlot.monsters)
+                foreach (Monster aMonster in thisMonsterSlot.monsters)
                 {
                     monsterList.Items.Add(aMonster);
                 }
@@ -304,12 +319,12 @@ namespace MonsterSpawnGenerator
                 MessageBox.Show("Please type a monster name.");
             else
             {
-                monster newMonster = new monster(monsterName.Text);
+                Monster newMonster = new Monster(monsterName.Text);
                 monsterList.Items.Add(newMonster);
 
-                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
+                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(MonsterSlot)))
                 {
-                    monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                    MonsterSlot thisMonsterSlot = (MonsterSlot)monsterSlotList.SelectedItem;
                     thisMonsterSlot.monsterAdd(newMonster);
                 }
             }
@@ -317,19 +332,19 @@ namespace MonsterSpawnGenerator
 
         private void removeMonsterFromList(object sender, EventArgs e)
         {
-            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
+            if (isListItemSelected(monsterSlotList.SelectedItem, typeof(MonsterSlot)))
             {
-                monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
-                thisMonsterSlot.monsterRemove((monster)monsterList.SelectedItem);
+                MonsterSlot thisMonsterSlot = (MonsterSlot)monsterSlotList.SelectedItem;
+                thisMonsterSlot.monsterRemove((Monster)monsterList.SelectedItem);
             }
             monsterList.Items.Remove(monsterList.SelectedItem);
         }
 
         private void changeMonster(object sender, EventArgs e)
         {
-            if (isListItemSelected(monsterList.SelectedItem, typeof(monster)))
+            if (isListItemSelected(monsterList.SelectedItem, typeof(Monster)))
             {
-                monster thisMonster = (monster)monsterList.SelectedItem;
+                Monster thisMonster = (Monster)monsterList.SelectedItem;
                 health1.Text = thisMonster.getMonsterHealthByDifficulty(0);
                 health2.Text = thisMonster.getMonsterHealthByDifficulty(1);
                 health3.Text = thisMonster.getMonsterHealthByDifficulty(2);
@@ -356,13 +371,13 @@ namespace MonsterSpawnGenerator
         private void populateMonsterList()
         {
             monsterList.Items.Clear();
-            if (isListItemSelected(altGameList.SelectedItem, typeof(altGame)))
+            if (isListItemSelected(altGameList.SelectedItem, typeof(AltGame)))
             {
-                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(monsterSlot)))
+                if (isListItemSelected(monsterSlotList.SelectedItem, typeof(MonsterSlot)))
                 {
-                    monsterSlot thisMonsterSlot = (monsterSlot)monsterSlotList.SelectedItem;
+                    MonsterSlot thisMonsterSlot = (MonsterSlot)monsterSlotList.SelectedItem;
 
-                    foreach (monster aMonster in thisMonsterSlot.monsters)
+                    foreach (Monster aMonster in thisMonsterSlot.monsters)
                     {
                         monsterList.Items.Add(aMonster);
                     }
@@ -370,11 +385,11 @@ namespace MonsterSpawnGenerator
             }
         }
 
-        private void setMonsterStat(object sender, Action<monster, string> changeFunc)
+        private void setMonsterStat(object sender, Action<Monster, string> changeFunc)
         {
-            if (isListItemSelected(monsterList.SelectedItem, typeof(monster)))
+            if (isListItemSelected(monsterList.SelectedItem, typeof(Monster)))
             {
-                monster selectedMonster = (monster) monsterList.SelectedItem;
+                Monster selectedMonster = (Monster) monsterList.SelectedItem;
                 TextBox input = (TextBox) sender;
 
                 changeFunc(selectedMonster, input.Text);
@@ -383,83 +398,83 @@ namespace MonsterSpawnGenerator
 
         private void health1Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 0));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 0));
         }
         private void health2Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 1));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 1));
         }
         private void health3Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 2));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 2));
         }
         private void health4Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 3));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 3));
         }
         private void health5Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 4));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterHealthByDifficulty(value, 4));
         }
         private void token1Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 0));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 0));
         }
         private void token2Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 1));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 1));
         }
         private void token3Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 2));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 2));
         }
         private void token4Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 3));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 3));
         }
         private void token5Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 4));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterTokenByDifficulty(value, 4));
         }
         private void speed1Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 0));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 0));
         }
         private void speed2Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 1));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 1));
         }
         private void speed3Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 2));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 2));
         }
         private void speed4Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 3));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 3));
         }
         private void speed5Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 4));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterSpeedByDifficulty(value, 4));
         }
         private void weight1Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 0));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 0));
         }
         private void weight2Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 1));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 1));
         }
         private void weight3Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 2));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 2));
         }
         private void weight4Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 3));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 3));
         }
         private void weight5Change(object sender, EventArgs e)
         {
-            setMonsterStat(sender, (monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 4));
+            setMonsterStat(sender, (Monster selectedMonster, string value) => selectedMonster.setMonsterWeightByDifficulty(value, 4));
         }
 
         private void generateSpawns(object sender, EventArgs e)
@@ -482,17 +497,17 @@ namespace MonsterSpawnGenerator
             foreach(Object item in gameList.Items)
             {
                 gameCounter++;
-                if (item.GetType() == typeof(game))
+                if (item.GetType() == typeof(Game))
                 {
-                    game thisGame = (game)item;
+                    Game thisGame = (Game)item;
                     sb.Append("\n\t{");
                     sb.Append("//" + item.ToString());
                     altGameCounter = 0;
                     foreach (Object item2 in thisGame.altGames)
                     {
                         altGameCounter++;
-                        altGame thisAltGame = (altGame)item2;
-                        if (item2.GetType() == typeof(altGame))
+                        AltGame thisAltGame = (AltGame)item2;
+                        if (item2.GetType() == typeof(AltGame))
                         {
                             sb.Append("\n\t\t{");
                             sb.Append("//" + item2.ToString());
@@ -500,8 +515,8 @@ namespace MonsterSpawnGenerator
                             foreach (Object item3 in thisAltGame.monsterslots)
                             {
                                 slotCounter++;
-                                monsterSlot thisMonsterSlot = (monsterSlot)item3;
-                                if (item3.GetType() == typeof(monsterSlot))
+                                MonsterSlot thisMonsterSlot = (MonsterSlot)item3;
+                                if (item3.GetType() == typeof(MonsterSlot))
                                 {
                                     sb.Append("\n\t\t\t{");
                                     sb.Append("//" + item3.ToString());
@@ -509,7 +524,7 @@ namespace MonsterSpawnGenerator
                                     foreach (Object item4 in thisMonsterSlot.monsters)
                                     {
                                         monsterCounter++;
-                                        monster thisMonster = (monster)item4;
+                                        Monster thisMonster = (Monster)item4;
                                         sb.Append("\n\t\t\t\t{\"" + thisMonster.ToString() + "\""
                                             + (thisMonster.getMonsterTokenByDifficulty(0) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(0) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(2) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(1) != string.Empty ? ",\"\"" : "")
                                             + (thisMonster.getMonsterTokenByDifficulty(1) != string.Empty ? ",\"" + thisMonster.getMonsterTokenByDifficulty(1) + "\"" : thisMonster.getMonsterTokenByDifficulty(4) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(3) != string.Empty ? ",\"\"" : thisMonster.getMonsterTokenByDifficulty(2) != string.Empty ? ",\"\"" : "")
@@ -524,7 +539,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append((altGameCounter > 0 ? "\n\t" : "") + "}" + (gameCounter < gameList.Items.Count ? "," : ""));
+                    sb.Append((altGameCounter > 0 ? "\n\t" : "\n\t") + "}" + (gameCounter < gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
@@ -536,18 +551,18 @@ namespace MonsterSpawnGenerator
             monsterCounter = 0;
             foreach (Object item in gameList.Items)
             {
-                if (item.GetType() == typeof(game))
+                if (item.GetType() == typeof(Game))
                 {
                     gameCounter++;
-                    game thisGame = (game)item;
+                    Game thisGame = (Game)item;
                     sb.Append("\n\t{");
                     sb.Append("//" + item.ToString());
                     altGameCounter = 0;
                     foreach (Object item2 in thisGame.altGames)
                     {
                         altGameCounter++;
-                        altGame thisAltGame = (altGame)item2;
-                        if (item2.GetType() == typeof(altGame))
+                        AltGame thisAltGame = (AltGame)item2;
+                        if (item2.GetType() == typeof(AltGame))
                         {
                             sb.Append("\n\t\t{");
                             sb.Append("//" + item2.ToString());
@@ -555,8 +570,8 @@ namespace MonsterSpawnGenerator
                             foreach (Object item3 in thisAltGame.monsterslots)
                             {
                                 slotCounter++;
-                                monsterSlot thisMonsterSlot = (monsterSlot)item3;
-                                if (item3.GetType() == typeof(monsterSlot))
+                                MonsterSlot thisMonsterSlot = (MonsterSlot)item3;
+                                if (item3.GetType() == typeof(MonsterSlot))
                                 {
                                     sb.Append("\n\t\t\t{");
                                     sb.Append("//" + item3.ToString());
@@ -564,7 +579,7 @@ namespace MonsterSpawnGenerator
                                     foreach (Object item4 in thisMonsterSlot.monsters)
                                     {
                                         monsterCounter++;
-                                        monster thisMonster = (monster)item4;
+                                        Monster thisMonster = (Monster)item4;
                                         sb.Append("\n\t\t\t\t{"
                                             + thisMonster.getMonsterSpeedByDifficulty(0) + ","
                                             + thisMonster.getMonsterHealthByDifficulty(0) + ","
@@ -589,7 +604,7 @@ namespace MonsterSpawnGenerator
                             sb.Append("\n\t\t}" + (altGameCounter == thisGame.altGames.Count ? "" : ","));
                         }
                     }
-                    sb.Append((thisGame.altGames.Count > 0 ? "\n\t" : "") + "}" + (gameCounter < gameList.Items.Count ? "," : ""));
+                    sb.Append("\n\t}" + (gameCounter < gameList.Items.Count ? "," : ""));
                 }
             }
             sb.Append("\n};");
@@ -619,345 +634,306 @@ namespace MonsterSpawnGenerator
 
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
-                    fileContent = reader.ReadToEnd();
-
-                    StringReader stringReader = new StringReader(fileContent);
                     string line = string.Empty;
+                    gameList.Items.Clear();
 
-                    while ((line = stringReader.ReadLine()) != null)
+                    bool stopSpec = false;
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        designSpec = designSpec.AppendLine(line);
+                        //If the spec has not stopped, keep appending the spec
+                        if(!stopSpec)
+                            designSpec = designSpec.AppendLine(line);
+                        //Use this boolean to stop creating the spec
                         if (line.Contains("*/"))
-                            break;
+                            stopSpec = true;
+
+                        //Check if it's time to get strings
+                        if(line == "str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] = ")
+                            dissectStrings(reader);
+
+                        if (line == "int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] = ")
+                            dissectValues(reader);
                     }
 
-                    if (!fileContent.Contains("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") || !fileContent.Contains("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] ="))
+                    gameList.SelectedIndex = 0;
+                    bool drawnGlobalList = false;
+                    foreach (Game game in gameList.Items)
                     {
-                        MessageBox.Show("This text file is invalid, please select another.");
-                    }
-                    else
-                    {
-                        gameList.Items.Clear();
-                        dissectStrings(fileContent);
-                        dissectValues(fileContent);
-                        gameList.SelectedIndex = 0;
-                        bool drawnGlobalList = false;
-                        foreach (game game in gameList.Items)
+                        foreach (AltGame altGame in game.altGames)
                         {
-                            foreach (altGame altGame in game.altGames)
+                            AltGame sortedAltGame = new AltGame(altGame.ToString());
+                            for (int i = 0; i < defaultMonsters.Length; i++)
                             {
-                                altGame sortedAltGame = new altGame(altGame.ToString());
-                                for (int i = 0; i < defaultMonsters.Length; i++)
+                                MonsterSlot newMonster = altGame.containsMonsterSlot(defaultMonsters[i]);
+                                if (newMonster != null)
+                                    sortedAltGame.monsterSlotAdd(altGame.containsMonsterSlot(defaultMonsters[i]));
+                            }
+                            altGame.monsterslots = sortedAltGame.monsterslots;
+                            if (drawnGlobalList == false)
+                            {
+                                globalSlotListView.Items.Clear();
+                                foreach (MonsterSlot monSlot in altGame.monsterslots)
                                 {
-                                    monsterSlot newMonster = altGame.containsMonsterSlot(defaultMonsters[i]);
-                                    if (newMonster != null)
-                                        sortedAltGame.monsterSlotAdd(altGame.containsMonsterSlot(defaultMonsters[i]));
+                                    globalSlotListView.Items.Add(monSlot.ToString());
                                 }
-                                altGame.monsterslots = sortedAltGame.monsterslots;
-                                if(drawnGlobalList == false)
-                                {
-                                    globalSlotListView.Items.Clear();
-                                    foreach (monsterSlot monSlot in altGame.monsterslots)
-                                    {
-                                        globalSlotListView.Items.Add(monSlot.ToString());
-                                    }
-                                    drawnGlobalList = true;
-                                }
-                            }    
+                                drawnGlobalList = true;
+                            }
                         }
-                        MessageBox.Show("Imported Spawns Successfully!");
                     }
+                    MessageBox.Show("Imported Spawns Successfully!");
                 }
             }
         }
 
-        private void dissectStrings(string file)
+        /// <summary>
+        /// Method that initializes nested reader for values
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectStrings(StreamReader reader, string line = "")
         {
-            string virtualString = file.Replace("\t", String.Empty);
-
-            int startPosition = virtualString.IndexOf("str monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =") + "int monsterSelectStr[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_STRING_ITEMS] =".Length;
-            virtualString = virtualString.Substring(startPosition);
-
-            StringReader stringReader = new StringReader(virtualString);
-
-            //Done twice to consume the remaining line and move onto next
-            string line;
-            int character;
-            bool breaknext = false;
-            line = stringReader.ReadLine();
-            line = stringReader.ReadLine();
-
-            if (line == "{")
+            //Trim the line, as you keep going. We will nest functionality to read the strings
+            while ((line = reader.ReadLine()) != null)
             {
-                while((line = stringReader.ReadLine()) != null)
+                //Trim here
+                line = line.Trim();
+
+                //Check for game name
+                if (line.StartsWith("{//"))
+                    //Dissect the next sub-block, taking the name of the game, here
+                    dissectStrings_Game(reader, line.Substring(3, line.Length - 3));
+                else if (line.StartsWith("};"))
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Method to attach game to the list as well as scan the current sub-block
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectStrings_Game(StreamReader reader, string gameName, string line = "")
+        {
+            //Get the name of the game
+            Game newGame = new Game(gameName);
+            while ((line = reader.ReadLine()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                //Check for alt game name
+                if (line.StartsWith("{//"))
                 {
+                    //Do not add the alt game if it is null
+                    AltGame newAltGame = dissectStrings_AltGame(reader, line.Substring(3, line.Length - 3));
+                    if (newAltGame != null) newGame.altGames.Add(newAltGame);
+                }
+                else if (line.StartsWith("}")) break;
+            }
+            gameList.Items.Add(newGame);
+        }
+
+        /// <summary>
+        /// Read the alt-game sub-block here
+        /// </summary>
+        /// <param name="reader"></param>
+        private AltGame dissectStrings_AltGame(StreamReader reader, string altGameName, string line = "")
+        {
+            //Get the name of the alt game
+            AltGame altGame = new AltGame(altGameName);
+            while ((line = reader.ReadLine().Trim()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                try
+                {
+                    //Check for an alt game
                     if (line.StartsWith("{//"))
-                    { 
-                        String gameName = line.Substring(3);
-                        game thisGame;
-
-                        if (line.EndsWith("}"))
-                        {
-                            gameName = line.Substring(3, gameName.Length - 1);
-                            thisGame = new game(gameName);
-                            gameList.Items.Add(thisGame);
-                            continue;
-                        }
-                        else if (line.EndsWith("},"))
-                        {
-                            gameName = line.Substring(3, gameName.Length - 2);
-                            thisGame = new game(gameName);
-                            gameList.Items.Add(thisGame);
-                            continue;
-                        }
-
-                        thisGame = new game(gameName);
-                        gameList.Items.Add(thisGame);
-
-                        while ((line = stringReader.ReadLine()) != null)
-                        {
-                            if (line.StartsWith("{//"))
-                            {
-                                String altGameName = line.Substring(3);
-                                altGame thisAltGame = new altGame(altGameName);
-                                while ((line = stringReader.ReadLine()) != null)
-                                {
-                                    if (line.StartsWith("{//"))
-                                    {
-                                        String monsterSlotName = line.Substring(3);
-                                        if (line.Substring(3) == monsterSlotName)
-                                        {
-                                            monsterSlot newMonsterSlot = new monsterSlot(monsterSlotName);
-
-                                            while ((line = stringReader.ReadLine()) != null && line.StartsWith("{"))
-                                            {
-                                                if (line.StartsWith("{"))
-                                                {
-                                                    String lineFormat = line.Replace("\"", "");
-                                                    lineFormat = lineFormat.Replace(" ", "");
-                                                    if (line.EndsWith("}") || line.EndsWith("},"))
-                                                        lineFormat = lineFormat.Substring(1);
-
-                                                    StringReader monsterLine = new StringReader(lineFormat);
-                                                    string monsterName = "";
-                                                    string tokenName = "";
-                                                    int tokenNumber = 0;
-                                                        
-                                                    while ((character = monsterLine.Read()) != -1)
-                                                    {
-                                                        if (character == '}')
-                                                        {
-                                                            if (monsterLine.Peek() != ',')
-                                                                breaknext = true;
-                                                            break;
-                                                        }
-                                                        else if (character != ',')
-                                                            monsterName += ((char)character).ToString();
-                                                        else if (character == ',')
-                                                            break;
-                                                    }
-                                                    monster newMonster = new monster(monsterName);
-
-                                                    while ((character = monsterLine.Read()) != -1)
-                                                    {
-                                                        if (character == '}')
-                                                        {
-                                                            newMonster.setMonsterTokenByDifficulty(tokenName, tokenNumber);
-                                                            tokenNumber++;
-                                                            tokenName = "";
-                                                            if (monsterLine.Peek() != ',')
-                                                                breaknext = true;
-                                                            break;
-                                                        }
-                                                        else if (character == ',')
-                                                        {
-                                                            newMonster.setMonsterTokenByDifficulty(tokenName, tokenNumber);
-                                                            tokenNumber++;
-                                                            tokenName = "";
-                                                        }
-                                                        else if (character != ',' || character != ' ')
-                                                            tokenName += ((char)character).ToString();  
-                                                    }
-                                                    newMonsterSlot.monsterAdd(newMonster);
-                                                }
-                                                if ((line.StartsWith("}") && !line.EndsWith(",")) || breaknext)
-                                                {
-                                                    breaknext = false;
-                                                    break;
-                                                }
-                                            }
-                                            thisAltGame.monsterSlotAdd(newMonsterSlot);
-                                        }
-                                    }
-                                    else if (line.StartsWith("}") && !line.EndsWith(","))
-                                        break;
-                                }
-                                thisGame.gameAdd(thisAltGame);
-                            }
-                            else if (line.StartsWith("}") && !line.EndsWith(","))
-                                break;
-                        }
+                    {
+                        //Do not add the monster slot if it is null
+                        MonsterSlot newSlot = dissectStrings_Slot(reader, line.Substring(3, line.Length - 3));
+                        if(newSlot != null) altGame.monsterSlotAdd(newSlot);
                     }
-                    else if (line.StartsWith("};"))
-                        break;
+                    else if (line.StartsWith("}")) break;
+                }
+                catch (Exception ex)
+                { 
+                    Console.WriteLine(ex.Message);
+                    return null;
+                }
+            }
+            return altGame;
+        }
+
+        /// <summary>
+        /// Read the sub-block for the monster slot
+        /// </summary>
+        /// <param name="reader"></param>
+        private MonsterSlot dissectStrings_Slot(StreamReader reader, string slotName, string line = "")
+        {
+            //If this slot doesn't exist in the master list, do not add this. You will break everything!
+            if (!defaultMonsters.Contains(slotName)) return null;
+            MonsterSlot slot = new MonsterSlot(slotName);
+            while ((line = reader.ReadLine()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                if (line.StartsWith("{\""))
+                {
+                    //Get the string not including the first bit, so it's easier to extract everything before the next quote
+                    line = line.Substring(2);
+                    Monster monster = new Monster(line.Substring(0, line.IndexOf("\"")));
+
+                    //Extract tokens here. Remove quotes then split the list by a delimiter
+                    if (line.IndexOf(",\"") >= 0)
+                    {
+                        string dissection = line.Replace("\"", "");
+                        dissection = dissection.Substring(dissection.IndexOf(",")+1);
+                        dissection = dissection.Substring(0, dissection.LastIndexOf("}"));
+                        List<string> tokens = dissection.Split(',').ToList();
+                        for (int i = 0; i < tokens.Count; i++)
+                            monster.setMonsterTokenByDifficulty(tokens[i], i);
+                    }
+
+                    if (monster != null) slot.monsters.Add(monster);
+                }
+                //This means you will find no more monsters afterward
+                if (line.StartsWith("}")) break;
+
+            }
+            return slot;
+        }
+
+        /// <summary>
+        /// This method dissects values from a monster, at a different point in the source file
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectValues(StreamReader reader, string line = "")
+        {
+            //Trim the line, as you keep going. We will nest functionality to read the strings
+            while ((line = reader.ReadLine()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                //Check for game name
+                if (line.StartsWith("{//"))
+                {
+                    //Get the game name, here, and attempt look up
+                    string gameName = line.Substring(3, line.Length - 3);
+                    Game game = gameList.Items.Cast<Game>().FirstOrDefault(item => item.ToString() == gameName);
+
+                    //Perform the dissection if it returns a game
+                    if (game != null) dissectValues_Game(reader, game);
+                }
+                else if (line.StartsWith("};"))
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Method to attach game to the list as well as scan the current sub-block
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectValues_Game(StreamReader reader, Game currentGame, string line = "")
+        {
+            while ((line = reader.ReadLine()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                //Check for alt game name
+                if (line.StartsWith("{//"))
+                {
+                    //Get the alt game name, here, and attempt look up
+                    string altGameName = line.Substring(3, line.Length - 3);
+                    AltGame altGame = currentGame.altGames.Cast<AltGame>().FirstOrDefault(item => item.ToString() == altGameName);
+
+                    //Perform the dissection if it returns an alt game
+                    if (altGame != null) dissectValues_AltGame(reader, altGame);
+                }
+                else if (line.StartsWith("}")) break;
+            }
+        }
+
+        /// <summary>
+        /// Read the alt-game sub-block here
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectValues_AltGame(StreamReader reader, AltGame altGame, string line = "")
+        {
+            while ((line = reader.ReadLine().Trim()) != null)
+            {
+                //Trim here
+                line = line.Trim();
+
+                try
+                {
+                    //Check for an alt game
+                    if (line.StartsWith("{//"))
+                    {
+                        //Get the alt game name, here, and attempt look up
+                        string slotName = line.Substring(3, line.Length - 3);
+                        MonsterSlot monsterSlot = altGame.monsterslots.Cast<MonsterSlot>().FirstOrDefault(item => item.ToString() == slotName);
+
+                        //Perform the dissection if it returns an alt game
+                        if (monsterSlot != null) dissectValues_Slot(reader, monsterSlot);
+                    }
+                    else if (line.StartsWith("}")) break;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }
 
-        private void dissectValues(string file)
+        /// <summary>
+        /// Read the sub-block for the monster slot
+        /// </summary>
+        /// <param name="reader"></param>
+        private void dissectValues_Slot(StreamReader reader, MonsterSlot slot, string line = "")
         {
-            int startPosition = file.IndexOf("int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =") + "int monsterSelectStat[MAX_GAME_TYPES][MAX_ALTS][MONSTER_SLOT][MAXPERSLOT][MAX_ITEMS] =".Length;
-            string virtualString = Regex.Replace(file.Substring(startPosition), @"\s", ""); 
-
-            StringReader stringReader = new StringReader(virtualString);
-
-            //Done twice to consume the remaining line and move onto next
-            string line;
-            string monsterValue = "";
-            line = stringReader.ReadLine();
-            line = stringReader.ReadLine();
-
-            int thisGame = 0;
-            int thisAltGame = 0;
-            int thisMonsterSlot = 0;
-            int thisMonster = 0;
-            int character = 0;
-            int statIncrement = 0;
-
-            if (line == "{")
+            int monsterIndex = 0;
+            while ((line = reader.ReadLine()) != null)
             {
-                while ((line = stringReader.ReadLine()) != null)
+                //Trim here
+                line = line.Trim();
+
+                if (line.StartsWith("{") && line.Length > 3 && monsterIndex < slot.monsters.Count)
                 {
-                    if (line.StartsWith("{"))
+                    //Validate this is an actual entry
+                    bool validLine = line.LastIndexOf("}") >= 0;
+                    if (validLine)
                     {
-                        if (line.EndsWith(","))
+                        //Populate values
+                        string dissection = line.Substring(1, line.LastIndexOf("}") - 1);
+
+                        List<string> tokens = dissection.Split(',').ToList();
+                        if (slot.monsters[monsterIndex].ToString() == "Cultist")
+                            Console.WriteLine(tokens.Count);
+                        for (int i = 0; i < tokens.Count / 3; i++)
                         {
-                            thisGame++;
-                            continue;
+                            slot.monsters[monsterIndex].setMonsterSpeedByDifficulty(tokens[i * 3], i);
+                            slot.monsters[monsterIndex].setMonsterHealthByDifficulty(tokens[i*3 + 1], i);
+                            slot.monsters[monsterIndex].setMonsterWeightByDifficulty(tokens[i*3 + 2], i);
                         }
-                        else if (line.EndsWith("}"))
-                            break;
-                        else
-                        {
-                            game thisGameObject = (game)gameList.Items[thisGame];
-                            thisAltGame = 0;
-                            while ((line = stringReader.ReadLine()) != null)
-                            {
-                                if (line.StartsWith("{"))
-                                {
-                                    if (line.EndsWith(","))
-                                    {
-                                        thisAltGame++;
-                                        continue;
-                                    }
-                                    else if (line.EndsWith("}"))
-                                        break;
-                                    else
-                                    {
-                                        altGame thisAltGameObject = thisGameObject.altGames[thisAltGame];
-                                        thisMonsterSlot = 0;
-                                        while ((line = stringReader.ReadLine()) != null)
-                                        {
-                                            if (line.StartsWith("{"))
-                                            {
-                                                if (line.EndsWith(","))
-                                                {
-                                                    thisMonsterSlot++;
-                                                    continue;
-                                                }
-                                                else if (line.EndsWith("}"))
-                                                    break;
-                                                else
-                                                {
-                                                    monsterSlot thisMonsterSlotObject = thisAltGameObject.monsterslots[thisMonsterSlot];
-                                                    thisMonster = 0;
-                                                    while ((line = stringReader.ReadLine()) != null)
-                                                    {
-                                                        if (line.StartsWith("{") && (line.EndsWith("}") || line.EndsWith(",")))
-                                                        {
-                                                            String lineFormat = line.Replace("\"", "");
-                                                            lineFormat = lineFormat.Replace(" ", "");
-                                                            if (line.EndsWith("}") || line.EndsWith("},"))
-                                                                lineFormat = lineFormat.Substring(1);
-
-                                                            StringReader monsterLine = new StringReader(lineFormat);
-
-                                                            monster thisMonsterObject = thisMonsterSlotObject.monsters[thisMonster];
-
-                                                            while ((character = monsterLine.Read()) != -1)
-                                                            {
-                                                                if (character == '}')
-                                                                {
-                                                                    switch (statIncrement % 3)
-                                                                    {
-                                                                        case 0:
-                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                        case 1:
-                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                        case 2:
-                                                                            thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                    }
-                                                                    statIncrement = 0;
-                                                                    monsterValue = "";
-                                                                    break;
-                                                                }
-                                                                else if (character == ',')
-                                                                {
-                                                                    switch (statIncrement % 3)
-                                                                    {
-                                                                        case 0:
-                                                                            thisMonsterObject.setMonsterSpeedByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                        case 1:
-                                                                            thisMonsterObject.setMonsterHealthByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                        case 2:
-                                                                            thisMonsterObject.setMonsterWeightByDifficulty(monsterValue, statIncrement / 3);
-                                                                            break;
-                                                                    }
-                                                                    statIncrement++;
-                                                                    monsterValue = "";
-                                                                }
-                                                                else
-                                                                    monsterValue += ((char)character).ToString();
-                                                            }
-
-                                                            thisMonster++;
-                                                        }
-                                                        if (line.EndsWith("}"))
-                                                            break;
-                                                    }
-                                                    thisMonsterSlot++;
-                                                }
-                                            }
-                                            else if (line.EndsWith("}"))
-                                                break;
-                                        }
-                                        thisAltGame++;
-                                    }
-                                }
-                                else if (line.EndsWith("}"))
-                                    break;
-                            }
-                            thisGame++;
-                        }
+                        monsterIndex++;
                     }
-                    else if (line.EndsWith("}"))
-                        break;
                 }
+                //This means you will find no more monsters afterward
+                else if (line.StartsWith("}")) break;
+
             }
         }
 
         private void addGlobalMonsterSlot(object sender, EventArgs e)
         {
-            monsterSlot newMonsterSlot = new monsterSlot(globalSlotBox.Text);
+            MonsterSlot newMonsterSlot = new MonsterSlot(globalSlotBox.Text);
             globalSlotListView.Items.Add(newMonsterSlot);
-            foreach(game game in gameList.Items)
+            foreach(Game game in gameList.Items)
             {
-                foreach (altGame altGame in game.altGames)
+                foreach (AltGame altGame in game.altGames)
                 {
                     altGame.monsterSlotAdd(newMonsterSlot);
                     monsterSlotList.Items.Add(newMonsterSlot);
@@ -969,12 +945,12 @@ namespace MonsterSpawnGenerator
         {
             if (globalSlotListView.SelectedItem != null)
             {
-                foreach (game game in gameList.Items)
+                foreach (Game game in gameList.Items)
                 {
-                    foreach (altGame altGame in game.altGames)
+                    foreach (AltGame altGame in game.altGames)
                     {
-                        monsterSlot removalMonsterSlot = new monsterSlot("null");
-                        foreach (monsterSlot monsterSlot in altGame.monsterslots)
+                        MonsterSlot removalMonsterSlot = new MonsterSlot("null");
+                        foreach (MonsterSlot monsterSlot in altGame.monsterslots)
                         {
                             if (globalSlotListView.SelectedItem.ToString() == monsterSlot.ToString())
                             {
@@ -999,20 +975,20 @@ namespace MonsterSpawnGenerator
             }
             else
             {
-                monsterSlot newMonsterSlot = new monsterSlot(globalSlotListView.SelectedItem.ToString());
+                MonsterSlot newMonsterSlot = new MonsterSlot(globalSlotListView.SelectedItem.ToString());
                 newMonsterSlot.renameMonster(globalSlotBox.Text);
                 globalSlotListView.Items.Add(newMonsterSlot);
 
-                foreach (game game in gameList.Items)
+                foreach (Game game in gameList.Items)
                 {
-                    foreach (altGame altGame in game.altGames)
+                    foreach (AltGame altGame in game.altGames)
                     {
-                        foreach (monsterSlot monsterSlot in altGame.monsterslots)
+                        foreach (MonsterSlot monsterSlot in altGame.monsterslots)
                         {
                             if (monsterSlot.ToString() == globalSlotListView.SelectedItem.ToString())
                             {
-                                monsterSlot copiedMonsterSlot = new monsterSlot(monsterSlot.ToString());
-                                foreach (monster monster in monsterSlot.monsters)
+                                MonsterSlot copiedMonsterSlot = new MonsterSlot(monsterSlot.ToString());
+                                foreach (Monster monster in monsterSlot.monsters)
                                 {
                                     copiedMonsterSlot.monsterAdd(monster);
                                 }
@@ -1033,7 +1009,7 @@ namespace MonsterSpawnGenerator
             globalSlotListView.Items.Clear();
             foreach (string monsterName in defaultMonsters)
             {
-                globalSlotListView.Items.Add(new monsterSlot(monsterName));
+                globalSlotListView.Items.Add(new MonsterSlot(monsterName));
             }
         }
 

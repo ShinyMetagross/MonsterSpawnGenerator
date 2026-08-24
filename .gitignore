@@ -3,4 +3,4 @@
 MonsterSpawnGenerator/.vs
 MonsterSpawnGenerator/Properties
 MonsterSpawnGenerator/obj
-/.acs
+*.acs

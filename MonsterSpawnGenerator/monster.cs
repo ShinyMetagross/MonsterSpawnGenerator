@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MonsterSpawnGenerator
 {
-    internal class monster
+    internal class Monster
     {
         private string monsterName = "Unknown";
         string[] weightMod = new string[5];
@@ -13,7 +13,7 @@ namespace MonsterSpawnGenerator
         string[] speedMod = new string[5];
         string[] difficultyToken = new string[5];
 
-        public monster(string name)
+        public Monster(string name)
         {
             this.monsterName = name;
             this.healthMod[0] = "0";

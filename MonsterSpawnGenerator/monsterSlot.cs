@@ -5,12 +5,12 @@ using System.Text;
 
 namespace MonsterSpawnGenerator
 {
-    internal class monsterSlot
+    internal class MonsterSlot
     {
         private string monsterSlotName = "Unknown";
-        public List<monster> monsters = new List<monster>();
+        public List<Monster> monsters = new List<Monster>();
 
-        public monsterSlot(string name)
+        public MonsterSlot(string name)
         {
             this.monsterSlotName = name;
         }
@@ -20,12 +20,12 @@ namespace MonsterSpawnGenerator
             this.monsterSlotName = name;
         }
 
-        public void monsterAdd(monster newMon)
+        public void monsterAdd(Monster newMon)
         {
             monsters.Add(newMon);
         }
 
-        public void monsterRemove(monster oldMon)
+        public void monsterRemove(Monster oldMon)
         {
             monsters.Remove(oldMon);
         }

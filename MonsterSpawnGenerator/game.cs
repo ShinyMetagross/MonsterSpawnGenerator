@@ -5,22 +5,22 @@ using System.Text;
 
 namespace MonsterSpawnGenerator
 {
-    internal class game
+    internal class Game
     {
         private string gameName = "Unknown";
-        public List<altGame> altGames = new List<altGame>();
+        public List<AltGame> altGames = new List<AltGame>();
 
-        public game(string name)
+        public Game(string name)
         {
             this.gameName = name;
         }
 
-        public void gameAdd(altGame newAltGame)
+        public void gameAdd(AltGame newAltGame)
         {
             altGames.Add(newAltGame);
         }
 
-        public void gameRemove(altGame oldAltGame)
+        public void gameRemove(AltGame oldAltGame)
         {
             altGames.Remove(oldAltGame);
         }

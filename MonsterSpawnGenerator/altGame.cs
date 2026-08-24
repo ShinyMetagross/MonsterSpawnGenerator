@@ -5,22 +5,22 @@ using System.Text;
 
 namespace MonsterSpawnGenerator
 {
-    internal class altGame
+    internal class AltGame
     {
         private string altGameName = "Unknown";
-        public List<monsterSlot> monsterslots = new List<monsterSlot>();
+        public List<MonsterSlot> monsterslots = new List<MonsterSlot>();
 
-        public altGame(string name)
+        public AltGame(string name)
         {
             this.altGameName = name;
         }
 
-        public void monsterSlotAdd(monsterSlot newMonSlot)
+        public void monsterSlotAdd(MonsterSlot newMonSlot)
         {
             monsterslots.Add(newMonSlot);
         }
 
-        public void monsterSlotRemove(monsterSlot newMonSlot)
+        public void monsterSlotRemove(MonsterSlot newMonSlot)
         {
             monsterslots.Remove(newMonSlot);
         }
@@ -30,9 +30,9 @@ namespace MonsterSpawnGenerator
             altGameName = name;
         }
 
-        public monsterSlot containsMonsterSlot(string name)
+        public MonsterSlot containsMonsterSlot(string name)
         {
-            foreach(monsterSlot monsterSlot in monsterslots)
+            foreach(MonsterSlot monsterSlot in monsterslots)
             {
                 if (monsterSlot.ToString() == name)
                     return monsterSlot;
